@@ -1,0 +1,138 @@
+@import 'vendor/fonts';
+@import 'vendor/variables';
+@import 'vendor/mixins';
+@import 'vendor/_normalize';
+@import 'vendor/header';
+
+body {
+    font-family: $font-family, sans-serif;
+  min-inline-size: 285px;
+  margin: 0 auto;
+  letter-spacing: 0;
+  font-size: $font-size;
+  font-weight: 400;
+  background-color: $bg-white;
+  color: $color-black;
+  overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+    width: 6px;
+    @media screen and (width<=500px) {
+      width: 4px;
+    }
+  }
+  &::-webkit-scrollbar-track {
+    background-color: $bg-grey;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: $color-accent;
+  }
+}
+
+html {
+		scroll-behavior: smooth;
+}
+
+html.burger-lock {
+  overflow-y: hidden;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin-inline-end: 20px;
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-inline-end: 18px;
+    border-right: 1px solid $color-light-grey;
+
+    span {
+      &:first-child {
+        font-size: $font-size-h4;
+        line-height: 1;
+        font-weight: 600;
+        color: $color-black;
+      }
+
+      &:last-child {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1;
+        color: $color-dark-grey;
+      }
+    }
+  }
+}
+
+.hide {
+  display: none !important;
+}
+
+.hide-item__height,
+.hide-item__height--2 {
+  transition: height 0.3s linear;
+  overflow: hidden;
+
+  @media (width>700px) {
+    &:not(.menu__subnav) {
+      height: 0;
+    }
+  }
+
+  @media (width<=700px) {
+    height: 0;
+  }
+}
+
+@media screen and (width<=1200px) {
+  .desktop {
+    display: none;
+  }
+}
+
+/* GO TO TOP BUTTON */
+#top-btn {
+		pointer-events: none;
+		position: fixed;
+		bottom: 160px;
+		left: -70px;
+		z-index: 99;
+		border: none;
+		outline: none;
+		cursor: pointer;
+		width: 60px;
+		height: 60px;
+		padding: 5px;
+		transition: .3s;
+
+		@media(max-width:1300px){
+			left: 5px;
+		}
+
+		@media(max-width:930px){
+			left: 5px;
+			bottom: 180px
+		}
+
+		@media(max-width:800px){
+			left: 5px;
+			bottom: 150px
+		}
+
+
+}
+#top-btn.is-visible{
+		pointer-events: all;
+		left: 30px;
+}
+/* GO TO TOP BUTTON END */
+
+@import "vendor/animate";
+//@import 'vendor/footer';

@@ -1,0 +1,186 @@
+@mixin box($bg-color, $color, $radius: 12px, $padding: 20px) {
+  background-color: $bg-color;
+  color: $color;
+  border-radius: $radius;
+  @if $padding == 20px {
+    padding: clamp(1rem, 0.65rem + 0.8vw, 1.25rem);
+  } @else if $padding == 30px {
+    padding: clamp(1rem, -0.225rem + 2.8vw, 1.875rem);
+  } @else {
+    padding: $padding;
+  }
+}
+
+.box_accent {
+  @include box($color-accent, $color-white, 16px, 30px);
+}
+
+.box_accent-op-10 {
+  @include box($color-accent-op-10, $color-black);
+}
+
+@mixin container($margin-bl: 0) {
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+  @if $margin-bl != 0 {
+    @if $margin-bl == "block" {
+      margin-block: clamp(2rem, -3.95rem + 13.6vw, 6.25rem);
+    } @else if $margin-bl == "top" {
+      margin-block-start: clamp(2rem, -3.95rem + 13.6vw, 6.25rem);
+    } @else if $margin-bl == "bottom" {
+      margin-block-end: clamp(2rem, -3.95rem + 13.6vw, 6.25rem);
+    } @else {
+      margin-block: $margin-bl;
+    }
+  }
+}
+
+.container {
+  @include container();
+
+  &_bl {
+    @include container("block");
+  }
+  &_b {
+    @include container("bottom");
+  }
+  &_t {
+    @include container("top");
+  }
+}
+
+.button {
+  padding: 20px 5px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+  transition: background-color 300ms ease-out, color 300ms ease-out,
+    outline 300ms ease-out;
+  background-color: $color-white;
+  color: $color-accent;
+  border-radius: 12px;
+  outline: 1px solid transparent;
+
+  &:hover,
+  &:active {
+    background-color: $color-accent;
+    color: $color-white;
+    outline: 1px solid $color-white;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  &_accent {
+    background-color: $color-accent;
+    color: $color-white;
+
+    &:hover,
+    &:active {
+      background-color: $color-accent-contrast;
+      color: $color-white;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+    }
+
+    &_light {
+      background-color: $color-accent-op-10;
+      color: $color-accent;
+
+      &:hover,
+      &:active {
+        background-color: $color-accent;
+        color: $color-white;
+      }
+
+      &:disabled {
+        color: $color-accent-op-50;
+      }
+    }
+  }
+
+  &_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-white;
+    color: $color-accent;
+    gap: 10px;
+
+    &:hover,
+    &:active {
+      background-color: $color-accent-contrast;
+      color: $color-white;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+    }
+
+    svg {
+      max-width: 18px;
+
+      &:hover path {
+        fill: #fff;
+      }
+
+      path {
+        transition: all 300ms ease-out;
+      }
+    }
+  }
+}
+
+@mixin point-mark-psevdo {
+  content: "";
+  position: absolute;
+  left: calc(50% - 10px);
+  top: calc(50% - 10px);
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 20px;
+  aspect-ratio: 1/1;
+}
+
+.point-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 8px;
+  aspect-ratio: 1/1;
+  width: fit-content;
+  background-color: $color-accent-op-10;
+
+  &_trans {
+    background-color: transparent;
+  }
+
+  &_light {
+    background-color: $color-white;
+    border: 1px solid $color-accent-op-50;
+  }
+
+  &_40 {
+    width: 40px;
+  }
+
+  &_56 {
+    width: 56px;
+  }
+}
+
+a.point-mark,
+button.point-mark {
+  outline: 1px solid transparent;
+  transition: outline 300ms ease-out;
+
+  &:hover,
+  &:active {
+    outline: 1px solid $color-accent;
+  }
+}
