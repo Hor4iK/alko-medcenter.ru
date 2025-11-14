@@ -70,6 +70,10 @@ html.burger-lock {
     }
   }
 
+  &__picture {
+    flex-shrink: 0;
+  }
+
   &.footer__logo &__title {
     border: none;
     span {

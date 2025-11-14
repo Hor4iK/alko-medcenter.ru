@@ -1,5 +1,7 @@
 .header {
+  padding-inline: clamp(1.875rem, -10.3125rem + 15vw, 3.75rem);
   border-bottom: 1px solid $color-light-grey;
+
   &__content {
     font-size: 16px;
     font-weight: 600;
@@ -72,6 +74,33 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
+  }
+
+  @media screen and (width<=1597px) {
+    &__license {
+      display: none;
+    }
+  }
+
+  @media screen and (width<=1400px) {
+    &__address {
+      display: none;
+    }
+    &__toolbar {
+      display: none;
+    }
+  }
+
+  @media screen and (width<=1105px) {
+    &__caption {
+      display: none;
+    }
+  }
+
+  @media screen and (width<=870px) {
+    &__phone {
+      display: none;
+    }
   }
 }
 
@@ -283,7 +312,7 @@
       margin-block-end: 20px;
     }
 
-    @media screen and (width<=700px) {
+    @media screen and (width<=980px) {
       ul {
         display: flex;
         flex-direction: column;
@@ -318,7 +347,7 @@
       }
     }
 
-    @media screen and (width>700px) {
+    @media screen and (width>980px) {
       position: absolute;
       min-width: 320px;
       width: fit-content;
@@ -369,7 +398,7 @@
       gap: 12px;
 
       &::before {
-        content: '';
+        content: "";
         display: block;
         aspect-ratio: 1/1;
         width: 12px;
@@ -426,49 +455,58 @@
     }
   }
 
-  &__btn_mobile {
+  &_mobile {
+    border: 1px solid $color-accent-op-50;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    aspect-ratio: 1 / 1;
-    background-color: #f3f9ff;
-    border-radius: 10px;
-    position: relative;
-    outline: 1px solid transparent;
-    transition: background-color 300ms ease-in-out, outline 300ms;
+    transition: background-color 220ms;
+    gap: 5px;
 
-    svg {
-      width: 19px;
-      aspect-ratio: 1/1;
-      transform: rotate3d(0, 0, 0, 0deg);
-      transition: transform 500ms ease-in-out, fill 300ms;
-    }
-
-    &:hover,
-    &:active {
+    span {
+      display: block;
+      height: 1px;
       background-color: $color-accent;
+      transition: all 350ms;
+      position: relative;
 
-      svg {
-        transform: rotate3d(1, 1, 1, 360deg);
+      &:nth-child(1) {
+        width: 20px;
+      }
 
-        path {
-          fill: #fff;
-        }
+      &:nth-child(2) {
+        width: 14px;
+      }
+
+      &:nth-child(3) {
+        width: 8px;
       }
     }
 
-    &:focus {
-      outline: 1px solid $color-accent;
-    }
+    &:active {
+      animation: breath 800ms 2 ease;
+      animation-direction: alternate;
 
-    @media screen and (width>700px) {
-      display: none;
+      span {
+        &:nth-child(1) {
+          transform: translateY(6px);
+        }
+        &:nth-child(3) {
+          transform: translateY(-6px);
+        }
+      }
     }
   }
 }
 
-@media screen and (width<=700px) {
+@media screen and (width>980px) {
+  .menu_mobile {
+    display: none;
+  }
+}
+
+@media screen and (width<=980px) {
   .menu {
     width: 100%;
     margin-block: 45px;
@@ -531,6 +569,25 @@
       width: fit-content;
     }
   }
+
+  .header__row {
+    &:last-child {
+      display: none;
+    }
+    &:first-child {
+      border: none;
+    }
+  }
+
+  .header__logo {
+    img {
+      width: 30px;
+    }
+
+    .logo__title {
+      display: none;
+    }
+  }
 }
 .menu__subnav--lvl-2 {
   max-width: 300px;
@@ -539,7 +596,7 @@
   padding: 15px 20px;
 }
 
-@media screen and (width > 700px) {
+@media screen and (width > 980px) {
   .menu__sublink > .menu__subnav {
     right: -99%;
     left: auto;
@@ -548,7 +605,7 @@
   }
 }
 
-@media screen and (width > 700px) {
+@media screen and (width > 980px) {
   .menu__sublink:hover > .menu__subnav {
     opacity: 1;
     transform: scaleY(1);
