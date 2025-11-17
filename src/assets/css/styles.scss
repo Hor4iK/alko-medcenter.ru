@@ -86,21 +86,6 @@ html.burger-lock {
   display: none !important;
 }
 
-.hide-item__height,
-.hide-item__height--2 {
-  transition: height 0.3s linear;
-  overflow: hidden;
-
-  @media (width>700px) {
-    &:not(.menu__subnav) {
-      height: 0;
-    }
-  }
-
-  @media (width<=700px) {
-    height: 0;
-  }
-}
 
 @media screen and (width<=1200px) {
   .desktop {

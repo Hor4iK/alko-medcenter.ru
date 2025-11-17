@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const burgerMenuArr = document.querySelectorAll('.menu_btn');
   if (burgerMenuArr && burgerMenuArr.length > 0) {
     const header = document.querySelector('.header');
-    const headerMobile = header.querySelector('.header__row.mobile');
+    const headerMobile = header.querySelector('.header__row:last-child');
 
     if (header && headerMobile) {
       burgerMenuArr.forEach(burgerMenu => {
@@ -134,7 +134,8 @@ document.addEventListener('DOMContentLoaded', function () {
             headerMobile.classList.add("active");
             header.classList.add("active");
             let height = header.offsetHeight;
-            // headerMobile.style.height = 'calc(100vh - ' + height + 'px)';
+            headerMobile.style.top = height + 'px';
+            //headerMobile.style.height = 'calc(100vh - ' + height + 'px)';
           }
           // header.querySelector('.ham').classList.toggle("active");
           document.querySelector('html').classList.toggle('burger-lock');
@@ -152,7 +153,52 @@ document.addEventListener('DOMContentLoaded', function () {
       hideItem.forEach((item) => {
         let title = item.querySelector('.hide-item__title');
         let content = item.querySelector('.hide-item__height');
-        title.addEventListener('click', () => {
+        title.addEventListener('click', (evt) => {
+          evt.stopPropagation();
+          if (title.classList.contains('active')) {
+              let height = content.querySelector('.hide-item__content').offsetHeight;
+             content.style.height = height + 'px';
+            title.classList.remove('active');
+            content.classList.remove('active');
+           setTimeout(() => {
+             content.removeAttribute('style');
+           }, 1);
+          }
+          else {
+            hideTitles.forEach((element) => {
+              element.classList.remove('active');
+            })
+            hideContents.forEach((element) => {
+              element.classList.remove('active');
+              element.removeAttribute("style");
+            })
+            let height = content.querySelector('.hide-item__content').offsetHeight;
+            title.classList.add('active');
+            content.classList.add('active');
+            content.style.height = height + 'px';
+            setTimeout(() => {
+              if (content.classList.contains('active')) {
+                  content.setAttribute('style', 'height: auto');
+              }
+            }, 301);
+          }
+        })
+      })
+    })
+  }
+
+  //Second level menu
+  const hideItems2 = document.querySelectorAll('.hide-items--2');
+  if (hideItems.length > 0) {
+    hideItems.forEach((elem) => {
+      const hideItem = elem.querySelectorAll('.hide-item--2');
+      const hideTitles = elem.querySelectorAll('.hide-item__title--2');
+      const hideContents = elem.querySelectorAll('.hide-item__height--2');
+      hideItem.forEach((item) => {
+        let title = item.querySelector('.hide-item__title--2');
+        let content = item.querySelector('.hide-item__height--2');
+        title.addEventListener('click', (evt) => {
+          evt.stopPropagation();
           if (title.classList.contains('active')) {
             title.classList.remove('active');
             content.classList.remove('active');
@@ -166,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function () {
               element.classList.remove('active');
               element.removeAttribute("style");
             })
-            let height = content.querySelector('.hide-item__content').offsetHeight;
+            let height = content.querySelector('.hide-item__content--2').offsetHeight;
             title.classList.add('active');
             content.classList.add('active');
             content.style.height = height + 'px';

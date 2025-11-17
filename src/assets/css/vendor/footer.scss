@@ -235,6 +235,11 @@
     &__container:first-child {
       max-width: none;
     }
+
+    &__logo {
+      margin-inline: 0;
+      margin-block-end: 30px;
+    }
   }
 }
 

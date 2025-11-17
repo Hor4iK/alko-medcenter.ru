@@ -167,6 +167,15 @@
     border: 1px solid $color-accent-op-50;
   }
 
+  &_accent {
+    background-color: $color-accent;
+    svg {
+      path {
+        fill: $color-white;
+      }
+    }
+  }
+
   &_40 {
     width: 40px;
   }
