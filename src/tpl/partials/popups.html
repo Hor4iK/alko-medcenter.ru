@@ -2,6 +2,7 @@
   <div>
   </div>
 </button>
+
 <div class="popup calculator" data-target="popup-calculator">
   <div class="popup__body">
     <div class="popup__content">
@@ -17,7 +18,7 @@
           стоимость услуги.
         </p>
       </div>
-      <forms class="calculator__wrapper">
+      <div class="calculator__wrapper">
         <div class="calculator__content">
           <div class="calculator__page active box_accent-light">
             <p class="calculator__page-title">Пол пациента</p>
@@ -181,7 +182,7 @@
               class="calculator__button point-mark point-mark_grey point-mark_arrow point-mark_arrow_right point-mark_56"></button>
           </div>
         </div>
-      </forms>
+      </div>
     </div>
   </div>
 </div>
@@ -190,7 +191,26 @@
   <div class="popup__body">
     <div class="popup__content">
       <button class="close-popup point-mark point-mark_56"></button>
-
+      <div>
+        <p class="popup__title">
+          Вызовите врача-нарколога на дом — без промедления и лишних вопросов
+        </p>
+        <p class="popup__subtitle">
+          Оставьте номер телефона — мы свяжемся в течение 5 минут, уточним ситуацию и направим ближайшую бригаду. Всё
+          пройдёт конфиденциально
+          и по существу.
+        </p>
+      </div>
+      <form class="popup__form form">
+        <input type="text" class="input" placeholder="Ваше имя" name="params[name][]" required>
+        <input type="tel" class="input" placeholder="Ваш номер телефона" name="params[phone][]" required>
+        <button type="submit" class="button button_accent popup__button">Заказать звонок</button>
+        <label class="checkbox">
+          <input type="checkbox" checked="checked" required="">
+          <span class="checkbox-mark"></span>
+          <span>Отправляя заявку, вы соглашаетесь с <a href="#" rel="nofollow">политикой конфиденциальности</a></span>
+        </label>
+      </form>
     </div>
   </div>
 </div>

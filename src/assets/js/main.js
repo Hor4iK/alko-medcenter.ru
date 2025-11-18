@@ -1048,79 +1048,64 @@ document.addEventListener('DOMContentLoaded', function () {
       })
     }
 
-
-
+    //Slide pages
     const form = popupCalculator.querySelector('.calculator__wrapper');
     const pages = popupCalculator.querySelectorAll('.calculator__page');
+
     const prevButton = popupCalculator.querySelector('.point-mark_arrow:not(.point-mark_arrow_right)');
     const nextButton = popupCalculator.querySelector('.point-mark_arrow_right');
+
     const pageNumber = popupCalculator.querySelector('.page-number');
     const totalPages = popupCalculator.querySelector('.calculator__count span:last-child');
 
-    let currentPage = 0;
-    const totalPagesCount = pages.length - 1; // -1 потому что последняя страница результата
 
-    // Инициализация
-    totalPages.textContent = String(totalPagesCount).padStart(2, '0');
-    updateNavigation();
+    const totalPagesCount = pages.length - 1;
+    totalPages.textContent = totalPagesCount < 10 ? "0" + totalPagesCount : totalPagesCount ;
 
-    // Функция проверки валидности текущей страницы
-    function isCurrentPageValid() {
+    const isPageValid = () => {
       const currentPageElement = pages[currentPage];
-      const inputs = currentPageElement.querySelectorAll('input[type="radio"]:checked, input[type="range"]');
+      const inputs = currentPageElement.querySelectorAll('input[type="radio"]');
 
-      // Для радио-кнопок проверяем, что хотя бы одна выбрана
-      const radioInputs = currentPageElement.querySelectorAll('input[type="radio"]');
-      if (radioInputs.length > 0) {
-        const hasCheckedRadio = Array.from(radioInputs).some(input => input.checked);
+      if (inputs.length > 0) {
+        const hasCheckedRadio = Array.from(inputs).some(input => input.checked);
         if (!hasCheckedRadio) return false;
       }
 
-      // Для range всегда валидно, так как есть значение по умолчанию
       return true;
     }
 
-    // Функция обновления навигации
-    function updateNavigation() {
-      // Обновляем номер страницы
-      pageNumber.textContent = String(currentPage + 1).padStart(2, '0');
+    const updateNavigation = () => {
+      pageNumber.textContent = (currentPage + 1) < 10 ? "0" + (currentPage + 1) : currentPage + 1;
 
-      // Обновляем кнопку "Назад"
       prevButton.disabled = currentPage === 0;
+      nextButton.disabled = currentPage === totalPagesCount || !isPageValid();
 
-      // Обновляем кнопку "Вперед"
-      const isValid = isCurrentPageValid();
-      nextButton.disabled = currentPage === totalPagesCount || !isValid;
-
-      // Обновляем видимость страниц
+      //Set necessary page
       pages.forEach((page, index) => {
         page.classList.toggle('active', index === currentPage);
       });
     }
 
-    // Функция перехода на следующую страницу
-    function goToNextPage() {
-      if (currentPage < totalPagesCount && isCurrentPageValid()) {
+    const nextPage = () => {
+      if (currentPage < totalPagesCount && isPageValid()) {
         currentPage++;
         updateNavigation();
       }
     }
-
-    // Функция перехода на предыдущую страницу
-    function goToPrevPage() {
+    const prevPage = () => {
       if (currentPage > 0) {
         currentPage--;
         updateNavigation();
       }
     }
 
-    // Обработчики кликов на кнопки
-    prevButton.addEventListener('click', goToPrevPage);
-    nextButton.addEventListener('click', goToNextPage);
+    let currentPage = 0;
+    updateNavigation();
 
-    // Обработчики изменений в инпутах (для валидации в реальном времени)
-    form.addEventListener('change', function (e) {
-      if (e.target.matches('input[type="radio"], input[type="range"]')) {
+    prevButton.addEventListener('click', prevPage);
+    nextButton.addEventListener('click', nextPage);
+    form.addEventListener('change', evt => {
+      if (evt.target.matches('input[type="radio"], input[type="range"]')) {
         updateNavigation();
       }
     });
