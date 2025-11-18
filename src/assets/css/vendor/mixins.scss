@@ -13,13 +13,17 @@
 .box_accent {
   @include box($color-accent, $color-white, 16px, 30px);
 }
-.box_accent-light-20 {
-  @include box(rgb(255, 255, 255, .2), $color-white, 10px, 12px);
+.box_accent-light {
+  @include box($color-accent-op-10, $color-black, 16px, 30px);
+}
+.box_light-20 {
+  @include box(rgb(255, 255, 255, 0.2), $color-white, 10px, 12px);
 }
 .box_accent-op-10 {
   @include box($color-accent-op-10, $color-black);
 }
 
+//CONTAINERS
 @mixin container($margin-bl: 0) {
   max-width: $max-width;
   width: 100%;
@@ -48,6 +52,7 @@
 .container_t {
   @include container("top");
 }
+//END CONTAINERS
 
 //BUTTONS
 .button {
@@ -62,8 +67,8 @@
   border-radius: 12px;
   outline: 1px solid transparent;
 
-  &:hover,
-  &:active {
+  &:not(:disabled):hover,
+  &:not(:disabled):active {
     background-color: $color-accent;
     color: $color-white;
     outline: 1px solid $color-white;
@@ -77,8 +82,8 @@
     background-color: $color-accent;
     color: $color-white;
 
-    &:hover,
-    &:active {
+    &:not(:disabled):hover,
+    &:not(:disabled):active {
       background-color: $color-accent-contrast;
       color: $color-white;
     }
@@ -91,8 +96,8 @@
       background-color: $color-accent-op-10;
       color: $color-accent;
 
-      &:hover,
-      &:active {
+      &:not(:disabled):hover,
+      &:not(:disabled):active {
         background-color: $color-accent;
         color: $color-white;
       }
@@ -111,8 +116,8 @@
     color: $color-accent;
     gap: 10px;
 
-    &:hover,
-    &:active {
+    &:not(:disabled):hover,
+    &:not(:disabled):active {
       background-color: $color-accent-contrast;
       color: $color-white;
     }
@@ -176,6 +181,36 @@
     }
   }
 
+  &_grey {
+    background-color: $bg-grey;
+    color: $color-black;
+
+    &:disabled {
+      &::before {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &_arrow {
+    &::before {
+      content: "";
+      background-image: url(../img/icons/arrow.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      display: block;
+      width: 16px;
+      height: 12px;
+    }
+
+    &_right {
+      &::before {
+        rotate: 180deg;
+      }
+    }
+  }
+
   &_40 {
     width: 40px;
   }
@@ -185,6 +220,7 @@
   }
 }
 
+//Изменение состояния для ссылок и кнопок
 a.point-mark,
 button.point-mark {
   outline: 1px solid transparent;
@@ -194,8 +230,8 @@ button.point-mark {
     transition: transform 200ms ease-out;
   }
 
-  &:hover,
-  &:active {
+  &:not(:disabled):hover,
+  &:not(:disabled):active {
     outline: 1px solid $color-accent;
 
     svg {
@@ -204,8 +240,8 @@ button.point-mark {
   }
 
   &_light {
-    &:hover,
-    &:active {
+    &:not(:disabled):hover,
+    &:not(:disabled):active {
       outline: 2px solid $color-light-grey;
     }
   }

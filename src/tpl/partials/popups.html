@@ -2,120 +2,200 @@
   <div>
   </div>
 </button>
-
-<div class="popup" data-target="popup-consult">
+<div class="popup calculator" data-target="popup-calculator">
   <div class="popup__body">
     <div class="popup__content">
-      <button class="close-popup"></button>
-
-      <p class="popup__title main-title">
-        Бесплатная консультация специалиста — <span><br>это первый шаг!</span>
-      </p>
-      <p class="popup__subtitle">
-        Оставьте заявку, и наш эксперт свяжется с вами, чтобы помочь подобрать решение и обсудить вашу ситуацию
-      </p>
-
-      <forms class="popup__form">
-        <input type="tel" class="input" name="params[phone][]" placeholder="+7(999) 999-99-99" required="">
-        <button type="submit" class="btn btn_consult popup__button popup-btn btn_accent">
-          <span>записаться</span>
-          <div class="point-mark"><span></span><span></span></div>
-        </button>
-        <label class="checkbox">
-          <input type="checkbox" checked="checked">
-          <span class="checkbox-mark"></span>
-          <span>Нажимая кнопку я соглашаюсь с <a href="#">политикой конфединциальности</a> и <a
-              href="#">пользовательским соглашением</a></span>
-        </label>
+      <button class="close-popup point-mark point-mark_56"></button>
+      <div>
+        <p class="popup__title">
+          Рассчитайте стоимость лечения за минуту
+        </p>
+        <p class="popup__subtitle">
+          Наш калькулятор поможет вам быстро сориентироваться в ценах —
+          без звонков и обязательств. Просто выберите параметры, актуальные для вашего случая, и получите
+          приблизительную
+          стоимость услуги.
+        </p>
+      </div>
+      <forms class="calculator__wrapper">
+        <div class="calculator__content">
+          <div class="calculator__page active box_accent-light">
+            <p class="calculator__page-title">Пол пациента</p>
+            <p class="calculator__page-caption">(некоторые программы учитывают физиологические особенности)</p>
+            <fieldset class="calculator__inputs-container">
+              <div class="input__button">
+                <input type="radio" name="sex" id="sexChoice1" value="Мужчина" required>
+                <label for="sexChoice1">Мужчина</label>
+              </div>
+              <div class="input__button">
+                <input type="radio" name="sex" id="sexChoice2" value="Женщина" required>
+                <label for="sexChoice2">Женщина</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="calculator__page box_accent-light">
+            <p class="calculator__page-title">Возраст пациента</p>
+            <p class="calculator__page-caption">(влияет на дозировки препаратов и интенсивность терапии)</p>
+            <fieldset class="calculator__range-container">
+              <div class="input__range age">
+                <span>14 лет</span>
+                <input type="range" value="50" min="14" max="69" step="1" name="age" id="age" required>
+                <output id="valueAge">50</output>
+                <span>69 лет</span>
+              </div>
+            </fieldset>
+          </div>
+          <div class="calculator__page box_accent-light">
+            <p class="calculator__page-title">Тип вещества</p>
+            <p class="calculator__page-caption">(определяет методы детоксикации и снятия ломки)</p>
+            <fieldset class="calculator__inputs-container">
+              <div class="input__button">
+                <input type="radio" name="type" id="typeChoice1" value="Алкоголь" required>
+                <label for="typeChoice1">Алкоголь</label>
+              </div>
+              <div class="input__button">
+                <input type="radio" name="type" id="typeChoice2" value="Наркотики" required>
+                <label for="typeChoice2">Наркотики</label>
+              </div>
+              <div class="input__button">
+                <input type="radio" name="type" id="typeChoice3" value="Сочетание алкоголя и наркотиков" required>
+                <label for="typeChoice3">Сочетание алкоголя и наркотиков</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="calculator__page box_accent-light">
+            <p class="calculator__page-title">Стаж употребления</p>
+            <p class="calculator__page-caption">(чем дольше зависимость, тем сложнее и длительнее восстановление)</p>
+            <fieldset class="calculator__range-container">
+              <div class="input__range exp">
+                <span>1 год</span>
+                <input type="range" value="8" min="1" max="11" step="1" name="exp" id="exp" required>
+                <output id="valueExp">8</output>
+                <span>11+ лет</span>
+              </div>
+            </fieldset>
+          </div>
+          <div class="calculator__page box_accent-light">
+            <p class="calculator__page-title">Согласие на лечение</p>
+            <p class="calculator__page-caption">(если пациент сопротивляется — может потребоваться мотивационная беседа)
+            </p>
+            <fieldset class="calculator__inputs-container">
+              <div class="input__button">
+                <input type="radio" name="agree" id="agreeChoice1" value="Да" required>
+                <label for="agreeChoice1">Да</label>
+              </div>
+              <div class="input__button">
+                <input type="radio" name="agree" id="agreeChoice2" value="Нет" required>
+                <label for="agreeChoice2">Нет</label>
+              </div>
+              <div class="input__button">
+                <input type="radio" name="agree" id="agreeChoice3" value="Колеблется или не уверен(а)" required>
+                <label for="agreeChoice3">Колеблется или не уверен(а)</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="calculator__page box_accent-light">
+            <p class="calculator__page-title">Ранее проходили лечение?</p>
+            <fieldset class="calculator__inputs-container_cl">
+              <div class="input__radio">
+                <input type="radio" name="previous" id="previousChoice1" value="Нет, обращаюсь впервые" required>
+                <label for="previousChoice1">Нет, обращаюсь впервые</label>
+              </div>
+              <div class="input__radio">
+                <input type="radio" name="previous" id="previousChoice2"
+                  value="Да, проходил(а) детоксикацию или вывод из запоя" required>
+                <label for="previousChoice2">Да, проходил(а) детоксикацию или вывод из запоя</label>
+              </div>
+              <div class="input__radio">
+                <input type="radio" name="previous" id="previousChoice3" value="Да, был(а) закодирован(а)" required>
+                <label for="previousChoice3">Да, был(а) закодирован(а)</label>
+              </div>
+              <div class="input__radio">
+                <input type="radio" name="previous" id="previousChoice4" value="Да, проходил(а) курс в стационаре"
+                  required>
+                <label for="previousChoice4">Да, проходил(а) курс в стационаре</label>
+              </div>
+              <div class="input__radio">
+                <input type="radio" name="previous" id="previousChoice5"
+                  value="Да, участвовал(а) в реабилитационной программе" required>
+                <label for="previousChoice5">Да, участвовал(а) в реабилитационной программе</label>
+              </div>
+              <div class="input__radio">
+                <input type="radio" name="previous" id="previousChoice6"
+                  value="Да, проходил(а) амбулаторное лечение или психотерапию" required>
+                <label for="previousChoice6">Да, проходил(а) амбулаторное лечение или психотерапию</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="calculator__page box_accent-light">
+            <p class="calculator__page-title">Сопутствующие заболевания</p>
+            <p class="calculator__page-caption">(влияет на выбор препаратов и контроль состояния)</p>
+            <fieldset class="calculator__inputs-container">
+              <div class="input__button">
+                <input type="radio" name="illness" id="illnessChoice1" value="Нет" required>
+                <label for="illnessChoice1">Нет</label>
+              </div>
+              <div class="input__button">
+                <input type="radio" name="illness" id="illnessChoice2" value="Есть" required>
+                <label for="illnessChoice2">Есть</label>
+              </div>
+              <div class="input__button">
+                <input type="radio" name="illness" id="illnessChoice3" value="Неизвестно" required>
+                <label for="illnessChoice3">Неизвестно</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="calculator__page box_accent-light">
+            <p class="calculator__page-title">Занятость</p>
+            <p class="calculator__page-caption">(учитывается при планировании амбулаторного режима)</p>
+            <fieldset class="calculator__inputs-container">
+              <div class="input__button">
+                <input type="radio" name="work" id="workChoice1" value="Работает" required>
+                <label for="workChoice1">Работает</label>
+              </div>
+              <div class="input__button">
+                <input type="radio" name="work" id="workChoice2" value="Учится" required>
+                <label for="workChoice2">Учится</label>
+              </div>
+              <div class="input__button">
+                <input type="radio" name="work" id="workChoice3" value="Не занят" required>
+                <label for="workChoice3">Не занят</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="calculator__page box_accent-light calculator__page-result">
+            <div class="calculator__page-result__content">
+              <p class="calculator__page-title">2 990 ₽</p>
+              <p class="calculator__page-caption">Это предварительная оценка. Окончательная стоимость определяется
+                врачом после бесплатной консультации — с учётом всех нюансов состояния и ваших целей.</p>
+              <button class="button button_accent popup-btn" data-path="popup-call">Рассчитать стоимость</button>
+            </div>
+          </div>
+        </div>
+        <div class="calculator__toolbar">
+          <p class="calculator__count"><span class="page-number">01</span> / <span>08</span></p>
+          <div class="calculator__buttons">
+            <button type="button"
+              class="calculator__button point-mark point-mark_grey point-mark_arrow point-mark_56"></button>
+            <button type="button"
+              class="calculator__button point-mark point-mark_grey point-mark_arrow point-mark_arrow_right point-mark_56"></button>
+          </div>
+        </div>
       </forms>
-      <span class="popup__separation"></span>
-      <div class="popup__bottom">
-        <div class="popup__bottom-column">
-          <p>Или свяжитесь с нами самостоятельно</p>
-          <a href="tel:+79999999999">+7 (999) 999-99-99</a>
-        </div>
-        <div class="popup__bottom-column">
-          <a href="#" target="_blank" class="point-mark btn_social point-tg">
-          </a>
-          <a href="+799999999999" class="point-mark btn_social point-tel">
-          </a>
-        </div>
-      </div>
     </div>
   </div>
 </div>
 
-<div class="popup popup_calculator" data-target="popup-calculator">
+<div class="popup" data-target="popup-call">
   <div class="popup__body">
     <div class="popup__content">
-      <button class="close-popup"></button>
-      <p class="popup__title main-title">
-        <span>Калькулятор </span>трезвой жизни
-      </p>
-      <div class="popup__form">
-        <div>
-          <p class="popup__chose-text">Как часто употребляете алкоголь?</p>
-          <div class="popup__chose-container">
-            <div class="chose__top-container">
-              <p class="chose__subtitle">Как часто употребляете алкоголь?</p>
-              <button class="chose__btn chose__btn_open point-mark"></button>
-            </div>
-            <div class="chose__bottom-container">
-              <p class="chose__item">2-4 раза в месяц</p>
-              <p class="chose__item">20-40 раз в месяц</p>
-              <p class="chose__item">никогда</p>
-              <p class="chose__item">да я вообще не пью, может только по праздникам</p>
-            </div>
-          </div>
-        </div>
-        <div>
-          <p class="popup__chose-text">Средние траты на алкоголь за раз, ₽</p>
-          <input type="number" class="input" placeholder="Введите сумму в рублях" required="">
-        </div>
-        <div>
-          <p class="popup__chose-text">Количество порций за раз</p>
-          <input type="number" class="input" placeholder="Введите количество порций за раз" required="">
-        </div>
-      </div>
-      <div class="popup__bottom">
-        <div class="popup__bottom-column">
-          <div type="submit" class="btn btn_consult popup__button popup-btn btn_accent">
-            <div class="popup__results">
-              <p>54 000 ₽</p>
-              <p>экономия за год</p>
-            </div>
-            <div class="point-mark">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 27">
-                <path fill="#FFF" fill-rule="evenodd"
-                  d="M12 27c-5.7 0-8.5 0-10.3-2C0 23 0 20 0 13.5S0 3.9 1.8 2C3.5 0 6.3 0 12 0c5.6 0 8.5 0 10.2 2C24 4 24 7 24 13.5S24 23 22.2 25c-1.7 2-4.6 2-10.2 2Zm4-21.6H6.8A2 2 0 0 0 5.4 7v2.4a2 2 0 0 0 1.4 1.4H17.2a2 2 0 0 0 1.4-1.4V6.9a2 2 0 0 0-1.4-1.4L16 5.4Zm-8 9.4c0 .8-.6 1.4-1.3 1.4-.8 0-1.4-.6-1.4-1.4a1.3 1.3 0 1 1 2.7 0Zm4 1.4c.7 0 1.3-.6 1.3-1.4a1.3 1.3 0 1 0-2.6 0c0 .8.6 1.4 1.3 1.4Zm6.7-1.4c0 .8-.6 1.4-1.4 1.4-.7 0-1.3-.6-1.3-1.4a1.3 1.3 0 1 1 2.7 0Zm-1.4 6.8c.8 0 1.4-.6 1.4-1.4 0-.7-.6-1.3-1.4-1.3-.7 0-1.3.6-1.3 1.4 0 .7.6 1.3 1.3 1.3Zm-4-1.4a1.3 1.3 0 1 1-2.6 0c0-.7.6-1.3 1.3-1.3.7 0 1.3.6 1.3 1.4Zm-6.6 1.4c.7 0 1.3-.6 1.3-1.4 0-.7-.6-1.3-1.3-1.3-.8 0-1.4.6-1.4 1.4 0 .7.6 1.3 1.4 1.3Z" />
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div class="popup__bottom-column">
-          <div type="submit" class="btn btn_consult popup__button popup-btn btn_accent">
-            <div class="popup__results">
-              <p>21 день</p>
-              <p>жизни сохранено</p>
-            </div>
-            <div class="point-mark">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 26">
-                <path fill="#FFF" fill-rule="evenodd"
-                  d="M9 0C3.7 0 1 0 .2 1.7L.1 2c-.5 1.8 1.3 4 5 8.1L7.8 13l-2.5 2.8C1.4 20-.4 22 0 23.8l.1.5C1 26 3.8 26 9 26c5.3 0 8 0 8.7-1.7l.2-.4c.5-1.8-1.3-4-5.1-8.1L10.3 13l2.5-2.8c3.8-4.2 5.6-6.3 5.1-8 0-.2 0-.4-.2-.5C17 0 14.3 0 9 0Z" />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-      <button class="btn btn_call btn_light stocks-page__button popup-btn" data-path="popup-consult">
-        <span>бесплатная консультация</span>
-        <div class="point-mark point-plus"></div>
-      </button>
+      <button class="close-popup point-mark point-mark_56"></button>
+
     </div>
   </div>
 </div>
 
-<div class="popup popup_test" data-target="popup-test">
+<!-- <div class="popup popup_test" data-target="popup-test">
   <div class="popup__body">
     <div class="popup__content">
       <button class="close-popup"></button>
@@ -179,9 +259,9 @@
       </button>
     </div>
   </div>
-</div>
+</div> -->
 
-<div class="popup popup_test-result" data-target="popup-test-result">
+<!-- <div class="popup popup_test-result" data-target="popup-test-result">
   <div class="popup__body">
     <div class="popup__content">
       <button class="close-popup"></button>
@@ -211,4 +291,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->

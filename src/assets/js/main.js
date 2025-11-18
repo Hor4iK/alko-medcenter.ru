@@ -156,13 +156,13 @@ document.addEventListener('DOMContentLoaded', function () {
         title.addEventListener('click', (evt) => {
           evt.stopPropagation();
           if (title.classList.contains('active')) {
-              let height = content.querySelector('.hide-item__content').offsetHeight;
-             content.style.height = height + 'px';
+            let height = content.querySelector('.hide-item__content').offsetHeight;
+            content.style.height = height + 'px';
             title.classList.remove('active');
             content.classList.remove('active');
-           setTimeout(() => {
-             content.removeAttribute('style');
-           }, 1);
+            setTimeout(() => {
+              content.removeAttribute('style');
+            }, 1);
           }
           else {
             hideTitles.forEach((element) => {
@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function () {
             content.style.height = height + 'px';
             setTimeout(() => {
               if (content.classList.contains('active')) {
-                  content.setAttribute('style', 'height: auto');
+                content.setAttribute('style', 'height: auto');
               }
             }, 301);
           }
@@ -965,35 +965,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   /* -- END POPUPS  -- */
 
-
-
-  /* -- POPUP CALCULATOR -- */
-  const popupCalculator = document.querySelector('.popup_calculator');
-
-  if (popupCalculator) {
-    const serviceTitle = popupCalculator.querySelectorAll('.chose__top-container');
-    const serviceContent = popupCalculator.querySelectorAll(".chose__bottom-container");
-
-    if (serviceTitle && serviceContent) {
-      tabs('.popup__chose-container', serviceTitle, serviceContent);
-    }
-
-    const item = popupCalculator.querySelector('.popup__chose-container');
-    const categories = item.querySelectorAll('.chose__item');
-    const listTitle = item.querySelector('.chose__subtitle');
-
-    listTitle.textContent = categories[0].textContent;
-
-    categories.forEach(category => {
-      category.addEventListener('click', evt => {
-        const categoryTitle = evt.target.textContent;
-        listTitle.textContent = categoryTitle;
-      })
-    })
-  }
-  /* -- END POPUP CALCULATOR -- */
-
-
   /* -- TOTOP -- */
   const btnTop = document.querySelector('#toTop');
   if (btnTop) {
@@ -1023,8 +994,6 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
   /* -- END TOTOP -- */
-
-
 
   /* -- OBSERVER -- */
   const observer = new IntersectionObserver((entries) => {
@@ -1056,9 +1025,180 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   /* -- END OBSERVER -- */
 
-
   //view photos fancybox
   Fancybox.bind("[data-fancybox]");
 
+  /*POPUP CALCULATOR*/
+  const popupCalculator = document.querySelector('.calculator');
+  if (popupCalculator) {
+    //range value
+    const inputRangeAge = popupCalculator.querySelector('#age');
+    const outputAge = popupCalculator.querySelector('#valueAge');
+    if (inputRangeAge && outputAge) {
+      inputRangeAge.addEventListener('input', evt => {
+        outputAge.textContent = evt.target.value;
+      })
+    }
+
+    const inputRangeExp = popupCalculator.querySelector('#exp');
+    const outputExp = popupCalculator.querySelector('#valueExp');
+    if (inputRangeExp && outputExp) {
+      inputRangeExp.addEventListener('input', evt => {
+        outputExp.textContent = evt.target.value;
+      })
+    }
+
+
+
+    const form = popupCalculator.querySelector('.calculator__wrapper');
+    const pages = popupCalculator.querySelectorAll('.calculator__page');
+    const prevButton = popupCalculator.querySelector('.point-mark_arrow:not(.point-mark_arrow_right)');
+    const nextButton = popupCalculator.querySelector('.point-mark_arrow_right');
+    const pageNumber = popupCalculator.querySelector('.page-number');
+    const totalPages = popupCalculator.querySelector('.calculator__count span:last-child');
+
+    let currentPage = 0;
+    const totalPagesCount = pages.length - 1; // -1 потому что последняя страница результата
+
+    // Инициализация
+    totalPages.textContent = String(totalPagesCount).padStart(2, '0');
+    updateNavigation();
+
+    // Функция проверки валидности текущей страницы
+    function isCurrentPageValid() {
+      const currentPageElement = pages[currentPage];
+      const inputs = currentPageElement.querySelectorAll('input[type="radio"]:checked, input[type="range"]');
+
+      // Для радио-кнопок проверяем, что хотя бы одна выбрана
+      const radioInputs = currentPageElement.querySelectorAll('input[type="radio"]');
+      if (radioInputs.length > 0) {
+        const hasCheckedRadio = Array.from(radioInputs).some(input => input.checked);
+        if (!hasCheckedRadio) return false;
+      }
+
+      // Для range всегда валидно, так как есть значение по умолчанию
+      return true;
+    }
+
+    // Функция обновления навигации
+    function updateNavigation() {
+      // Обновляем номер страницы
+      pageNumber.textContent = String(currentPage + 1).padStart(2, '0');
+
+      // Обновляем кнопку "Назад"
+      prevButton.disabled = currentPage === 0;
+
+      // Обновляем кнопку "Вперед"
+      const isValid = isCurrentPageValid();
+      nextButton.disabled = currentPage === totalPagesCount || !isValid;
+
+      // Обновляем видимость страниц
+      pages.forEach((page, index) => {
+        page.classList.toggle('active', index === currentPage);
+      });
+    }
+
+    // Функция перехода на следующую страницу
+    function goToNextPage() {
+      if (currentPage < totalPagesCount && isCurrentPageValid()) {
+        currentPage++;
+        updateNavigation();
+      }
+    }
+
+    // Функция перехода на предыдущую страницу
+    function goToPrevPage() {
+      if (currentPage > 0) {
+        currentPage--;
+        updateNavigation();
+      }
+    }
+
+    // Обработчики кликов на кнопки
+    prevButton.addEventListener('click', goToPrevPage);
+    nextButton.addEventListener('click', goToNextPage);
+
+    // Обработчики изменений в инпутах (для валидации в реальном времени)
+    form.addEventListener('change', function (e) {
+      if (e.target.matches('input[type="radio"], input[type="range"]')) {
+        updateNavigation();
+      }
+    });
+  }
+  /*END POPUP CALCULATOR*/
 });
 
+
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   const pages = document.querySelectorAll(".popup-quiz__page");
+//   const btnPrev = document.querySelector(".popup-quiz__btn-prev");
+//   const btnNext = document.querySelector(".popup-quiz__btn-next");
+//   const pagination = document.querySelector(".popup-quiz__paginations");
+//   const btns = document.querySelector(".popup-quiz__bottom");
+
+//   let currentPage = 0;
+
+//   function showPage(index) {
+//     pages.forEach((page, i) => {
+//       page.style.display = i === index ? "block" : "none";
+//     });
+
+//     // кнопка "Предыдущий"
+//     btnPrev.disabled = index === 0;
+
+//     // обновление пагинации
+//     pagination.querySelector("span:first-child").textContent = String(index + 1).padStart(2, "0");
+//     pagination.querySelector("span:last-child").textContent = String(pages.length - 1).padStart(2, "0");
+
+//     // проверяем доступность кнопки "Следующий"
+//     checkNextAvailability();
+
+//     // если последняя страница → скрываем кнопку "Следующий"
+//     if (index === pages.length - 1) {
+//       btns.style.display = "none";
+//     } else {
+//       btns.style.display = "flex";
+//     }
+//   }
+
+//   function checkNextAvailability() {
+//     const inputs = pages[currentPage].querySelectorAll("input[type=radio], input[type=checkbox]");
+//     if (inputs.length === 0) {
+//       btnNext.disabled = false;
+//       return;
+//     }
+
+//     let checked = Array.from(inputs).some(input => input.checked);
+//     btnNext.disabled = !checked;
+//   }
+
+//   // события
+//   btnPrev.addEventListener("click", () => {
+//     console.log(btnPrev)
+//     if (currentPage > 0) {
+//       currentPage--;
+//       showPage(currentPage);
+//     }
+//   });
+
+//   btnNext.addEventListener("click", () => {
+//     console.log("btnNext")
+//     if (currentPage < pages.length - 1) {
+//       currentPage++;
+//       showPage(currentPage);
+//     }
+//   });
+
+//   // следим за изменением radio/checkbox
+//   pages.forEach(page => {
+//     page.addEventListener("change", () => {
+//       if (page === pages[currentPage]) {
+//         checkNextAvailability();
+//       }
+//     });
+//   });
+
+//   // инициализация
+//   showPage(currentPage);
+// });
