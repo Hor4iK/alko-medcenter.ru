@@ -27,8 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
   /* -- END SEARCH  -- */
 
 
-
-
   /* -- AUTOMATIC CONTENT -- */
   const textAreas = document.querySelectorAll('.text');
   if (textAreas && textAreas.length > 0) {
@@ -114,8 +112,6 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
   /* -- END AUTOMATIC CONTENT   -- */
-
-
 
 
   /* -- MENU MOBILE  -- */
@@ -224,7 +220,6 @@ document.addEventListener('DOMContentLoaded', function () {
   /* -- END MENU MOBILE  -- */
 
 
-
   /* -- PAGINATION  -- */
   function hiddenItems(tabContent) {
     elements = Array.from(tabContent.children);
@@ -266,7 +261,6 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
   /* -- END PAGINATION  -- */
-
 
 
   /* -- CATEGORIES  -- */
@@ -377,10 +371,8 @@ document.addEventListener('DOMContentLoaded', function () {
   /* -- END TABS  -- */
 
 
-
   /* -- SERVICES  -- */
   const service = document.querySelector('.services');
-
   if (service) {
 
     //Services tabs
@@ -410,10 +402,8 @@ document.addEventListener('DOMContentLoaded', function () {
   /* -- END SERVICES  -- */
 
 
-
   /* -- ALLOCATOR PAGE -- */
   const allocator = document.querySelector('.allocator');
-
   if (allocator) {
     const serviceTitle = allocator.querySelectorAll('.categories__top-container');
     const serviceContent = allocator.querySelectorAll(".categories__bottom-container");
@@ -439,7 +429,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   }
   /* -- END ALLOCATOR PAGE -- */
-
 
 
   /* -- VACANCIES  -- */
@@ -483,7 +472,6 @@ document.addEventListener('DOMContentLoaded', function () {
   /* -- END FAQ  -- */
 
 
-
   /* -- LAW-PAGE  -- */
   const law = document.querySelector('.legal-information');
   if (law) {
@@ -497,7 +485,6 @@ document.addEventListener('DOMContentLoaded', function () {
   /* -- END LAW-PAGE -- */
 
 
-
   /* -- MYTHS SECTION  -- */
   const myths = document.querySelector('.myths');
   if (myths) {
@@ -509,7 +496,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
   /* -- END MYTHS SECTION -- */
-
 
 
   /* -- DOCTOR  -- */
@@ -541,34 +527,6 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
   /* -- END AUTOCONTENT RESIZE  -- */
-
-
-  /* -- SCHEME SECTION  -- */
-  const scheme = document.querySelector('.scheme-work');
-  if (scheme) {
-    const titleArray = scheme.querySelectorAll('.scheme-work__top-container');
-    const contentArray = scheme.querySelectorAll('.scheme-work__bottom-container');
-
-    if (titleArray && contentArray) {
-      tabs('.scheme-work__item', titleArray, contentArray);
-    }
-  }
-  /* -- END SCHEME SECTION -- */
-
-
-  /* -- HOW-GOING SECTION  -- */
-  const how = document.querySelector('.how-procedure');
-  if (how) {
-    const titleArray = how.querySelectorAll('.how-procedure__top-container');
-    const contentArray = how.querySelectorAll('.how-procedure__bottom-container');
-
-    if (titleArray && contentArray) {
-
-      tabs('.how-procedure__item', titleArray, contentArray);
-    }
-  }
-  /* -- END HOW-GOING SECTION -- */
-
 
 
   /* -- COPY BUTTON -- */

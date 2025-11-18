@@ -550,7 +550,7 @@
       content: "";
       display: block;
       background: url(../img/photo/molodaa-krasivaa-zensina.webp) no-repeat
-        center/center;
+        center;
       background-size: contain;
       width: 80%;
       height: 80%;
@@ -573,6 +573,163 @@
       .popup__button {
         order: 4;
         margin-block-start: 6px;
+      }
+    }
+  }
+}
+
+.popup-responce {
+  .popup__content {
+    max-width: 1200px;
+    background-color: #fbf9f8;
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h3 {
+      font-size: clamp(1.875rem, 1.35rem + 1.2vw, 2.25rem);
+      font-weight: 600;
+      line-height: 1.15;
+    }
+
+    p {
+      font-size: $font-size;
+      font-weight: 500;
+      line-height: 1.5;
+      margin-block: clamp(1.5rem, 0.1rem + 3.2vw, 2.5rem)
+        clamp(2.5rem, 1.625rem + 2vw, 3.125rem);
+    }
+
+    .button {
+      max-width: 360px;
+      width: 100%;
+      position: static;
+
+      &::before,
+      &::after {
+        content: none;
+      }
+    }
+  }
+}
+
+.popup.city {
+  .popup__content {
+    max-width: 900px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-block-end: 0;
+  }
+
+  .search__form {
+    max-width: 450px;
+    width: 100%;
+    margin-block-start: 0;
+    margin-block-end: clamp(1.5rem, 0.1rem + 3.2vw, 2.5rem);
+    border-radius: 8px;
+
+    input {
+      height: 36px;
+    }
+  }
+
+  .city__popular {
+    // display: none;
+    padding-block-end: clamp(1rem,-2.85rem + 8.8vw,3.75rem);
+    width: 100%;
+
+    &-title {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1;
+      margin-block-end: clamp(1.25rem, 0.375rem + 2vw, 1.875rem);
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 200px);
+      justify-items: start;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+
+      li {
+        list-style: none;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+
+        &::before {
+          content: "";
+          display: block;
+          width: 16px;
+          height: 20px;
+          background: url(../img/icons/map.svg) no-repeat center;
+          background-size: contain;
+        }
+
+        a {
+          color: inherit;
+
+          &:hover {
+            color: $color-accent;
+          }
+        }
+      }
+    }
+  }
+
+  .city__search-result {
+  }
+
+  .city__no-results-message {
+    display: none;
+  }
+
+  .city__search-wrap {
+    max-width: 436px;
+    width: 100%;
+    display: none;
+  }
+
+  .city__list_result {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 280px;
+    padding-inline-end: 12px;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      @media screen and (width<=500px) {
+        width: 3px;
+      }
+    }
+    &::-webkit-scrollbar-track {
+      background-color: $color-light-grey;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 2px;
+      background-color: $color-accent;
+    }
+
+    li {
+      border-bottom: 1px solid $color-light-grey;
+
+      a {
+        display: block;
+        padding-block: 20px;
+      }
+
+      &.none {
+        display: none;
       }
     }
   }

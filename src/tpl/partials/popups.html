@@ -215,100 +215,85 @@
   </div>
 </div>
 
-<!-- <div class="popup popup_test" data-target="popup-test">
+<div class="popup city" data-target="popup-city">
   <div class="popup__body">
     <div class="popup__content">
-      <button class="close-popup"></button>
-
-      <p class="popup__title main-title">
-        <span>Экспресс-тест </span>на алкогольную зависимость
+      <button class="close-popup point-mark point-mark_56"></button>
+      <p class="popup__title">
+        Укажите ваш город
       </p>
-      <forms class="popup__form">
-        <div class="pagination__list">
-          <span class="pagination__point active"></span>
-          <span class="pagination__point"></span>
-          <span class="pagination__point"></span>
-          <span class="pagination__point"></span>
-          <span class="pagination__point"></span>
+      <form class="popup__form search__form">
+        <input placeholder="Поиск по сайту" type="text" class="search__input">
+      </form>
+      <div class="city__popular">
+        <p class="city__popular-title">Популярные города:</p>
+        <ul>
+          <li><a href="#">Ростов-на-Дону</a></li>
+          <li><a href="#">Ростов-на-Дону</a></li>
+          <li><a href="#">Ростов-на-Дону</a></li>
+          <li><a href="#">Владивосток</a></li>
+          <li><a href="#">Владивосток</a></li>
+          <li><a href="#">Владивосток</a></li>
+          <li><a href="#">Москва</a></li>
+          <li><a href="#">Москва</a></li>
+          <li><a href="#">Москва</a></li>
+          <li><a href="#">Санкт-Петербург</a></li>
+          <li><a href="#">Санкт-Петербург</a></li>
+          <li><a href="#">Санкт-Петербург</a></li>
+          <li><a href="#">Великий Новгород</a></li>
+          <li><a href="#">Великий Новгород</a></li>
+          <li><a href="#">Великий Новгород</a></li>
+        </ul>
+      </div>
+      <div class="popup__search city__search none">
+        <ul class="popup__search_list city__list">
+        </ul>
+      </div>
+      <div class="city__search-wrap">
+        <div class="popup__search popup__search-result city__search-result">
+          <p class="no-results-message city__no-results-message">По вашему запросу города не найдены</p>
+          <ul class="search-list popup__search_list city__list_result">
+            <li><a href="#" class="search-name">Воронеж 3000</a></li>
+            <li><a href="#" class="search-name">Воронеж 3000</a></li>
+            <li><a href="#" class="search-name">Воронеж 3000</a></li>
+            <li><a href="#" class="search-name">Воронеж 3000</a></li>
+            <li><a href="#" class="search-name">Воронеж 3000</a></li>
+            <li><a href="#" class="search-name">Воронеж 3000</a></li>
+            <li class="none"><a href="#" class="search-name">Воронеж 2000</a></li>
+            <li class="none"><a href="#" class="search-name">Воронеж</a></li>
+          </ul>
         </div>
-        <p class="popup__chose-text">Как часто вы употребляете алкоголь?</p>
-        <label class="check-input">
-          <input type="checkbox" name="how-often">
-          <p>Раз в месяц или реже</p>
-          <span class="check-mark point-mark">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-              <path fill="#4995EC" fill-rule="evenodd"
-                d="M10 20c-4.72 0-7.08 0-8.54-1.47C0 17.07 0 14.71 0 10c0-4.72 0-7.08 1.46-8.54C2.92 0 5.28 0 10 0c4.71 0 7.07 0 8.53 1.46C20 2.92 20 5.28 20 10c0 4.71 0 7.07-1.47 8.53C17.07 20 14.71 20 10 20Zm4.03-13.04c.29.3.29.77 0 1.07l-5 5a.77.77 0 0 1-1.07 0l-2-2a.77.77 0 0 1 0-1.07.77.77 0 0 1 1.07 0l1.47 1.47 4.46-4.47a.77.77 0 0 1 1.07 0Z" />
-            </svg>
-          </span>
-        </label>
-        <label class="check-input">
-          <input type="checkbox" name="how-often">
-          <p>2-4 раза в месяц</p>
-          <span class="check-mark point-mark">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-              <path fill="#4995EC" fill-rule="evenodd"
-                d="M10 20c-4.72 0-7.08 0-8.54-1.47C0 17.07 0 14.71 0 10c0-4.72 0-7.08 1.46-8.54C2.92 0 5.28 0 10 0c4.71 0 7.07 0 8.53 1.46C20 2.92 20 5.28 20 10c0 4.71 0 7.07-1.47 8.53C17.07 20 14.71 20 10 20Zm4.03-13.04c.29.3.29.77 0 1.07l-5 5a.77.77 0 0 1-1.07 0l-2-2a.77.77 0 0 1 0-1.07.77.77 0 0 1 1.07 0l1.47 1.47 4.46-4.47a.77.77 0 0 1 1.07 0Z" />
-            </svg>
-          </span>
-        </label>
-        <label class="check-input">
-          <input type="checkbox" name="how-often">
-          <p>2-3 раза в неделю</p>
-          <span class="check-mark point-mark">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-              <path fill="#4995EC" fill-rule="evenodd"
-                d="M10 20c-4.72 0-7.08 0-8.54-1.47C0 17.07 0 14.71 0 10c0-4.72 0-7.08 1.46-8.54C2.92 0 5.28 0 10 0c4.71 0 7.07 0 8.53 1.46C20 2.92 20 5.28 20 10c0 4.71 0 7.07-1.47 8.53C17.07 20 14.71 20 10 20Zm4.03-13.04c.29.3.29.77 0 1.07l-5 5a.77.77 0 0 1-1.07 0l-2-2a.77.77 0 0 1 0-1.07.77.77 0 0 1 1.07 0l1.47 1.47 4.46-4.47a.77.77 0 0 1 1.07 0Z" />
-            </svg>
-          </span>
-        </label>
-        <label class="check-input">
-          <input type="checkbox" name="how-often">
-          <p>4 и более раз в неделю</p>
-          <span class="check-mark point-mark">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-              <path fill="#4995EC" fill-rule="evenodd"
-                d="M10 20c-4.72 0-7.08 0-8.54-1.47C0 17.07 0 14.71 0 10c0-4.72 0-7.08 1.46-8.54C2.92 0 5.28 0 10 0c4.71 0 7.07 0 8.53 1.46C20 2.92 20 5.28 20 10c0 4.71 0 7.07-1.47 8.53C17.07 20 14.71 20 10 20Zm4.03-13.04c.29.3.29.77 0 1.07l-5 5a.77.77 0 0 1-1.07 0l-2-2a.77.77 0 0 1 0-1.07.77.77 0 0 1 1.07 0l1.47 1.47 4.46-4.47a.77.77 0 0 1 1.07 0Z" />
-            </svg>
-          </span>
-        </label>
-      </forms>
-      <button class="btn btn_consult popup__button popup-btn btn_accent">
-        <span>следующий вопрос</span>
-        <div class="point-mark point-arrow"></div>
-      </button>
+      </div>
     </div>
   </div>
-</div> -->
+</div>
 
-<!-- <div class="popup popup_test-result" data-target="popup-test-result">
+<div class="popup popup-responce" data-modal-ok="result-wrapper" data-modal-open="open active">
   <div class="popup__body">
     <div class="popup__content">
-      <button class="close-popup"></button>
+      <button class="close-popup point-mark point-mark_56"></button>
 
-      <div>
-        <p class="popup__title main-title">
-          Признаков алкогольной <span>зависимости нет</span>
-        </p>
-        <p class="popup__subtitle">
-          Ваши ответы указывают на то, что вы контролируете употребление алкоголя и не демонстрируете признаков
-          зависимости. Вы осознанно подходите к выбору ситуаций, в которых употребляете спиртное, и не испытываете тяги
-          к
-          нему в повседневной жизни.
-        </p>
+      <div class="result-wrapper popup-change-response__wrapper">
+        <h3>Заявка успешно отправлена!</h3>
+        <p></p>
       </div>
 
-      <div>
-        <span class="popup__separation"></span>
-        <p class="popup__caption">Оставьте заявку для записи на бесплатную консультацию</p>
-        <forms class="popup__form">
-          <input type="tel" class="input" name="params[phone][]" placeholder="+7(999) 999-99-99" required="">
-          <button type="submit" class="btn btn_consult popup__button popup-btn btn_accent">
-            <span>записаться</span>
-            <div class="point-mark"><span></span><span></span></div>
-          </button>
-        </forms>
-      </div>
+      <button class="button button_accent close-popup">Хорошо</button>
     </div>
   </div>
-</div> -->
+</div>
+
+<div class="popup popup-responce" data-modal-err="result-wrapper" data-modal-open="open active">
+  <div class="popup__body">
+    <div class="popup__content">
+      <button class="close-popup point-mark point-mark_56"></button>
+
+      <div class="result-wrapper popup-change-response__wrapper">
+        <h3>Произошла какая-то ошибка</h3>
+        <p></p>
+      </div>
+
+      <button class="button button_accent close-popup">Повторить попытку</button>
+    </div>
+  </div>
+</div>
