@@ -1,4 +1,5 @@
 $max-width: 1800px;
+$base-section-margin: clamp(1.875rem, -4.25rem + 14vw, 6.25rem); //30px -> 100px
 
 // COLORS
 $color-accent: #D9A28C;
@@ -20,3 +21,4 @@ $font-size-h1: clamp(1.875rem, -1.1rem + 6.8vw, 4rem);
 $font-size-h2: clamp(1.75rem, -0.525rem + 5.2vw, 3.375rem);
 $font-size-h3: clamp(1.625rem, 0.75rem + 2vw, 2.25rem);
 $font-size-h4: clamp(1.375rem, 1.025rem + 0.8vw, 1.625rem);
+

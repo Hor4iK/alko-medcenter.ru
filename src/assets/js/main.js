@@ -375,29 +375,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const service = document.querySelector('.services');
   if (service) {
 
-    //Services tabs
-    const serviceTitle = service.querySelectorAll('.services__top-container');
-    const serviceContent = service.querySelectorAll(".services__bottom-container");
-    if (serviceTitle && serviceContent) {
-      tabs('.services__item', serviceTitle, serviceContent);
-    }
-
-    //Services category
-    const serviceItems = service.querySelectorAll('.services__item');
-
-    serviceItems.forEach(item => {
-      const categories = item.querySelectorAll('.services__category__item');
-      const categoriesContent = item.querySelectorAll(".services__table");
-
-      categoriesSwitch(service, categories, categoriesContent, ".services__category__item.active", ".services__table.active", true);
-    })
-
-    //Swipe lists of category
-    const containersArray = document.querySelectorAll('.services__category__list');
-    containersArray.forEach(container => {
-      grabListListeners(container);
-    })
-
   }
   /* -- END SERVICES  -- */
 
@@ -405,111 +382,23 @@ document.addEventListener('DOMContentLoaded', function () {
   /* -- ALLOCATOR PAGE -- */
   const allocator = document.querySelector('.allocator');
   if (allocator) {
-    const serviceTitle = allocator.querySelectorAll('.categories__top-container');
-    const serviceContent = allocator.querySelectorAll(".categories__bottom-container");
-
-    if (serviceTitle && serviceContent) {
-      tabs('.allocator__categories__list', serviceTitle, serviceContent);
-    }
-
-    const item = allocator.querySelector('.allocator__categories__list');
-    const categories = item.querySelectorAll('.categories__item');
-    const listTitle = item.querySelector('.categories__subtitle');
-    const categoriesContent = allocator.querySelectorAll(".allocator__block");
-
-    listTitle.textContent = categories[0].textContent;
-
-    categories.forEach(category => {
-      category.addEventListener('click', evt => {
-        const categoryTitle = evt.target.textContent;
-        listTitle.textContent = categoryTitle;
-      })
-    })
-    categoriesSwitch(allocator, categories, categoriesContent, ".categories__item.active", ".allocator__block.active");
 
   }
   /* -- END ALLOCATOR PAGE -- */
 
 
-  /* -- VACANCIES  -- */
-  const vacancies = document.querySelector('.part-team');
-  if (vacancies) {
-    const titleArray = vacancies.querySelectorAll('.part-team__top-container');
-    const contentArray = vacancies.querySelectorAll('.part-team__bottom-container');
+  /* -- PRICE  -- */
+  //Price tabs
+  const price = document.querySelector('.price');
+  if (price) {
+    const priceTabsList = price.querySelector('.price__tabs');
+    const priceCategories = price.querySelectorAll('.price__tab');
+    const priceContent = price.querySelectorAll('.price__tabs-content');
 
-    if (titleArray && contentArray) {
-      tabs('.part-team__item', titleArray, contentArray);
-    }
+    grabListListeners(priceTabsList);
+    categoriesSwitch(price, priceCategories, priceContent, ".price__tab.active", ".price__tabs-content.active");
   }
-  /* -- END VACANCIES  -- */
-
-
-  /* -- FAQ  -- */
-  const faq = document.querySelector('.faq-section');
-  if (faq) {
-    const titleArray = faq.querySelectorAll('.faq-section__top-container');
-    const contentArray = faq.querySelectorAll('.faq-section__bottom-container');
-    const pagList = faq.querySelector('.pag-list');
-    const moreBtn = faq.querySelector('.btn_more');
-
-    if (titleArray && contentArray) {
-      tabs('.faq-section__item', titleArray, contentArray);
-    }
-
-    if (pagList && moreBtn) {
-      pagList.classList.add('pag-active');
-
-      HiddenElementsInit(pagList, 4, moreBtn);
-      moreBtn.addEventListener("click", (evt) => {
-        hiddenElements = hiddenItems(pagList);
-        for (let i = 0; i < hiddenElements.length; i++) {
-          hiddenElements[i].classList.remove("hide");
-        }
-        moreBtn.classList.remove("active");
-      })
-    }
-  }
-  /* -- END FAQ  -- */
-
-
-  /* -- LAW-PAGE  -- */
-  const law = document.querySelector('.legal-information');
-  if (law) {
-    const titleArray = law.querySelectorAll('.legal-information__top-container');
-    const contentArray = law.querySelectorAll('.legal-information__bottom-container');
-
-    if (titleArray && contentArray) {
-      tabs('.legal-information__item', titleArray, contentArray);
-    }
-  }
-  /* -- END LAW-PAGE -- */
-
-
-  /* -- MYTHS SECTION  -- */
-  const myths = document.querySelector('.myths');
-  if (myths) {
-    const titleArray = myths.querySelectorAll('.myths__top-container');
-    const contentArray = myths.querySelectorAll('.myths__bottom-container');
-
-    if (titleArray && contentArray) {
-      tabs('.myths__item', titleArray, contentArray);
-    }
-  }
-  /* -- END MYTHS SECTION -- */
-
-
-  /* -- DOCTOR  -- */
-  //Doctor tabs
-  const education = document.querySelector('.doctor-page__education');
-  if (education) {
-    const educationList = education.querySelector('.doctor-page__education-tabs');
-    const educationCategories = education.querySelectorAll('.doctor-page__education-tab');
-    const educationContent = education.querySelectorAll('.doctor-page__education-items');
-
-    grabListListeners(educationList);
-    categoriesSwitch(education, educationCategories, educationContent, ".doctor-page__education-tab.active", ".doctor-page__education-items.active");
-  }
-  /* -- END DOCTOR  -- */
+  /* -- END PRICE  -- */
 
 
   /* -- AUTOCONTENT RESIZE  -- */
@@ -529,334 +418,9 @@ document.addEventListener('DOMContentLoaded', function () {
   /* -- END AUTOCONTENT RESIZE  -- */
 
 
-  /* -- COPY BUTTON -- */
-  const copyBtns = document.querySelectorAll('.copylink-btn');
-  if (copyBtns && copyBtns.length > 0) {
-    copyBtns.forEach(copyBtn => {
-      copyBtn.addEventListener('click', () => {
-        const textBtn = this.querySelector('.copylink-btn__text');
-        const originalText = textBtn.textContent;
-        const currentUrl = window.location.href;
-        navigator.clipboard.writeText(currentUrl);
-        textBtn.textContent = 'Ссылка скопирована!';
-        setTimeout(() => {
-          textBtn.textContent = originalText;
-        }, 2000);
-      })
-    })
-  }
-  /* -- END COPY BUTTON -- */
-
-
-
   /* -- SLIDERS  -- */
 
-  //Slider INTRO, turns off when resize
-  introSwiper = document.querySelector(".intro");
-  if (introSwiper) {
-    introSwiperCheck = false;
-    ['resize', 'load'].forEach((event) => {
-      window.addEventListener(event, function () {
-        if (window.innerWidth <= 650 && !introSwiperCheck) {
-          introSwiperCheck = new Swiper(introSwiper.querySelector('.intro__swiper'), {
-            direction: 'horizontal',
-            slidesPerView: 1.1,
-            grabCursor: true,
-            spaceBetween: 10
-          });
-        }
-        if (window.innerWidth > 650 && introSwiperCheck) {
-          introSwiperCheck.destroy(true, true);
-          introSwiperCheck = false
-        }
-      })
-    })
-  }
-
-  //Slider CARDS, turns on when mobile
-  cardsSwipers = document.querySelectorAll(".cards");
-  if (cardsSwipers && cardsSwipers.length > 0) {
-    swiperCheck = new Array();
-    for (let i = 0; i < cardsSwipers.length; i++) {
-      const cardsList = cardsSwipers[i].querySelector('.cards__list');
-      swiperCheck[i] = false;
-      ['resize', 'load'].forEach((event) => {
-        window.addEventListener(event, function () {
-          if (window.innerWidth <= 1300 && !swiperCheck[i]) {
-            cardsList.classList.add('swiper-wrapper');
-            swiperCheck[i] = new Swiper(cardsSwipers[i].querySelector('.cards__swiper'), {
-              direction: 'horizontal',
-              slidesPerView: 1,
-              grabCursor: true,
-              spaceBetween: 10,
-              breakpoints: {
-                0: {
-                  slidesPerView: 1.1,
-                  spaceBetween: 10
-                },
-                750: {
-                  slidesPerView: 2,
-                  spaceBetween: 15
-                }
-              }
-            });
-          }
-          if (window.innerWidth > 1300 && swiperCheck[i]) {
-            cardsList.classList.remove('swiper-wrapper');
-            swiperCheck[i].destroy(true, true);
-            swiperCheck[i] = false
-          }
-        })
-      });
-    }
-  }
-
-  //Slider Situations, turns on when mobile
-  situationSwiper = document.querySelector(".situation");
-  if (situationSwiper) {
-    const situationList = situationSwiper.querySelector('.situation__content');
-    situationSwiperCheck = false;
-    ['resize', 'load'].forEach((event) => {
-      window.addEventListener(event, function () {
-        if (window.innerWidth <= 650 && !situationSwiperCheck) {
-          situationList.classList.add('swiper-wrapper');
-          situationSwiperCheck = new Swiper(situationSwiper.querySelector('.situation__body'), {
-            direction: 'vertical',
-            slidesPerView: 5,
-            grabCursor: true,
-            spaceBetween: 10,
-          });
-        }
-        if (window.innerWidth > 650 && situationSwiperCheck) {
-          situationList.classList.remove('swiper-wrapper');
-          situationSwiperCheck.destroy(true, true);
-          situationSwiperCheck = false
-        }
-      })
-    })
-  }
-
-  //Slider CENTER, turns on when mobile
-  centerSwiper = document.querySelector(".center-lecheniya");
-  if (centerSwiper) {
-    const centerList = centerSwiper.querySelector('.center-lecheniya__gallery');
-    const centerItemArray = centerList.querySelectorAll('.center-lecheniya__gallery__item:not(.center-lecheniya__gallery__item_more)');
-    centerSwiperCheck = false;
-    ['resize', 'load'].forEach((event) => {
-      window.addEventListener(event, function () {
-        if (window.innerWidth <= 800 && !centerSwiperCheck) {
-          if (centerItemArray && centerItemArray.length > 0) {
-            centerItemArray.forEach(item => {
-              item.classList.add('swiper-slide');
-            })
-          }
-          centerList.classList.add('swiper-wrapper');
-          centerSwiperCheck = new Swiper(centerSwiper.querySelector('.center-lecheniya__gallery__wrapper'), {
-            direction: 'horizontal',
-            slidesPerView: 1.1,
-            grabCursor: true,
-            spaceBetween: 10
-          });
-        }
-        if (window.innerWidth > 800 && centerSwiperCheck) {
-          const centerItemArray = centerList.querySelectorAll('.swiper-slide');
-          centerList.classList.remove('swiper-wrapper');
-          if (centerItemArray && centerItemArray.length > 0) {
-            centerItemArray.forEach(item => {
-              item.classList.remove('swiper-slide');
-            })
-          }
-          centerSwiperCheck.destroy(true, true);
-          centerSwiperCheck = false
-        }
-      })
-    })
-  }
-
-  //Slider KNOWLEDGE, turns on when mobile
-  knowledgeSwiper = document.querySelector(".knowledge");
-  if (knowledgeSwiper) {
-    const knowledgeList = knowledgeSwiper.querySelector('.knowledge__list');
-    const knowledgeItemArray = knowledgeList.querySelectorAll('.knowledge__item');
-    knowledgeSwiperCheck = false;
-    ['resize', 'load'].forEach((event) => {
-      window.addEventListener(event, function () {
-        if (window.innerWidth <= 700 && !knowledgeSwiperCheck) {
-          if (knowledgeItemArray && knowledgeItemArray.length > 0) {
-            knowledgeItemArray.forEach(item => {
-              item.classList.add('swiper-slide');
-            })
-          }
-          knowledgeSwiperCheck = new Swiper(knowledgeSwiper.querySelector('.knowledge__swiper'), {
-            direction: 'horizontal',
-            slidesPerView: 1.1,
-            grabCursor: true,
-            spaceBetween: 10
-          });
-        }
-        if (window.innerWidth > 700 && knowledgeSwiperCheck) {
-          const knowledgeItemArray = knowledgeList.querySelectorAll('.swiper-slide');
-          if (knowledgeItemArray && knowledgeItemArray.length > 0) {
-            knowledgeItemArray.forEach(item => {
-              item.classList.remove('swiper-slide');
-            })
-          }
-          knowledgeSwiperCheck.destroy(true, true);
-          knowledgeSwiperCheck = false
-        }
-      })
-    })
-  }
-
-  //Slider offers, turns on when mobile
-  offersSwiper = document.querySelector(".offers");
-  if (offersSwiper) {
-    const offersList = offersSwiper.querySelector('.offers__list');
-    const offersItemArray = offersList.querySelectorAll('.offers__item');
-    offersSwiperCheck = false;
-    ['resize', 'load'].forEach((event) => {
-      window.addEventListener(event, function () {
-        if (window.innerWidth <= 700 && !offersSwiperCheck) {
-          if (offersItemArray && offersItemArray.length > 0) {
-            offersItemArray.forEach(item => {
-              item.classList.add('swiper-slide');
-            })
-          }
-          offersSwiperCheck = new Swiper(offersSwiper.querySelector('.offers__swiper'), {
-            direction: 'horizontal',
-            slidesPerView: 1.1,
-            grabCursor: true,
-            spaceBetween: 10
-          });
-        }
-        if (window.innerWidth > 700 && offersSwiperCheck) {
-          const offersItemArray = offersList.querySelectorAll('.swiper-slide');
-          if (offersItemArray && offersItemArray.length > 0) {
-            offersItemArray.forEach(item => {
-              item.classList.remove('swiper-slide');
-            })
-          }
-          offersSwiperCheck.destroy(true, true);
-          offersSwiperCheck = false
-        }
-      })
-    })
-  }
-
-  //Slider Principles
-  principlesSwiper = document.querySelector(".principles");
-  if (principlesSwiper) {
-    const svg = principlesSwiper.querySelector('.svg_text');
-    principlesSwiperCheck = new Swiper(principlesSwiper.querySelector('.principles__swiper'), {
-      direction: 'horizontal',
-      on: {
-        slideChange: function () {
-          if (svg) {
-            svg.className = 'svg_text';
-            svg.classList.add(`svg_text_slide-${this.activeIndex + 1}`);
-          }
-        },
-        init: function () {
-          svg.classList.add(`svg_text_slide-${this.activeIndex + 1}`);
-        }
-      },
-      slidesPerView: 1.2,
-      grabCursor: true,
-      spaceBetween: 10,
-      breakpoints: {
-        1000: {
-          direction: 'vertical',
-          slidesPerView: 1.2,
-          spaceBetween: 20
-        }
-      }
-    });
-  }
-
-
-  //Slider Photos on About page
-  gallerySwiper = document.querySelector(".intro_about");
-  if (gallerySwiper) {
-    gallerySwiperCheck = new Swiper(gallerySwiper.querySelector('.gallery__swiper'), {
-      direction: 'horizontal',
-      slidesPerView: 1.02,
-      grabCursor: true,
-      spaceBetween: 10,
-      breakpoints: {
-        1000: {
-          direction: 'horizontal',
-          slidesPerView: 2.4,
-          spaceBetween: 20
-        }
-      }
-    });
-  }
-
-  //Slider methods-alko, turns on when mobile
-  methodsSwiper = document.querySelector(".methods-alko");
-  if (methodsSwiper) {
-    const methodsList = methodsSwiper.querySelector('.methods-alko__list');
-    const methodsItemArray = methodsList.querySelectorAll('.methods-alko__item');
-    methodsSwiperCheck = false;
-    ['resize', 'load'].forEach((event) => {
-      window.addEventListener(event, function () {
-        if (window.innerWidth <= 650 && !methodsSwiperCheck) {
-          if (methodsItemArray && methodsItemArray.length > 0) {
-            methodsItemArray.forEach(item => {
-              item.classList.add('swiper-slide');
-            })
-          }
-          methodsSwiperCheck = new Swiper(methodsSwiper.querySelector('.methods-alko__swiper'), {
-            direction: 'horizontal',
-            slidesPerView: 1.1,
-            grabCursor: true,
-            spaceBetween: 10
-          });
-        }
-        if (window.innerWidth > 650 && methodsSwiperCheck) {
-          const methodsItemArray = methodsList.querySelectorAll('.swiper-slide');
-          if (methodsItemArray && methodsItemArray.length > 0) {
-            methodsItemArray.forEach(item => {
-              item.classList.remove('swiper-slide');
-            })
-          }
-          methodsSwiperCheck.destroy(true, true);
-          methodsSwiperCheck = false
-        }
-      })
-    })
-  }
-
-  //Sliders horizontal (3 desktop -> 1 mobile)
-  slidersArray = document.querySelectorAll(".slider-hl");
-  if (slidersArray) {
-    slidersArray.forEach(slider => {
-      sliderCheck = new Swiper(slider.querySelector('.slider-hl__swiper'), {
-        direction: 'horizontal',
-        slidesPerView: 1.1,
-        grabCursor: true,
-        spaceBetween: 10,
-        navigation: {
-          nextEl: slider.querySelector('.swiper-btn_right'),
-          prevEl: slider.querySelector('.swiper-btn_left'),
-        },
-        breakpoints: {
-          600: {
-            direction: 'horizontal',
-            slidesPerView: 2.2,
-            spaceBetween: 15
-          },
-          1100: {
-            direction: 'horizontal',
-            slidesPerView: 3.2,
-            spaceBetween: 20
-          }
-        }
-      });
-    })
-  }
   /* -- END SLIDERS  -- */
-
 
 
   /* -- POPUPS  -- */
@@ -923,6 +487,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   /* -- END POPUPS  -- */
 
+
   /* -- TOTOP -- */
   const btnTop = document.querySelector('#toTop');
   if (btnTop) {
@@ -952,6 +517,7 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
   /* -- END TOTOP -- */
+
 
   /* -- OBSERVER -- */
   const observer = new IntersectionObserver((entries) => {
@@ -983,8 +549,10 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   /* -- END OBSERVER -- */
 
+
   //view photos fancybox
   Fancybox.bind("[data-fancybox]");
+
 
   /*POPUP CALCULATOR*/
   const popupCalculator = document.querySelector('.calculator');
@@ -1070,78 +638,3 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   /*END POPUP CALCULATOR*/
 });
-
-
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   const pages = document.querySelectorAll(".popup-quiz__page");
-//   const btnPrev = document.querySelector(".popup-quiz__btn-prev");
-//   const btnNext = document.querySelector(".popup-quiz__btn-next");
-//   const pagination = document.querySelector(".popup-quiz__paginations");
-//   const btns = document.querySelector(".popup-quiz__bottom");
-
-//   let currentPage = 0;
-
-//   function showPage(index) {
-//     pages.forEach((page, i) => {
-//       page.style.display = i === index ? "block" : "none";
-//     });
-
-//     // кнопка "Предыдущий"
-//     btnPrev.disabled = index === 0;
-
-//     // обновление пагинации
-//     pagination.querySelector("span:first-child").textContent = String(index + 1).padStart(2, "0");
-//     pagination.querySelector("span:last-child").textContent = String(pages.length - 1).padStart(2, "0");
-
-//     // проверяем доступность кнопки "Следующий"
-//     checkNextAvailability();
-
-//     // если последняя страница → скрываем кнопку "Следующий"
-//     if (index === pages.length - 1) {
-//       btns.style.display = "none";
-//     } else {
-//       btns.style.display = "flex";
-//     }
-//   }
-
-//   function checkNextAvailability() {
-//     const inputs = pages[currentPage].querySelectorAll("input[type=radio], input[type=checkbox]");
-//     if (inputs.length === 0) {
-//       btnNext.disabled = false;
-//       return;
-//     }
-
-//     let checked = Array.from(inputs).some(input => input.checked);
-//     btnNext.disabled = !checked;
-//   }
-
-//   // события
-//   btnPrev.addEventListener("click", () => {
-//     console.log(btnPrev)
-//     if (currentPage > 0) {
-//       currentPage--;
-//       showPage(currentPage);
-//     }
-//   });
-
-//   btnNext.addEventListener("click", () => {
-//     console.log("btnNext")
-//     if (currentPage < pages.length - 1) {
-//       currentPage++;
-//       showPage(currentPage);
-//     }
-//   });
-
-//   // следим за изменением radio/checkbox
-//   pages.forEach(page => {
-//     page.addEventListener("change", () => {
-//       if (page === pages[currentPage]) {
-//         checkNextAvailability();
-//       }
-//     });
-//   });
-
-//   // инициализация
-//   showPage(currentPage);
-// });

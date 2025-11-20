@@ -14,7 +14,7 @@
   @include box($color-accent, $color-white, 16px, 30px);
 }
 .box_accent-light {
-  @include box($color-accent-op-10, $color-black, 16px, 30px);
+  @include box(#f7f0ec, $color-black, 16px, 30px);
 }
 .box_light-20 {
   @include box(rgb(255, 255, 255, 0.2), $color-white, 10px, 12px);

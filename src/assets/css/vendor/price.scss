@@ -1,0 +1,198 @@
+.price {
+  &__body {
+    padding-block: $base-section-margin;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    margin-block-end: clamp(1.5rem, -2.525rem + 9.2vw, 4.375rem);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    gap: 24px;
+    margin-block-end: clamp(2rem, -0.45rem + 5.6vw, 3.75rem);
+
+    @media screen and (width<=800px) {
+      flex-direction: column;
+    }
+  }
+
+  &__tabs {
+    max-width: 547px;
+    width: 100%;
+
+    @media screen and (width<=800px) {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      overflow-x: scroll;
+      max-width: none;
+
+      &::-webkit-scrollbar {
+        height: 2px;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: $bg-grey;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 2px;
+        background-color: $color-accent;
+      }
+    }
+
+    &-content {
+      max-width: 1183px;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: 450ms;
+
+      &.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        position: relative;
+      }
+    }
+  }
+
+  &__tab {
+    width: 100%;
+    padding-block: 30px;
+    font-size: clamp(0.875rem, 0.35rem + 1.2vw, 1.25rem);
+    border-bottom: 1px solid $color-light-grey;
+    transition: 300ms;
+
+    span {
+      position: relative;
+      left: -26px;
+      display: flex;
+      gap: 12px;
+      transition: 0.2s ease-out;
+    }
+
+    &:first-of-type {
+      border-top: 1px solid $color-light-grey;
+    }
+
+    & span::before {
+      content: "";
+      display: block;
+      aspect-ratio: 1 / 1;
+      width: 12px;
+      background-image: url(../img/icons/star-point.svg);
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+      transition: opacity 0.3s;
+      opacity: 0;
+      flex-shrink: 0;
+    }
+
+    &:hover span,
+    &:focus span,
+    &:active span,
+    &.active span {
+      left: 0;
+      color: $color-accent;
+      outline: none;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    @media screen and (width<=800px) {
+      border: 1px solid $color-accent-op-50;
+      background-color: $color-white;
+      padding: 18px 19px;
+      border-radius: 8px;
+
+      span {
+        position: static;
+        width: max-content;
+
+        &::before {
+          content: none;
+        }
+      }
+
+      &.active {
+        background-color: #f8f1ee;
+        border: 1px solid transparent;
+      }
+    }
+
+    &-content {
+      border-radius: 12px;
+      padding: 12px;
+      font-weight: 500;
+      display: grid;
+      grid-template-columns: 2fr 0.5fr 0.5fr;
+      align-items: center;
+      justify-items: center;
+
+      &:nth-child(odd) {
+        background-color: #fbf9f8;
+      }
+
+      &__name {
+      }
+
+      &__value {
+        color: $color-dark-grey;
+        line-height: 1;
+        font-weight: 500;
+      }
+
+      &__button {
+        padding: 16px 34px;
+      }
+    }
+  }
+
+  &__payments {
+    background-color: $color-accent;
+    border-radius: 16px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-white;
+    font-weight: 600;
+    font-size: clamp(1.125rem, 0.95rem + 0.4vw, 1.25rem);
+
+    .payments {
+      max-width: 950px;
+      width: 100%;
+    }
+    .payment {
+      background-color: $color-white;
+      max-width: 150px;
+      color: $color-black;
+
+      svg:not(.sbp) path {
+        fill: $color-accent;
+      }
+    }
+
+    @media (width<=850px) {
+      padding: 24px 16px;
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+}

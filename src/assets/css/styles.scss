@@ -174,12 +174,35 @@ form.form {
   }
 }
 
+.main-title {
+  font-size: $font-size-h1;
+  line-height: 1.15;
+  font-weight: 600;
+  color: inherit;
+
+  span {
+    color: $color-accent;
+  }
+}
+
+.section__title {
+  font-size: $font-size-h2;
+  line-height: 1.15;
+  font-weight: 600;
+
+  span {
+    color: $color-accent;
+  }
+}
+
 @media screen and (width<=1200px) {
   .desktop {
     display: none;
   }
 }
 
+@import "vendor/intro";
+@import "vendor/price";
 @import "vendor/animate";
 @import "vendor/footer";
 @import "vendor/popups";
