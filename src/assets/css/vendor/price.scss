@@ -3,6 +3,12 @@
     padding-block: $base-section-margin;
   }
 
+  @media (width<=800px) {
+    &__button {
+      display: none;
+    }
+  }
+
   &__row {
     display: flex;
     flex-direction: row;
@@ -19,7 +25,7 @@
     gap: 24px;
     margin-block-end: clamp(2rem, -0.45rem + 5.6vw, 3.75rem);
 
-    @media screen and (width<=800px) {
+    @media screen and (width<=1200px) {
       flex-direction: column;
     }
   }
@@ -72,6 +78,7 @@
     padding-block: 30px;
     font-size: clamp(0.875rem, 0.35rem + 1.2vw, 1.25rem);
     border-bottom: 1px solid $color-light-grey;
+    line-height: 1;
     transition: 300ms;
 
     span {
@@ -148,16 +155,43 @@
       }
 
       &__name {
+        @media screen and (width<=800px) {
+          grid-row-start: 1;
+          grid-row-end: 2;
+          grid-column-start: 1;
+          grid-column-end: 3;
+        }
       }
 
       &__value {
         color: $color-dark-grey;
         line-height: 1;
         font-weight: 500;
+
+        @media screen and (width<=800px) {
+          grid-row-start: 2;
+          grid-row-end: 3;
+          grid-column-start: 1;
+          grid-column-end: 2;
+        }
       }
 
       &__button {
         padding: 16px 34px;
+
+        @media screen and (width<=800px) {
+          grid-row-start: 2;
+          grid-row-end: 3;
+          grid-column-start: 2;
+          grid-column-end: 3;
+          padding: 15px 28px;
+        }
+      }
+
+      @media screen and (width<=800px) {
+        grid-template-columns: 1fr;
+        justify-items: start;
+        gap: 16px;
       }
     }
   }
