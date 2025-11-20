@@ -1,3 +1,4 @@
+//CONTAINERS
 @mixin box($bg-color, $color, $radius: 12px, $padding: 20px) {
   background-color: $bg-color;
   color: $color;
@@ -16,6 +17,13 @@
 .box_accent-light {
   @include box(#f7f0ec, $color-black, 16px, 30px);
 }
+.box_light {
+  @include box($color-white, $color-black, 16px, 24px);
+}
+.box_light_b {
+  @extend .box_light;
+  border: 1px solid $color-accent-op-50;
+}
 .box_light-20 {
   @include box(rgb(255, 255, 255, 0.2), $color-white, 10px, 12px);
 }
@@ -23,7 +31,6 @@
   @include box($color-accent-op-10, $color-black);
 }
 
-//CONTAINERS
 @mixin container($margin-bl: 0) {
   max-width: $max-width;
   width: 100%;
@@ -42,15 +49,6 @@
 }
 .container {
   @include container();
-}
-.container_bl {
-  @include container("block");
-}
-.container_b {
-  @include container("bottom");
-}
-.container_t {
-  @include container("top");
 }
 //END CONTAINERS
 
@@ -108,13 +106,9 @@
     }
   }
 
-  &_icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  &_light {
     background-color: $color-white;
     color: $color-accent;
-    gap: 10px;
 
     &:not(:disabled):hover,
     &:not(:disabled):active {
@@ -125,6 +119,13 @@
     &:disabled {
       opacity: 0.5;
     }
+  }
+
+  &_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 
     svg {
       max-width: 18px;

@@ -340,66 +340,6 @@
     }
   }
 
-  .input__radio {
-    position: relative;
-    display: flex;
-    align-items: center;
-    font-size: clamp(0.875rem, 0.7rem + 0.4vw, 1rem); //16 -> 14
-
-    input {
-      position: absolute;
-      opacity: 0;
-      width: 0;
-      height: 0;
-      transition: scale 300ms;
-
-      + label {
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-
-        &::before {
-          content: "";
-          display: inline-block;
-          width: 16px;
-          height: 16px;
-          border: 1px solid $color-accent;
-          border-radius: 50%;
-          background-color: $color-white;
-          margin-right: 12px;
-          transition: all 0.2s ease;
-          flex-shrink: 0;
-        }
-      }
-
-      // Состояние checked
-      &:checked + label {
-        &::after {
-          content: "";
-          position: absolute;
-          display: block;
-          left: 4px;
-          width: 8px;
-          height: 8px;
-          border-radius: 50%;
-          background-color: $color-accent;
-          border-radius: 50%;
-        }
-      }
-
-      // Состояния при фокусе
-      &:focus + label::before {
-        box-shadow: 0 0 0 2px rgba($color-accent, 0.2);
-      }
-
-      // Состояния при наведении
-      &:hover + label::before {
-        border-color: darken($color-accent, 10%);
-        scale: 1.2;
-      }
-    }
-  }
-
   .input__range {
     span {
       color: $color-dark-grey;
@@ -640,7 +580,7 @@
 
   .city__popular {
     // display: none;
-    padding-block-end: clamp(1rem,-2.85rem + 8.8vw,3.75rem);
+    padding-block-end: clamp(1rem, -2.85rem + 8.8vw, 3.75rem);
     width: 100%;
 
     &-title {

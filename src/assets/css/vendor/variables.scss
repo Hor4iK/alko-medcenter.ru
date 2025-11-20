@@ -1,5 +1,6 @@
 $max-width: 1800px;
-$base-section-margin: clamp(1.875rem, -4.25rem + 14vw, 6.25rem); //30px -> 100px
+$base-section-margin-bl: clamp(1.875rem, -4.25rem + 14vw, 6.25rem); //30px -> 100px
+$base-section-margin-in: clamp(1px, -3.75rem + 8.5714vw, 3.75rem); //1px -> 60px
 
 // COLORS
 $color-accent: #D9A28C;

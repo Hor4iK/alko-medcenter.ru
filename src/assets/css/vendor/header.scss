@@ -1,5 +1,5 @@
 .header {
-  padding-inline: clamp(1.875rem, -10.3125rem + 15vw, 3.75rem);
+  padding-inline: $base-section-margin-in;
   border-bottom: 1px solid $color-light-grey;
 
   &__content {

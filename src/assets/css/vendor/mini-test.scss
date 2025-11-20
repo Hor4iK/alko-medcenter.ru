@@ -1,0 +1,254 @@
+.narkolog-test {
+  padding-inline: $base-section-margin-in;
+  background-color: #fbf9f8;
+  margin-block: $base-section-margin-bl;
+
+  &__body {
+    padding-block: $base-section-margin-bl;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    overflow: hidden;
+
+    &:has(.narkolog-test__result.active) .narkolog-test__right {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+    }
+
+    @media screen and (width<=1700px) {
+      padding-block-end: 280px;
+      overflow: hidden;
+    }
+
+    @media screen and (width<=900px) {
+      flex-direction: column;
+      padding-block-start: 0;
+    }
+  }
+
+  &__title {
+    margin-block-end: clamp(1.5rem, -0.775rem + 5.2vw, 3.125rem);
+  }
+
+  &__caption {
+    font-size: clamp(1rem, 0.65rem + 0.8vw, 1.25rem);
+    font-weight: 500;
+  }
+
+  &__left {
+    max-width: 534px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+  }
+
+  &__right {
+    max-width: 1193px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    counter-reset: form;
+    transition: 450ms;
+  }
+
+  &__result {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: 450ms;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+    &::before {
+      content: "";
+      display: block;
+      background: url(../img/icons/pyatno-double.svg) center / contain no-repeat;
+      width: 120%;
+      height: 120%;
+      min-width: 650px;
+      min-height: 400px;
+      position: absolute;
+      right: 0;
+      transform: translate(30%, 20%);
+      bottom: 0;
+      rotate: 5deg;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      background: url(../img/photo/molodaa-krasivaa-zensina.webp) center /
+        contain no-repeat;
+      width: 80%;
+      height: 90%;
+      max-width: 600px;
+      max-height: 995px;
+      min-width: 270px;
+      min-height: 270px;
+      position: absolute;
+      right: 0;
+      bottom: -10px;
+    }
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    &-title {
+      font-size: clamp(1.125rem, 0.625rem + 1.1429vw, 1.625rem);
+      font-weight: 600;
+      line-height: 1.15;
+      margin-block-end: clamp(1.25rem, 0.5rem + 1.7143vw, 2rem);
+    }
+
+    &-caption {
+      margin-block-end: clamp(1.75rem, -0.6875rem + 5.5714vw, 4.1875rem);
+    }
+
+    &-content {
+      max-width: 607px;
+      position: relative;
+      z-index: 2;
+    }
+
+    &-block {
+      padding: 30px;
+
+      p:first-of-type {
+        font-weight: 500;
+        margin-block-end: clamp(2rem, 0.875rem + 2.5714vw, 3.125rem);
+      }
+      p:last-of-type {
+        color: $color-dark-grey;
+        margin-block-end: clamp(1.25rem, 0.625rem + 1.4286vw, 1.875rem);
+      }
+    }
+
+    @media screen and (width<=1700px) {
+      overflow: visible;
+
+      &::before {
+        bottom: -550px;
+        rotate: 8deg;
+        right: auto;
+        left: 0;
+        transform: none;
+      }
+
+      &::after {
+        right: 160px;
+        bottom: -290px;
+        max-width: 270px;
+        max-height: 270px;
+      }
+    }
+
+    @media screen and (width<=760px) {
+      &::before {
+        bottom: -470px;
+        left: 50%;
+        translate: -50%;
+      }
+
+      &::after {
+        right: 50%;
+        translate: 50%;
+      }
+    }
+
+    @media screen and (width<=700px) {
+      padding: 24px 16px;
+
+      &-block {
+        padding: 20px 16px;
+      }
+    }
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: start;
+    position: relative;
+    font-weight: 500;
+    gap: 50px;
+    max-width: 360px;
+
+    &-title {
+      max-width: 232px;
+    }
+
+    &::after {
+      content: "";
+      background: url(../img/icons/star-point.svg) no-repeat center;
+      background-size: contain;
+      position: absolute;
+      width: 14px;
+      height: 16px;
+      top: 24px;
+      right: 24px;
+    }
+
+    .narkolog-test__value {
+      font-weight: 600;
+      font-size: 24px;
+      color: $color-accent;
+    }
+
+    @media screen and (width<=800px) {
+      display: none;
+    }
+  }
+
+  &__form {
+    padding: 32px;
+    position: relative;
+
+    &-title {
+      color: $color-dark-grey;
+      font-weight: 500;
+      margin-block-end: 24px;
+    }
+
+    &::before {
+      content: "0" counter(form) "/";
+      counter-increment: form;
+      color: $color-accent;
+      font-weight: 600;
+      position: absolute;
+      top: 32px;
+      right: 32px;
+      line-height: 1;
+    }
+
+    @media screen and (width<=800px) {
+      padding: 24px 16px;
+
+      &::before {
+        display: block;
+        margin-block-end: 16px;
+        position: static;
+      }
+    }
+  }
+
+  &__fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+}

@@ -401,6 +401,38 @@ document.addEventListener('DOMContentLoaded', function () {
   /* -- END PRICE  -- */
 
 
+  /* -- NARKOLOG-TEST -- */
+  const test = document.querySelector('.narkolog-test');
+  if (test) {
+    const forms = test.querySelectorAll('.narkolog-test__form');
+    const resultBlock = test.querySelector('.narkolog-test__result');
+    const allInputs = test.querySelectorAll('.narkolog-test__form input[type="radio"]');
+
+
+    function formsFilled() {
+      return Array.from(forms).every(form => {
+        const inputs = form.querySelectorAll('input[type="radio"]');
+        return Array.from(inputs).some(input => input.checked);
+      });
+    }
+
+    allInputs.forEach(input => {
+      input.addEventListener('change', function () {
+        if (formsFilled()) {
+          allInputs.forEach(input => {
+            input.disabled = true;
+          });
+
+          setTimeout(() => {
+            resultBlock.classList.add('active');
+          }, 600);
+        }
+      });
+    });
+  }
+  /* -- END NARKOLOG-TEST -- */
+
+
   /* -- AUTOCONTENT RESIZE  -- */
   const autocontentArray = document.querySelectorAll('.autocontent');
   if (autocontentArray && autocontentArray.length > 0) {
@@ -586,7 +618,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     const totalPagesCount = pages.length - 1;
-    totalPages.textContent = totalPagesCount < 10 ? "0" + totalPagesCount : totalPagesCount ;
+    totalPages.textContent = totalPagesCount < 10 ? "0" + totalPagesCount : totalPagesCount;
 
     const isPageValid = () => {
       const currentPageElement = pages[currentPage];
