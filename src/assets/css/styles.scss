@@ -255,6 +255,40 @@ form.form {
   }
 }
 
+.breadcrumbs {
+  margin-block-end: clamp(2.5rem, 0.125rem + 5.7143vw, 5rem);
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    line-height: 1.1;
+    font-size: 14px;
+
+    @media (width<=500px) {
+      // flex-direction: column;
+    }
+  }
+
+  &__item {
+    position: relative;
+    color: rgb(31, 31, 31, .5);
+
+    &:not(:first-of-type)::before {
+      content: '/';
+      color: $color-black;
+      position: absolute;
+      left: -16px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    a {
+      color: $color-black;
+    }
+  }
+}
+
 @media screen and (width<=1200px) {
   .desktop {
     display: none;
@@ -264,6 +298,7 @@ form.form {
 @import "vendor/intro";
 @import "vendor/price";
 @import "vendor/mini-test";
+@import "vendor/allocator";
 
 @import "vendor/animate";
 @import "vendor/footer";

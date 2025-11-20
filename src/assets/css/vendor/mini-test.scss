@@ -20,8 +20,10 @@
     }
 
     @media screen and (width<=1700px) {
-      padding-block-end: 280px;
-      overflow: hidden;
+      &:has(.narkolog-test__result.active) {
+        padding-block-end: 280px;
+        overflow: hidden;
+      }
     }
 
     @media screen and (width<=900px) {
@@ -65,10 +67,11 @@
     visibility: hidden;
     transform: translateY(10px);
     transition: 450ms;
-    padding: 40px;
+    padding: 0;
     position: relative;
     overflow: hidden;
-    width: 100%;
+    width: 1px;
+    height: 1px;
 
     &::before {
       content: "";
@@ -105,6 +108,9 @@
       opacity: 1;
       visibility: visible;
       transform: translateY(0);
+      width: 100%;
+      height: auto;
+      padding: 40px;
     }
 
     &-title {
@@ -170,7 +176,9 @@
     }
 
     @media screen and (width<=700px) {
-      padding: 24px 16px;
+      &.active {
+        padding: 24px 16px;
+      }
 
       &-block {
         padding: 20px 16px;

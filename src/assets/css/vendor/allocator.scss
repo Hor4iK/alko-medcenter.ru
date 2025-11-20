@@ -1,0 +1,207 @@
+.allocator {
+  padding-inline: $base-section-margin-in;
+  padding-block-start: clamp(1.875rem, 0rem + 4.2857vw, 3.75rem);
+  padding-block-end: $base-section-margin-bl;
+
+  &__title {
+    margin-block-end: clamp(2.5rem, 0.625rem + 4.2857vw, 4.375rem);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @media (width<=700px) {
+      gap: 12px;
+    }
+  }
+
+  &__item {
+    &-title {
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 16px;
+      padding: 12px;
+      padding-inline-start: clamp(1.25rem, 0.125rem + 2.8571vw, 2.5rem);
+      background-color: #fbf9f8;
+      outline: 1px solid $color-accent-op-50;
+      transition: outline 300ms;
+
+      &:hover,
+      &:focus,
+      &:active {
+        outline: 2px solid $color-accent;
+      }
+
+      > div:first-of-type {
+        max-width: 465px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+      }
+
+      > div:last-of-type {
+        max-width: 205px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+
+        @media (width<=800px) {
+          justify-content: end;
+          width: fit-content;
+        }
+      }
+      @media (width<=800px) {
+        padding: 10px;
+      }
+
+      &.active {
+        .point-mark {
+          &::before {
+            transform: translate(-25%, -50%) rotate(130deg);
+          }
+          &::after {
+            transform: translate(-75%, -50%) rotate(45deg);
+          }
+        }
+      }
+    }
+
+    &-name {
+      font-size: clamp(1rem, 0.5rem + 1.1429vw, 1.5rem);
+    }
+
+    &-count {
+      font-size: 20px;
+      color: $color-dark-grey;
+    }
+
+    &-price {
+      font-size: 20px;
+      color: $color-dark-grey;
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding-block-start: clamp(0.5rem, -0.25rem + 1.7143vw, 1.25rem);
+
+      @media (width<=600px) {
+        li {
+          width: 100%;
+        }
+      }
+    }
+
+    &-link {
+      display: block;
+      padding: 12px 75px 12px 24px;
+      background-color: #f8f1ee;
+      border-radius: 12px;
+      position: relative;
+      transition: 300ms;
+      outline: 1px solid transparent;
+
+      &::before {
+        content: "";
+        display: block;
+        aspect-ratio: 1/1;
+        width: 40px;
+        border-radius: 8px;
+        background-color: $color-white;
+        position: absolute;
+        top: 50%;
+        right: 12px;
+        transform: translateY(-50%);
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        aspect-ratio: 1/1;
+        width: 12px;
+        background: url(../img/icons/arrow-diago.svg) no-repeat center;
+        background-size: contain;
+        position: absolute;
+        top: 50%;
+        right: 27px;
+        transform: translateY(-50%);
+        transition: 300ms;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        outline: 1px solid $color-accent-op-50;
+
+        &::after {
+          rotate: 45deg;
+        }
+      }
+    }
+
+    @media (width<=800px) {
+      &-price {
+        display: none;
+      }
+
+      &-count {
+        display: none;
+      }
+    }
+  }
+
+  .point-mark {
+    position: relative;
+    border: 1px solid transparent;
+    transition: 300ms;
+
+    &:hover {
+      background-color: $color-white;
+      border: 1px solid $color-accent-op-50;
+
+      &::before,
+      &::after {
+        background-color: $color-accent;
+      }
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(90deg);
+      background-color: $color-white;
+      height: 2px;
+      width: clamp(0.75rem, 0.25rem + 1.1429vw, 1.25rem);
+      transition: 300ms;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $color-white;
+      height: 2px;
+      width: clamp(0.75rem, 0.25rem + 1.1429vw, 1.25rem);
+      transition: 300ms;
+    }
+  }
+}
