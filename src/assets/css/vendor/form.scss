@@ -1,0 +1,90 @@
+.form {
+  &-call {
+    padding-inline: $base-section-margin-in;
+    margin-block-end: $base-section-margin-bl;
+    background-color: #FBF9F8;
+    position: relative;
+    overflow: hidden;
+
+    &__body {
+      padding-block: $base-section-margin-bl;
+    }
+
+    &__content {
+      max-width: 1035px;
+      position: relative;
+      z-index: 2;
+    }
+
+    &__title {
+      margin-block-end: clamp(1.5rem, -0.5313rem + 6.5vw, 3.125rem);
+    }
+
+    &__caption {
+      font-size: clamp(1rem, 0.6875rem + 1vw, 1.25rem);
+      margin-block-end: clamp(2rem, -1.75rem + 12vw, 5rem);
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      background: url(../img/icons/pyatno-double.svg) center / contain no-repeat;
+      width: 120%;
+      height: 120%;
+      min-width: 650px;
+      min-height: 400px;
+      position: absolute;
+      right: -110px;
+      transform: translate(30%, 20%);
+      bottom: -100px;
+      rotate: -4deg;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      background: url(../img/photo/molodaa-krasivaa-zensina.webp) center / contain no-repeat;
+      width: 80%;
+      height: 90%;
+      max-width: 600px;
+      max-height: 995px;
+      min-width: 270px;
+      min-height: 270px;
+      position: absolute;
+      right: 0;
+      bottom: -20px;
+    }
+
+    @media (width <=1700px) {
+      padding-block-end: 280px;
+
+      &::before {
+        bottom: -550px;
+        rotate: 8deg;
+        right: auto;
+        left: 0;
+        transform: none;
+      }
+
+      &::after {
+        right: 160px;
+        bottom: -10px;
+        max-width: 270px;
+        max-height: 270px;
+      }
+    }
+
+    @media screen and (width <=760px) {
+      &::before {
+        bottom: -470px;
+        left: 50%;
+        translate: -50%;
+      }
+
+      &::after {
+        right: 50%;
+        translate: 50%;
+      }
+    }
+  }
+}
