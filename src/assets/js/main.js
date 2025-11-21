@@ -451,7 +451,71 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   /* -- SLIDERS  -- */
+  //Sliders 700 --> mobile 1
+  sliders700Array = document.querySelectorAll(".slider-700");
+  if (sliders700Array) {
+    sliders700Array.forEach(slider700 => {
+      const sliders700List = slider700.querySelector('.how-going__content');
+    const sliders700ItemArray = sliders700List.querySelectorAll('.how-going__item');
+    slider700Check = false;
+    ['resize', 'load'].forEach((event) => {
+      window.addEventListener(event, function () {
+        if (window.innerWidth <= 700 && !slider700Check) {
+          if (sliders700ItemArray && sliders700ItemArray.length > 0) {
+            sliders700ItemArray.forEach(item => {
+              item.classList.add('swiper-slide');
+            })
+          }
+          slider700Check = new Swiper(slider700.querySelector('.slider-700__swiper'), {
+            direction: 'horizontal',
+            slidesPerView: 1.1,
+            grabCursor: true,
+            spaceBetween: 8
+          });
+        }
+        if (window.innerWidth > 700 && slider700Check) {
+          const sliders700ItemArray = sliders700List.querySelectorAll('.swiper-slide');
+          if (sliders700ItemArray && sliders700ItemArray.length > 0) {
+            sliders700ItemArray.forEach(item => {
+              item.classList.remove('swiper-slide');
+            })
+          }
+          slider700Check.destroy(true, true);
+          slider700Check = false
+        }
+      })
+    })
+    })
+  }
 
+  //Sliders horizontal (3 desktop -> 1 mobile)
+  slidersArray = document.querySelectorAll(".slider-hl");
+  if (slidersArray) {
+    slidersArray.forEach(slider => {
+      sliderCheck = new Swiper(slider.querySelector('.slider-hl__swiper'), {
+        direction: 'horizontal',
+        slidesPerView: 1.1,
+        grabCursor: true,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: slider.querySelector('.swiper-btn_right'),
+          prevEl: slider.querySelector('.swiper-btn_left'),
+        },
+        breakpoints: {
+          600: {
+            direction: 'horizontal',
+            slidesPerView: 2.2,
+            spaceBetween: 15
+          },
+          1100: {
+            direction: 'horizontal',
+            slidesPerView: 3.2,
+            spaceBetween: 20
+          }
+        }
+      });
+    })
+  }
   /* -- END SLIDERS  -- */
 
 
