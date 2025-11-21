@@ -3,30 +3,41 @@
   background-color: $bg-color;
   color: $color;
   border-radius: $radius;
-  @if $padding == 20px {
+
+  @if $padding ==20px {
     padding: clamp(1rem, 0.65rem + 0.8vw, 1.25rem);
-  } @else if $padding == 30px {
+  }
+
+  @else if $padding ==30px {
     padding: clamp(1rem, -0.225rem + 2.8vw, 1.875rem);
-  } @else {
+  }
+
+  @else {
     padding: $padding;
   }
 }
+
 .box_accent {
   @include box($color-accent, $color-white, 16px, 30px);
 }
+
 .box_accent-light {
   @include box(#f7f0ec, $color-black, 16px, 30px);
 }
+
 .box_light {
   @include box($color-white, $color-black, 16px, 24px);
 }
+
 .box_light_b {
   @extend .box_light;
   border: 1px solid $color-accent-op-50;
 }
+
 .box_light-20 {
   @include box(rgb(255, 255, 255, 0.2), $color-white, 10px, 12px);
 }
+
 .box_accent-op-10 {
   @include box($color-accent-op-10, $color-black);
 }
@@ -35,27 +46,36 @@
   max-width: $max-width;
   width: 100%;
   margin: 0 auto;
-  @if $margin-bl != 0 {
-    @if $margin-bl == "block" {
+
+  @if $margin-bl !=0 {
+    @if $margin-bl =="block" {
       margin-block: clamp(2rem, -3.95rem + 13.6vw, 6.25rem);
-    } @else if $margin-bl == "top" {
+    }
+
+    @else if $margin-bl =="top" {
       margin-block-start: clamp(2rem, -3.95rem + 13.6vw, 6.25rem);
-    } @else if $margin-bl == "bottom" {
+    }
+
+    @else if $margin-bl =="bottom" {
       margin-block-end: clamp(2rem, -3.95rem + 13.6vw, 6.25rem);
-    } @else {
+    }
+
+    @else {
       margin-block: $margin-bl;
     }
   }
 }
+
 .container {
   @include container();
 }
+
 //END CONTAINERS
 
 //BUTTONS
 .button {
   padding: 20px 5px;
-  font-size: 18px;
+  font-size: $font-size;
   font-weight: 600;
   line-height: 1;
   transition: background-color 300ms ease-out, color 300ms ease-out,
@@ -84,6 +104,10 @@
     &:not(:disabled):active {
       background-color: $color-accent-contrast;
       color: $color-white;
+
+      svg path {
+        fill: $color-white;
+      }
     }
 
     &:disabled {
@@ -98,6 +122,10 @@
       &:not(:disabled):active {
         background-color: $color-accent;
         color: $color-white;
+
+        svg path {
+          fill: $color-white;
+        }
       }
 
       &:disabled {
@@ -114,6 +142,10 @@
     &:not(:disabled):active {
       background-color: $color-accent-contrast;
       color: $color-white;
+
+      svg path {
+        fill: $color-white;
+      }
     }
 
     &:disabled {
@@ -130,16 +162,13 @@
     svg {
       max-width: 18px;
 
-      &:hover path {
-        fill: #fff;
-      }
-
       path {
         transition: all 300ms ease-out;
       }
     }
   }
 }
+
 //END BUTTONS
 
 @mixin point-mark-psevdo {
@@ -175,6 +204,7 @@
 
   &_accent {
     background-color: $color-accent;
+
     svg {
       path {
         fill: $color-white;
@@ -245,10 +275,12 @@ button.point-mark {
   }
 
   &_light {
+
     &:not(:disabled):hover,
     &:not(:disabled):active {
       outline: 2px solid $color-light-grey;
     }
   }
 }
+
 //END POINT-MARK
