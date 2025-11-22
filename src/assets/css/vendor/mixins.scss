@@ -69,8 +69,8 @@
 .container {
   @include container();
 }
-
 //END CONTAINERS
+
 
 //BUTTONS
 .button {
@@ -168,8 +168,8 @@
     }
   }
 }
-
 //END BUTTONS
+
 
 @mixin point-mark-psevdo {
   content: "";
@@ -282,5 +282,4 @@ button.point-mark {
     }
   }
 }
-
 //END POINT-MARK

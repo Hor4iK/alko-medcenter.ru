@@ -6,7 +6,6 @@
     max-width: 1020px;
   }
 
-
   &__content {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -27,7 +26,11 @@
       grid-template-rows: auto;
 
       .how-going__item {
-        aspect-ratio: 2/3;
+        aspect-ratio: auto;
+        height: 100%;
+      }
+      .slider-700__item {
+        height: auto;
       }
     }
   }
@@ -47,8 +50,8 @@
       font-weight: 600;
       position: absolute;
       line-height: 1;
-      top: clamp(1rem, -.225rem + 2.8vw, 1.875rem);
-      right: clamp(1rem, -.225rem + 2.8vw, 1.875rem);
+      top: clamp(1rem, -0.225rem + 2.8vw, 1.875rem);
+      right: clamp(1rem, -0.225rem + 2.8vw, 1.875rem);
     }
 
     &-title {
@@ -61,8 +64,6 @@
       font-size: clamp(0.875rem, 0.7188rem + 0.5vw, 1rem);
     }
   }
-
-
 
   @media screen and (width<=800px) {
     margin-block-end: 50px;

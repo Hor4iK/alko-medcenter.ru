@@ -455,8 +455,8 @@ document.addEventListener('DOMContentLoaded', function () {
   sliders700Array = document.querySelectorAll(".slider-700");
   if (sliders700Array) {
     sliders700Array.forEach(slider700 => {
-      const sliders700List = slider700.querySelector('.how-going__content');
-    const sliders700ItemArray = sliders700List.querySelectorAll('.how-going__item');
+      const sliders700List = slider700.querySelector('.slider-700__content');
+    const sliders700ItemArray = sliders700List.querySelectorAll('.slider-700__item');
     slider700Check = false;
     ['resize', 'load'].forEach((event) => {
       window.addEventListener(event, function () {
