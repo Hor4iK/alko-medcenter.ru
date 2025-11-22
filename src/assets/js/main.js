@@ -456,37 +456,37 @@ document.addEventListener('DOMContentLoaded', function () {
   if (sliders700Array) {
     sliders700Array.forEach(slider700 => {
       const sliders700List = slider700.querySelector('.slider-700__content');
-    const sliders700ItemArray = sliders700List.querySelectorAll('.slider-700__item');
-    slider700Check = false;
-    ['resize', 'load'].forEach((event) => {
-      window.addEventListener(event, function () {
-        if (window.innerWidth <= 700 && !slider700Check) {
-          sliders700List.classList.add('swiper-wrapper');
-          if (sliders700ItemArray && sliders700ItemArray.length > 0) {
-            sliders700ItemArray.forEach(item => {
-              item.classList.add('swiper-slide');
-            })
+      const sliders700ItemArray = sliders700List.querySelectorAll('.slider-700__item');
+      slider700Check = false;
+      ['resize', 'load'].forEach((event) => {
+        window.addEventListener(event, function () {
+          if (window.innerWidth <= 700 && !slider700Check) {
+            sliders700List.classList.add('swiper-wrapper');
+            if (sliders700ItemArray && sliders700ItemArray.length > 0) {
+              sliders700ItemArray.forEach(item => {
+                item.classList.add('swiper-slide');
+              })
+            }
+            slider700Check = new Swiper(slider700.querySelector('.slider-700__swiper'), {
+              direction: 'horizontal',
+              slidesPerView: 1.1,
+              grabCursor: true,
+              spaceBetween: 8
+            });
           }
-          slider700Check = new Swiper(slider700.querySelector('.slider-700__swiper'), {
-            direction: 'horizontal',
-            slidesPerView: 1.1,
-            grabCursor: true,
-            spaceBetween: 8
-          });
-        }
-        if (window.innerWidth > 700 && slider700Check) {
-          sliders700List.classList.remove('swiper-wrapper');
-          const sliders700ItemArray = sliders700List.querySelectorAll('.swiper-slide');
-          if (sliders700ItemArray && sliders700ItemArray.length > 0) {
-            sliders700ItemArray.forEach(item => {
-              item.classList.remove('swiper-slide');
-            })
+          if (window.innerWidth > 700 && slider700Check) {
+            sliders700List.classList.remove('swiper-wrapper');
+            const sliders700ItemArray = sliders700List.querySelectorAll('.swiper-slide');
+            if (sliders700ItemArray && sliders700ItemArray.length > 0) {
+              sliders700ItemArray.forEach(item => {
+                item.classList.remove('swiper-slide');
+              })
+            }
+            slider700Check.destroy(true, true);
+            slider700Check = false
           }
-          slider700Check.destroy(true, true);
-          slider700Check = false
-        }
+        })
       })
-    })
     })
   }
 
@@ -517,6 +517,34 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
     })
+  }
+
+  //Silder how-help Чем мы можем вам помочь?
+  const twister = document.querySelector('.how-help');
+  if (twister) {
+    twisterSwiperCheck = new Swiper(twister.querySelector('.twister__swiper'), {
+      direction: 'horizontal',
+      slidesPerView: 1.2,
+      grabCursor: true,
+      spaceBetween: 30,
+      breakpoints: {
+        600: {
+          direction: 'horizontal',
+          slidesPerView: 2,
+        },
+        850: {
+          direction: 'vertical',
+          slidesPerView: 1,
+          spaceBetween: 0,
+          centeredSlides: true,
+          centeredSlidesBounds: true,
+        }
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
   }
   /* -- END SLIDERS  -- */
 
