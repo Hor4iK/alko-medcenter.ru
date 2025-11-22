@@ -1,5 +1,9 @@
 .how-going {
-  margin-block-end: $base-section-margin-bl;
+  padding-inline: $base-section-margin-in;
+
+  &__body {
+    padding-block: $base-section-margin-bl;
+  }
 
   &__title {
     margin-block-end: clamp(1.875rem, -1.25rem + 10vw, 4.375rem);

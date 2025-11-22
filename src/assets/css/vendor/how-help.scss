@@ -1,0 +1,21 @@
+.how-help {
+  padding-inline: $base-section-margin-in;
+
+  &__body {
+    padding-block: $base-section-margin-bl;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__left {
+
+  }
+
+  &__title {
+    margin-block-end: clamp(1.5rem, -0.125rem + 3.7143vw, 3.125rem);
+  }
+
+  &__caption {
+    font-weight: 500;
+  }
+}

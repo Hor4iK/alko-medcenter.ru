@@ -461,6 +461,7 @@ document.addEventListener('DOMContentLoaded', function () {
     ['resize', 'load'].forEach((event) => {
       window.addEventListener(event, function () {
         if (window.innerWidth <= 700 && !slider700Check) {
+          sliders700List.classList.add('swiper-wrapper');
           if (sliders700ItemArray && sliders700ItemArray.length > 0) {
             sliders700ItemArray.forEach(item => {
               item.classList.add('swiper-slide');
@@ -474,6 +475,7 @@ document.addEventListener('DOMContentLoaded', function () {
           });
         }
         if (window.innerWidth > 700 && slider700Check) {
+          sliders700List.classList.remove('swiper-wrapper');
           const sliders700ItemArray = sliders700List.querySelectorAll('.swiper-slide');
           if (sliders700ItemArray && sliders700ItemArray.length > 0) {
             sliders700ItemArray.forEach(item => {
