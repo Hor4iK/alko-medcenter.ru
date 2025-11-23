@@ -526,6 +526,14 @@ document.addEventListener('DOMContentLoaded', function () {
       direction: 'horizontal',
       slidesPerView: 1.2,
       grabCursor: true,
+      initialSlide: 1,
+      pagination: {
+        el: '.how-help__count',
+        type: 'fraction',
+        renderFraction: function (currentClass, totalClass) {
+          return '<span class="page-number ' + currentClass + '"></span>' + ' / ' + '<span class="' + totalClass + '"></span>';
+        }
+      },
       spaceBetween: 30,
       breakpoints: {
         600: {

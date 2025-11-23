@@ -52,6 +52,7 @@
         display: block;
         width: 12px;
         height: 14px;
+        flex-shrink: 0;
         background: url(../img/icons/star-point.svg) no-repeat center;
         background-size: contain;
       }
