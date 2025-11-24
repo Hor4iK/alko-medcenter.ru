@@ -30,7 +30,9 @@ document.addEventListener('DOMContentLoaded', function () {
   /* -- AUTOMATIC CONTENT -- */
   const textAreas = document.querySelectorAll('.text');
   if (textAreas && textAreas.length > 0) {
+    let numb = 0;
     textAreas.forEach(text => {
+      numb++;
       const autocontentSection = text.querySelector('.autocontent');
       const jsScrollBlockList = text.querySelectorAll('h2, h3, h4');
 
@@ -69,8 +71,8 @@ document.addEventListener('DOMContentLoaded', function () {
             navTitle = articleNavigationItem.querySelector('.autocontent__item-title');
 
             articleNavigationLink.classList.add('title-h2');
-            jsScrollBlock.setAttribute('id', i)
-            articleNavigationLink.setAttribute('href', '#' + i);
+            jsScrollBlock.setAttribute('id', i + "_" + numb)
+            articleNavigationLink.setAttribute('href', '#' + i + "_" + numb);
             articleNavigationLink.textContent = ' ' + titleBlock;
             navTitle.append(articleNavigationLink);
             firstElementCheck++;
@@ -84,8 +86,8 @@ document.addEventListener('DOMContentLoaded', function () {
               articleNavigationLink.classList.add('title-h4');
             }
 
-            jsScrollBlock.setAttribute('id', i)
-            articleNavigationLink.setAttribute('href', '#' + i);
+            jsScrollBlock.setAttribute('id', i + "_" + numb)
+            articleNavigationLink.setAttribute('href', '#' + i + "_" + numb);
             articleNavigationLink.textContent = ' ' + titleBlock;
             navList.append(articleNavigationLink);
           }
@@ -268,28 +270,56 @@ document.addEventListener('DOMContentLoaded', function () {
     if (categoriesArray.length > 0 && categoriesContentArray.length > 0) {
       categoriesArray[0].classList.add("active");
       categoriesContentArray[0].classList.add("active");
-      if (pagination) categoriesContentArray[0].querySelector('.pag-list').classList.add('pag-active');
+      if (pagination) {
+        let pagList = categoriesContentArray[0].querySelector('.pag-list');
+        if (pagList) {
+          pagList.classList.add('pag-active');
+        } else if (categoriesContentArray[0].classList.contains('pag-list')) {
+          categoriesContentArray[0].classList.add('pag-active');
+        }
+      };
       if (window.innerWidth <= 800) {
         categoriesContentArray[0].style.maxHeight = categoriesContentArray[0].scrollHeight + 40 + "px";
       }
       for (let i = 0; i < categoriesContentArray.length; i++) {
         categoriesContentArray[i].style.order = i * 2 + 1;
         categoriesArray[i].style.order = i * 2;
+        if (i > 0) categoriesContentArray[i].style.display = "none";
         categoriesArray[i].addEventListener('click', () => {
           mainContainer.querySelectorAll(itemSelectorActive).forEach(activeBtn => {
             activeBtn.classList.remove('active');
           })
           mainContainer.querySelectorAll(contentSelectorActive).forEach(activeContent => {
             activeContent.classList.remove('active');
+            setTimeout(() => { activeContent.style.display = "none"; }, 10);
             if (pagination) {
-              activeContent.classList.remove("pag-active");
-              activeContent.querySelector('.pag-list').classList.remove('pag-active');
+              let pagList = activeContent.querySelector('.pag-list');
+              if (pagList) {
+                pagList.classList.remove('pag-active');
+              } else if (activeContent.classList.contains('pag-list')) {
+                activeContent.classList.remove('pag-active');
+              }
             }
           })
-          categoriesArray[i].classList.add('active');
-          categoriesContentArray[i].classList.add("active");
+          categoriesArray[i].classList.add("active");
           if (pagination) {
-            categoriesContentArray[i].querySelector('.pag-list').classList.add('pag-active');
+            let pagList = categoriesContentArray[i].querySelector('.pag-list');
+            if (pagList) {
+              pagList.classList.add('pag-active');
+            } else if (categoriesContentArray[i].classList.contains('pag-list')) {
+              categoriesContentArray[i].classList.add('pag-active');
+            }
+          }
+          categoriesContentArray[i].style.display = null;
+          setTimeout(() => { categoriesContentArray[i].classList.add("active"); }, 10);
+
+          if (pagination) {
+            let pagList = categoriesContentArray[i].querySelector('.pag-list');
+            if (pagList) {
+              pagList.classList.add('pag-active');
+            } else if (categoriesContentArray[i].classList.contains('.pag-list')) {
+              categoriesContentArray[i].classList.add('pag-active');
+            }
 
             tabContents.forEach(content => {
               HiddenElementsInit(content, 8, showMoreBtn);
@@ -431,6 +461,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
   /* -- END NARKOLOG-TEST -- */
+
+
+  /* -- ARTICLES -- */
+  const articles = document.querySelector('.articles');
+  if (articles) {
+    const articlesTabsList = articles.querySelector('.articles__tabs');
+    const articlesCategories = articles.querySelectorAll('.articles__tab');
+    const articlesContent = articles.querySelectorAll('.articles__tab-content');
+
+    grabListListeners(articlesTabsList);
+    categoriesSwitch(articles, articlesCategories, articlesContent, ".articles__tab.active", ".articles__tab-content.active", 1);
+  }
+  /* -- END ARTICLES -- */
 
 
   /* -- AUTOCONTENT RESIZE  -- */
