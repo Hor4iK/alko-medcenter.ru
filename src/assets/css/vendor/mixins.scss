@@ -42,6 +42,14 @@
   @include box($color-accent-op-10, $color-black);
 }
 
+.box_accent-op-50 {
+  @include box($color-accent-op-50, $color-black);
+}
+
+.box_peach {
+  @include box($bg-peach-dusty, $color-black, 16px, clamp(1rem, 0.125rem + 2.2857vw, 2rem));
+}
+
 @mixin container($margin-bl: 0) {
   max-width: $max-width;
   width: 100%;
