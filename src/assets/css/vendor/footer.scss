@@ -67,11 +67,11 @@
     }
 
     .search__input {
+      background-color: transparent;
+
       &::placeholder {
         color: rgba($color-white, 0.6);
       }
-
-      background-color: transparent;
     }
 
     .search__content {

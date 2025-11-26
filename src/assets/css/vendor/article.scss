@@ -1,4 +1,96 @@
-
 .article {
+  padding-inline: $base-section-margin-in;
 
+  &__text {
+    padding: 0;
+
+    .text-section__content {
+      padding: 0;
+    }
+  }
+
+  &__title {
+    margin-block-end: clamp(2.25rem, 0.75rem + 3.4286vw, 3.75rem);
+  }
+
+  &__body {
+    padding-block-end: $base-section-margin-bl;
+    padding-block-start: clamp(2rem, 1.5rem + 1.1429vw, 2.5rem);
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: start;
+    justify-content: space-between;
+
+    @media (width <= 1400px) {
+      display: block;
+    }
+  }
+
+  &__left {
+    max-width: 395px;
+    width: 100%;
+
+    @media (width <= 1400px) {
+      display: none;
+    }
+  }
+
+  &__block {
+    padding-block: 30px;
+    border-bottom: 1px solid $color-light-grey;
+
+    &:first-of-type {
+      border-top: 1px solid $color-light-grey;
+    }
+
+    &:last-of-type {
+      margin-block-end: 80px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    > a:first-of-type {
+      margin-block-end: 30px;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    a {
+      transition: 0.2s ease-out;
+      position: relative;
+      left: -24px;
+      display: flex;
+      gap: 12px;
+      font-weight: 500;
+      line-height: 1;
+
+      &::before {
+        content: "";
+        display: block;
+        aspect-ratio: 1 / 1;
+        width: 12px;
+        background-image: url(../img/icons/star-point.svg);
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        transition: opacity 0.3s;
+        opacity: 0;
+        flex-shrink: 0;
+      }
+
+      &:hover {
+        left: 0;
+        color: $color-accent;
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
 }

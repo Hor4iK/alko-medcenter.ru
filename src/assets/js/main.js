@@ -28,14 +28,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   /* -- AUTOMATIC CONTENT -- */
-  const textAreas = document.querySelectorAll('.text');
+  const autocontentSection = document.querySelector('.autocontent');
+  const textAreas = document.querySelectorAll('.text-section');
   if (textAreas && textAreas.length > 0) {
     let numb = 0;
     textAreas.forEach(text => {
       numb++;
-      const autocontentSection = text.querySelector('.autocontent');
       const jsScrollBlockList = text.querySelectorAll('h2, h3, h4');
-
       if (jsScrollBlockList.length > 0 && autocontentSection) {
         const autocontentList = autocontentSection.querySelector('.autocontent__list');
 
@@ -100,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             let href = this.getAttribute('href').substring(1);
             const scrollTarget = document.getElementById(href);
-            const topOffset = 180;
+            const topOffset = 380;
             const elementPosition = scrollTarget.getBoundingClientRect().top;
             const offsetPosition = elementPosition - topOffset;
 
@@ -534,17 +533,17 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   //Sliders horizontal (3 desktop -> 1 mobile)
-  slidersArray = document.querySelectorAll(".slider-hl");
-  if (slidersArray) {
-    slidersArray.forEach(slider => {
-      sliderCheck = new Swiper(slider.querySelector('.slider-hl__swiper'), {
+  slidersHl3Array = document.querySelectorAll(".slider-hl-3");
+  if (slidersHl3Array) {
+    slidersHl3Array.forEach(slider => {
+      sliderCheck = new Swiper(slider.querySelector('.slider-hl-3__swiper'), {
         direction: 'horizontal',
         slidesPerView: 1.1,
         grabCursor: true,
         spaceBetween: 10,
         navigation: {
-          nextEl: slider.querySelector('.swiper-btn_right'),
-          prevEl: slider.querySelector('.swiper-btn_left'),
+          nextEl: slider.querySelector('.swiper-button-next'),
+          prevEl: slider.querySelector('.swiper-button-prev'),
         },
         breakpoints: {
           600: {
@@ -557,6 +556,59 @@ document.addEventListener('DOMContentLoaded', function () {
             slidesPerView: 3.2,
             spaceBetween: 20
           }
+        }
+      });
+    })
+  }
+
+  //Sliders horizontal (2 desktop -> 1 mobile)
+  slidersHl2Array = document.querySelectorAll(".slider-hl-2");
+  if (slidersHl2Array) {
+    slidersHl2Array.forEach(slider => {
+      sliderCheck = new Swiper(slider.querySelector('.slider-hl-2__swiper'), {
+        direction: 'horizontal',
+        slidesPerView: 1.1,
+        grabCursor: true,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: slider.querySelector('.swiper-button-next'),
+          prevEl: slider.querySelector('.swiper-button-prev'),
+        },
+        breakpoints: {
+          600: {
+            direction: 'horizontal',
+            slidesPerView: 2.2,
+            spaceBetween: 15
+          },
+          1100: {
+            direction: 'horizontal',
+            slidesPerView: 3.2,
+            spaceBetween: 20
+          }
+        }
+      });
+    })
+  }
+
+  //Sliders horizontal (1 desktop -> 1 mobile)
+  slidersHl1Array = document.querySelectorAll(".slider-hl-1");
+  if (slidersHl1Array) {
+    slidersHl1Array.forEach(slider => {
+      sliderCheck = new Swiper(slider.querySelector('.slider-hl-1__swiper'), {
+        direction: 'horizontal',
+        slidesPerView: 1,
+        grabCursor: true,
+        spaceBetween: 10,
+        pagination: {
+          el: '.slider-hl-1__count',
+          type: 'fraction',
+          renderFraction: function (currentClass, totalClass) {
+            return '<span class="page-number ' + currentClass + '"></span>' + ' / ' + '<span class="' + totalClass + '"></span>';
+          }
+        },
+        navigation: {
+          nextEl: slider.querySelector('.swiper-button-next'),
+          prevEl: slider.querySelector('.swiper-button-prev'),
         }
       });
     })
