@@ -1,6 +1,6 @@
 .service {
   .article__right {
-    > div:not(.autocontent, .form-call),
+    > div:not(.autocontent, .form-call, .intro-service),
     > section {
       padding-inline: 0;
     }
