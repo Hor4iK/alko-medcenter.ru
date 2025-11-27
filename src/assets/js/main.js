@@ -475,6 +475,15 @@ document.addEventListener('DOMContentLoaded', function () {
   /* -- END ARTICLES -- */
 
 
+  /* -- FAST-LINKS -- */
+  const fastLinks = document.querySelector('.fast-links');
+  if (fastLinks) {
+    const fastLinksList = fastLinks.querySelector('.fast-links__list');
+    grabListListeners(fastLinksList);
+  }
+  /* -- END FAST-LINKS -- */
+
+
   /* -- AUTOCONTENT RESIZE  -- */
   const autocontentArray = document.querySelectorAll('.autocontent');
   if (autocontentArray && autocontentArray.length > 0) {
@@ -483,9 +492,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const contentArray = autocontent.querySelectorAll('.autocontent__bottom-container');
 
       if (titleArray && contentArray) {
-        if (window.innerWidth <= 975) {
-          tabs('.autocontent', titleArray, contentArray);
-        }
+        tabs('.autocontent', titleArray, contentArray);
       }
     })
   }
@@ -540,13 +547,20 @@ document.addEventListener('DOMContentLoaded', function () {
         direction: 'horizontal',
         slidesPerView: 1.1,
         grabCursor: true,
-        spaceBetween: 10,
+        spaceBetween: 8,
+        pagination: {
+          el: '.slider-hl-3__count',
+          type: 'fraction',
+          renderFraction: function (currentClass, totalClass) {
+            return '<span class="page-number ' + currentClass + '"></span>' + ' / ' + '<span class="' + totalClass + '"></span>';
+          }
+        },
         navigation: {
           nextEl: slider.querySelector('.swiper-button-next'),
           prevEl: slider.querySelector('.swiper-button-prev'),
         },
         breakpoints: {
-          600: {
+          700: {
             direction: 'horizontal',
             slidesPerView: 2.2,
             spaceBetween: 15
@@ -569,22 +583,24 @@ document.addEventListener('DOMContentLoaded', function () {
         direction: 'horizontal',
         slidesPerView: 1.1,
         grabCursor: true,
-        spaceBetween: 10,
+        spaceBetween: 8,
+        pagination: {
+          el: '.slider-hl-2__count',
+          type: 'fraction',
+          renderFraction: function (currentClass, totalClass) {
+            return '<span class="page-number ' + currentClass + '"></span>' + ' / ' + '<span class="' + totalClass + '"></span>';
+          }
+        },
         navigation: {
           nextEl: slider.querySelector('.swiper-button-next'),
           prevEl: slider.querySelector('.swiper-button-prev'),
         },
         breakpoints: {
-          600: {
+          700: {
             direction: 'horizontal',
             slidesPerView: 2.2,
             spaceBetween: 15
           },
-          1100: {
-            direction: 'horizontal',
-            slidesPerView: 3.2,
-            spaceBetween: 20
-          }
         }
       });
     })
@@ -598,7 +614,7 @@ document.addEventListener('DOMContentLoaded', function () {
         direction: 'horizontal',
         slidesPerView: 1,
         grabCursor: true,
-        spaceBetween: 10,
+        spaceBetween: 8,
         pagination: {
           el: '.slider-hl-1__count',
           type: 'fraction',

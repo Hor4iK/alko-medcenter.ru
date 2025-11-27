@@ -1,14 +1,15 @@
 .faq {
+  margin-block-end: $base-section-margin-bl;
   &__title {
     margin-block-end: clamp(1.875rem, 0.125rem + 4.2857vw, 3.75rem);
   }
-  &__content {
-  }
+
   &__list {
     display: flex;
     flex-direction: column;
     gap: 12px;
   }
+
   &__item {
     &-title {
       display: flex;

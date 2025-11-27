@@ -6,13 +6,9 @@
 
   @if $padding ==20px {
     padding: clamp(1rem, 0.65rem + 0.8vw, 1.25rem);
-  }
-
-  @else if $padding ==30px {
+  } @else if $padding ==30px {
     padding: clamp(1rem, -0.225rem + 2.8vw, 1.875rem);
-  }
-
-  @else {
+  } @else {
     padding: $padding;
   }
 }
@@ -47,7 +43,12 @@
 }
 
 .box_peach {
-  @include box($bg-peach-dusty, $color-black, 16px, clamp(1rem, 0.125rem + 2.2857vw, 2rem));
+  @include box(
+    $bg-peach-dusty,
+    $color-black,
+    16px,
+    clamp(1rem, 0.125rem + 2.2857vw, 2rem)
+  );
 }
 
 @mixin container($margin-bl: 0) {
@@ -56,19 +57,13 @@
   margin: 0 auto;
 
   @if $margin-bl !=0 {
-    @if $margin-bl =="block" {
+    @if $margin-bl == "block" {
       margin-block: clamp(2rem, -3.95rem + 13.6vw, 6.25rem);
-    }
-
-    @else if $margin-bl =="top" {
+    } @else if $margin-bl == "top" {
       margin-block-start: clamp(2rem, -3.95rem + 13.6vw, 6.25rem);
-    }
-
-    @else if $margin-bl =="bottom" {
+    } @else if $margin-bl == "bottom" {
       margin-block-end: clamp(2rem, -3.95rem + 13.6vw, 6.25rem);
-    }
-
-    @else {
+    } @else {
       margin-block: $margin-bl;
     }
   }
@@ -78,7 +73,6 @@
   @include container();
 }
 //END CONTAINERS
-
 
 //BUTTONS
 .button {
@@ -178,7 +172,6 @@
 }
 //END BUTTONS
 
-
 @mixin point-mark-psevdo {
   content: "";
   position: absolute;
@@ -200,6 +193,8 @@
   aspect-ratio: 1/1;
   width: fit-content;
   background-color: $color-accent-op-10;
+  transition: 300ms ease-out;
+  outline: 1px solid transparent;
 
   &_trans {
     background-color: transparent;
@@ -254,6 +249,10 @@
     width: 40px;
   }
 
+  &_50 {
+    width: clamp(2.5rem, 1.7188rem + 2.5vw, 3.125rem);
+  }
+
   &_56 {
     width: clamp(3.125rem, 2.6rem + 1.2vw, 3.5rem);
   }
@@ -267,7 +266,6 @@
 a.point-mark,
 button.point-mark {
   outline: 1px solid transparent;
-  transition: outline 300ms ease-out;
 
   svg {
     transition: transform 200ms ease-out;
@@ -283,7 +281,6 @@ button.point-mark {
   }
 
   &_light {
-
     &:not(:disabled):hover,
     &:not(:disabled):active {
       outline: 2px solid $color-light-grey;

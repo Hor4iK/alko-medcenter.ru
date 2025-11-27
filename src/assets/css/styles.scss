@@ -265,8 +265,8 @@ form.form {
     line-height: 1.1;
     font-size: 14px;
 
-    @media (width<=500px) {
-      // flex-direction: column;
+    @media (width<=600px) {
+      gap: 25px;
     }
   }
 
@@ -279,19 +279,36 @@ form.form {
       color: $color-black;
       position: absolute;
       left: -16px;
-      top: 50%;
-      transform: translateY(-50%);
+      top: 1px;
     }
 
     a {
       color: $color-black;
+
+      &:hover {
+        color: $color-accent;
+      }
     }
   }
 }
 
 .autocontent {
   padding: 10px;
-  transition: padding 0.3s;
+  transition: padding 0.3s, outline 300ms;
+  outline: 1px solid transparent;
+
+  &:hover,
+  &:focus {
+    outline: 1px solid $color-accent;
+
+    .autocontent__btn {
+      background-color: #dd9071;
+      &::before,
+      &::after {
+        border: 2px solid $color-white;
+      }
+    }
+  }
 
   &:not(:last-child) {
     margin-block-end: clamp(2.25rem, 0.75rem + 3.4286vw, 3.75rem);
@@ -381,7 +398,8 @@ form.form {
       left: 50%;
       top: 50%;
       transform: translateX(-20%) rotate(-45deg);
-      transition: transform 0.3s;
+      transition: transform 0.3s, border 300ms;
+      border: 1px solid transparent;
     }
 
     &::after {
@@ -394,7 +412,8 @@ form.form {
       left: 50%;
       top: 50%;
       transform: translateX(-70%) rotate(45deg);
-      transition: transform 0.3s;
+      transition: transform 0.3s, border 300ms;
+      border: 1px solid transparent;
     }
   }
 
@@ -494,6 +513,8 @@ form.form {
 @import "vendor/article";
 @import "vendor/stocks";
 @import "vendor/faq";
+@import "vendor/service";
+@import "vendor/intro-service";
 
 @import "vendor/animate";
 @import "vendor/footer";

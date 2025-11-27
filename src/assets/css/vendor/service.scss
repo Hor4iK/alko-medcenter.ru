@@ -1,0 +1,24 @@
+.service {
+  .article__right {
+    > div:not(.autocontent, .form-call),
+    > section {
+      padding-inline: 0;
+    }
+  }
+
+  @media (width<=800px) {
+    .article__body {
+      padding-block-start: 0;
+    }
+  }
+
+  .breadcrumbs {
+    margin-block-end: 40px;
+
+    @media screen and (width<=800px) {
+      padding-block-start: 30px;
+      background-color: #fbf9f8;
+      margin: 0;
+    }
+  }
+}
