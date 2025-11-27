@@ -418,7 +418,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /* -- PRICE  -- */
   //Price tabs
-  const price = document.querySelector('.price');
+  const price = document.querySelector('.price-main');
   if (price) {
     const priceTabsList = price.querySelector('.price__tabs');
     const priceCategories = price.querySelectorAll('.price__tab');

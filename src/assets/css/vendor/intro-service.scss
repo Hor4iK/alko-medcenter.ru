@@ -203,7 +203,7 @@
 
   &__item {
     padding: 0;
-    transition: 300ms;
+    transition: 400ms;
 
     &.box_light {
       a {
@@ -237,6 +237,20 @@
 
       a {
         color: $color-accent;
+      }
+    }
+
+    &:active {
+      animation: breath 800ms infinite ease;
+      animation-direction: alternate;
+
+      span {
+        &:nth-child(1) {
+          transform: translateY(6px);
+        }
+        &:nth-child(3) {
+          transform: translateY(-6px);
+        }
       }
     }
   }

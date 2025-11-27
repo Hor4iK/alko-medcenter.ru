@@ -21,4 +21,15 @@
       margin: 0;
     }
   }
+
+  .how-going__content {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-rows: 1fr;
+  }
+
+  .how-going__item {
+    aspect-ratio: auto;
+    height: 100%;
+  }
 }
