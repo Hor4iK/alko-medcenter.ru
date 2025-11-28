@@ -23,6 +23,7 @@
       border-radius: 16px;
       transition: 300ms;
       margin-block-end: 0;
+      cursor: pointer;
 
       &.active {
         margin-block-end: 8px;
@@ -77,6 +78,136 @@
 
   &.faq-page {
     padding-inline: $base-section-margin-in;
+
+    .faq__content {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: 450ms;
+
+      &.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        position: relative;
+      }
+    }
+
+    .faq-page__button {
+      max-width: 320px;
+      width: 100%;
+      margin-block-start: clamp(1.875rem, 1rem + 2vw, 2.5rem);
+
+      &-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  &__categories {
+    margin-block-end: clamp(2.125rem, -1.025rem + 7.2vw, 4.375rem);
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 248px));
+      gap: 10px;
+
+      @media screen and (width<=700px) {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        overflow-x: scroll;
+        max-width: none;
+        padding-bottom: 2px;
+
+        .fast-links__item {
+          a {
+            width: max-content;
+            padding-inline: 76px;
+          }
+        }
+
+        &::-webkit-scrollbar {
+          height: 4px;
+        }
+        &::-webkit-scrollbar-track {
+          background-color: $bg-white;
+        }
+        &::-webkit-scrollbar-thumb {
+          border-radius: 4px;
+          background-color: $color-accent;
+        }
+      }
+    }
+
+    &__item {
+      padding: 0;
+      transition: 400ms;
+
+      &.box_light {
+        a {
+          color: $color-dark-grey;
+        }
+      }
+
+      &.box_accent-light,
+      &.active {
+        background-color: #f7f0ec;
+        color: #1f1f1f;
+        border-radius: 16px;
+        border: 1px solid transparent;
+
+        a {
+          color: $color-accent;
+        }
+      }
+
+      a {
+        padding: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100%;
+        line-height: 1.2;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $bg-peach-dusty;
+        border: 1px solid transparent;
+
+        a {
+          color: $color-accent;
+        }
+      }
+
+      &:active {
+        animation: breath 800ms infinite ease;
+        animation-direction: alternate;
+
+        span {
+          &:nth-child(1) {
+            transform: translateY(6px);
+          }
+          &:nth-child(3) {
+            transform: translateY(-6px);
+          }
+        }
+      }
+
+      @media screen and (width<=700px) {
+        width: 190px;
+        flex-shrink: 0;
+      }
+    }
   }
 
   &__body {

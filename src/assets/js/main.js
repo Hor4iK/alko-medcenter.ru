@@ -415,6 +415,19 @@ document.addEventListener('DOMContentLoaded', function () {
   /* -- END PRICE  -- */
 
 
+  /* -- FAQ-PAGE -- */
+  const faqPage = document.querySelector('.faq-page');
+  if (faqPage) {
+    const faqPageTabsList = faqPage.querySelector('.faq__categories__list');
+    const faqPageCategories = faqPage.querySelectorAll('.faq__categories__item');
+    const faqPageContent = faqPage.querySelectorAll('.faq__content');
+
+    grabListListeners(faqPageTabsList);
+    categoriesSwitch(faqPage, faqPageCategories, faqPageContent, ".faq__categories__item.active", ".faq__content.active", 1);
+  }
+  /* -- FAQ-PAGE -- */
+
+
   /* -- NARKOLOG-TEST -- */
   const test = document.querySelector('.narkolog-test');
   if (test) {
