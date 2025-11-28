@@ -17,6 +17,12 @@
     counter-reset: how-going;
     gap: 20px;
 
+    &-wrapper {
+      @media screen and (width<=700px) {
+        overflow: hidden;
+      }
+    }
+
     @media screen and (width<=1550px) {
       grid-template-columns: 1fr 1fr 1fr;
     }

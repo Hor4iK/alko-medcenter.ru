@@ -1,5 +1,6 @@
 .faq {
-  margin-block-end: $base-section-margin-bl;
+  margin-block: $base-section-margin-bl;
+
   &__title {
     margin-block-end: clamp(1.875rem, 0.125rem + 4.2857vw, 3.75rem);
   }

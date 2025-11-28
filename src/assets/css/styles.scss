@@ -17,13 +17,16 @@ body {
 
   &::-webkit-scrollbar {
     width: 6px;
+
     @media screen and (width<=500px) {
       width: 4px;
     }
   }
+
   &::-webkit-scrollbar-track {
     background-color: $bg-grey;
   }
+
   &::-webkit-scrollbar-thumb {
     border-radius: 2px;
     background-color: $color-accent;
@@ -76,6 +79,7 @@ html.burger-lock {
 
   &.footer__logo &__title {
     border: none;
+
     span {
       color: $color-white;
     }
@@ -160,7 +164,7 @@ form.form {
     }
   }
 
-  input[type="checkbox"]:checked ~ .checkbox-mark {
+  input[type="checkbox"]:checked~.checkbox-mark {
     background-color: $color-accent;
     border: 1px solid transparent;
 
@@ -187,7 +191,7 @@ form.form {
     height: 0;
     transition: scale 300ms;
 
-    + label {
+    +label {
       display: flex;
       align-items: center;
       cursor: pointer;
@@ -207,7 +211,7 @@ form.form {
     }
 
     // Состояние checked
-    &:checked + label {
+    &:checked+label {
       &::after {
         content: "";
         position: absolute;
@@ -222,12 +226,12 @@ form.form {
     }
 
     // Состояния при фокусе
-    &:focus + label::before {
+    &:focus+label::before {
       box-shadow: 0 0 0 2px rgba($color-accent, 0.2);
     }
 
     // Состояния при наведении
-    &:hover + label::before {
+    &:hover+label::before {
       border-color: darken($color-accent, 10%);
       scale: 1.2;
     }
@@ -303,6 +307,7 @@ form.form {
 
     .autocontent__btn {
       background-color: #dd9071;
+
       &::before,
       &::after {
         border: 2px solid $color-white;
@@ -362,6 +367,7 @@ form.form {
         transform: rotate(-45deg);
         transition: transform 0.3s;
       }
+
       &:after {
         content: "";
         display: block;
@@ -433,6 +439,7 @@ form.form {
     display: block;
     font-weight: 500;
     max-width: 90%;
+    width: fit-content;
   }
 
   .title-h3 {
@@ -465,8 +472,7 @@ form.form {
   }
 
   &.active {
-    padding: 10px 10px clamp(1.25rem, 0.625rem + 1.4286vw, 1.875rem)
-      clamp(1.25rem, 0.625rem + 1.4286vw, 1.875rem);
+    padding: 10px 10px clamp(1.25rem, 0.625rem + 1.4286vw, 1.875rem) clamp(1.25rem, 0.625rem + 1.4286vw, 1.875rem);
 
     .autocontent__bottom-container {
       margin-block-start: 25px;
@@ -517,6 +523,10 @@ form.form {
 @import "vendor/faq";
 @import "vendor/service";
 @import "vendor/intro-service";
+// @import "vendor/reviews";
+// @import "vendor/doctors";
+@import "vendor/ratings";
+// @import "vendor/gallery";
 
 @import "vendor/animate";
 @import "vendor/footer";

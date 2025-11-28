@@ -141,6 +141,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  //First level menu
   const hideItems = document.querySelectorAll('.hide-items');
   if (hideItems.length > 0) {
     hideItems.forEach((elem) => {
@@ -400,14 +401,6 @@ document.addEventListener('DOMContentLoaded', function () {
   /* -- END TABS  -- */
 
 
-  /* -- SERVICES  -- */
-  const service = document.querySelector('.services');
-  if (service) {
-
-  }
-  /* -- END SERVICES  -- */
-
-
   /* -- ALLOCATOR PAGE -- */
   const allocator = document.querySelector('.allocator');
   if (allocator) {
@@ -545,7 +538,7 @@ document.addEventListener('DOMContentLoaded', function () {
     slidersHl3Array.forEach(slider => {
       sliderCheck = new Swiper(slider.querySelector('.slider-hl-3__swiper'), {
         direction: 'horizontal',
-        slidesPerView: 1.1,
+        slidesPerView: 1.05,
         grabCursor: true,
         spaceBetween: 8,
         pagination: {
@@ -560,14 +553,19 @@ document.addEventListener('DOMContentLoaded', function () {
           prevEl: slider.querySelector('.swiper-button-prev'),
         },
         breakpoints: {
-          700: {
+          900: {
             direction: 'horizontal',
-            slidesPerView: 2.2,
+            slidesPerView: 1.3,
+            spaceBetween: 10
+          },
+          1200: {
+            direction: 'horizontal',
+            slidesPerView: 2,
             spaceBetween: 15
           },
-          1100: {
+          1620: {
             direction: 'horizontal',
-            slidesPerView: 3.2,
+            slidesPerView: 3,
             spaceBetween: 20
           }
         }
