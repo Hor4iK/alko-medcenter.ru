@@ -43,6 +43,7 @@
       }
     }
   }
+
   &__btn {
     position: relative;
     flex-shrink: 0;
@@ -72,5 +73,12 @@
       transform: translateX(-50%) rotate(90deg);
       transition: transform 0.3s;
     }
+  }
+
+  &.faq-page {
+    padding-inline: $base-section-margin-in;
+  }
+
+  &__body {
   }
 }

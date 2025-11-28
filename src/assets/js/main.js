@@ -401,14 +401,6 @@ document.addEventListener('DOMContentLoaded', function () {
   /* -- END TABS  -- */
 
 
-  /* -- ALLOCATOR PAGE -- */
-  const allocator = document.querySelector('.allocator');
-  if (allocator) {
-
-  }
-  /* -- END ALLOCATOR PAGE -- */
-
-
   /* -- PRICE  -- */
   //Price tabs
   const price = document.querySelector('.price-main');
@@ -797,7 +789,7 @@ document.addEventListener('DOMContentLoaded', function () {
   Fancybox.bind("[data-fancybox]");
 
 
-  /*POPUP CALCULATOR*/
+  /* -- POPUP CALCULATOR -- */
   const popupCalculator = document.querySelector('.calculator');
   if (popupCalculator) {
     //range value
@@ -879,5 +871,36 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
-  /*END POPUP CALCULATOR*/
+  /* -- END POPUP CALCULATOR -- */
+
+  /* -- POLICY-PLASHKA -- */
+  function getCookie(name) {
+    let matches = document.cookie.match(new RegExp(
+      "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+  }
+  const cookiePolicy = document.querySelector('.cookie-policy');
+  if (cookiePolicy) {
+    if (getCookie('cookie-policyz') != "en") {
+      cookiePolicy.classList.add('active');
+      document.cookie = "cookie-policyz=dis";
+      const btnsContainer = cookiePolicy.querySelector('.bottom-info__action');
+      if (btnsContainer) {
+        const btnsArr = btnsContainer.querySelectorAll('button');
+        btnsArr.forEach(button => {
+          button.addEventListener('click', evt => {
+            cookiePolicy.classList.remove('active');
+            setTimeout(() => {
+              cookiePolicy.style.display = "none";
+            }, 3000);
+            document.cookie = "cookie-policyz=en";
+          })
+        })
+      }
+    } else if (getCookie('cookie-policyz') == "en") {
+      cookiePolicy.style.display = "none";
+    }
+  }
+  /* -- END POLICY-PLASHKA -- */
 });

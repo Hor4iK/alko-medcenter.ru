@@ -43,9 +43,7 @@
   max-width: 900px;
   border-radius: 30px;
   position: relative;
-  padding: clamp(2rem, -0.45rem + 5.6vw, 3.75rem)
-    clamp(1rem, -2.85rem + 8.8vw, 3.75rem)
-    clamp(1rem, -2.85rem + 8.8vw, 3.75rem);
+  padding: clamp(2rem, -0.45rem + 5.6vw, 3.75rem) clamp(1rem, -2.85rem + 8.8vw, 3.75rem) clamp(1rem, -2.85rem + 8.8vw, 3.75rem);
   scale: 0.3;
   transition: scale 0.4s ease;
   background-color: $color-white;
@@ -70,6 +68,7 @@
   &:hover,
   &:focus,
   &:active {
+
     &::before,
     &::after {
       scale: 1.5;
@@ -215,8 +214,7 @@
       &::after {
         content: "";
         display: block;
-        background: url(../img/photo/molodaa-krasivaa-zensina.webp) no-repeat
-          center/center;
+        background: url(../img/photo/molodaa-krasivaa-zensina.webp) no-repeat center/center;
         background-size: contain;
         width: 90%;
         height: 90%;
@@ -242,9 +240,11 @@
         font-size: $font-size-h3;
         margin-block-end: clamp(1rem, 0.3rem + 1.6vw, 1.5rem);
       }
+
       .calculator__page-caption {
         margin-block-end: 40px;
       }
+
       .popup-btn {
         width: 100%;
         padding-inline: 20px;
@@ -376,6 +376,7 @@
         border: none;
         border-radius: 1px;
       }
+
       &::-moz-range-track {
         box-sizing: border-box;
         height: 2px;
@@ -383,12 +384,14 @@
         border: none;
         border-radius: 1px;
       }
+
       &::-ms-track {
         background: transparent;
         border-color: transparent;
         color: transparent;
         height: 2px;
       }
+
       &::-ms-fill-lower,
       &::-ms-fill-upper {
         background-color: $color-accent;
@@ -409,6 +412,7 @@
         cursor: pointer;
         transition: scale 300ms;
       }
+
       &::-moz-range-thumb {
         width: 10px;
         height: 10px;
@@ -420,6 +424,7 @@
         cursor: pointer;
         box-sizing: border-box;
       }
+
       &::-ms-thumb {
         width: 10px;
         height: 10px;
@@ -429,11 +434,13 @@
         transition: scale 300ms;
         cursor: pointer;
       }
+
       &:hover::-webkit-slider-thumb,
       &:focus-visible::-webkit-slider-thumb,
       &:active::-webkit-slider-thumb {
         scale: 1.6;
       }
+
       &:hover::-moz-range-thumb,
       &:focus-visible::-moz-range-thumb,
       &:active::-moz-range-thumb {
@@ -460,7 +467,7 @@
     background-color: #fbf9f8;
     overflow: hidden;
 
-    > div,
+    >div,
     form {
       max-width: 656px;
       position: relative;
@@ -489,8 +496,7 @@
     &::after {
       content: "";
       display: block;
-      background: url(../img/photo/molodaa-krasivaa-zensina.webp) no-repeat
-        center;
+      background: url(../img/photo/molodaa-krasivaa-zensina.webp) no-repeat center;
       background-size: contain;
       width: 80%;
       height: 80%;
@@ -538,8 +544,7 @@
       font-size: $font-size;
       font-weight: 500;
       line-height: 1.5;
-      margin-block: clamp(1.5rem, 0.1rem + 3.2vw, 2.5rem)
-        clamp(2.5rem, 1.625rem + 2vw, 3.125rem);
+      margin-block: clamp(1.5rem, 0.1rem + 3.2vw, 2.5rem) clamp(2.5rem, 1.625rem + 2vw, 3.125rem);
     }
 
     .button {
@@ -626,9 +631,6 @@
     }
   }
 
-  .city__search-result {
-  }
-
   .city__no-results-message {
     display: none;
   }
@@ -648,13 +650,16 @@
 
     &::-webkit-scrollbar {
       width: 4px;
+
       @media screen and (width<=500px) {
         width: 3px;
       }
     }
+
     &::-webkit-scrollbar-track {
       background-color: $color-light-grey;
     }
+
     &::-webkit-scrollbar-thumb {
       border-radius: 2px;
       background-color: $color-accent;
@@ -674,3 +679,80 @@
     }
   }
 }
+
+/*POLICY-PLASHKA*/
+.bottom-info__wrapper {
+  position: fixed;
+  inset: auto 0 0 0;
+  z-index: 1500;
+  color: $color-white;
+  font: inherit;
+  background-color: $color-accent;
+  opacity: 0;
+  transition: opacity 300ms;
+  font-size: clamp(0.875rem, 0.5625rem + 1vw, 1.125rem);
+  line-height: 1.1;
+}
+
+.bottom-info__wrapper.active {
+  opacity: 1;
+}
+
+.bottom-info__wrapper .bottom-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 15px 20px;
+}
+
+@media screen and (max-width: 700px) {
+  .bottom-info__wrapper .bottom-info {
+    flex-direction: column;
+  }
+}
+
+.bottom-info__wrapper .bottom-info__content {
+  margin: 0 10px 0 0;
+}
+
+.bottom-info__content a {
+  color: #52c5ff;
+  text-decoration: underline;
+  transition: color 300ms;
+}
+
+.bottom-info__content a:hover {
+  color: #296de7;
+}
+
+@media screen and (max-width: 700px) {
+  .bottom-info__wrapper .bottom-info__content {
+    text-align: center;
+    margin: 0 30px 0 0;
+  }
+}
+
+.bottom-info__wrapper .bottom-info__action {
+  display: flex;
+}
+
+@media screen and (max-width: 639px) {
+  .bottom-info__wrapper .bottom-info__action {
+    margin: 10px 0 0;
+  }
+}
+
+.bottom-info__wrapper .bottom-info__button-agree {
+  font-size: 16px;
+  line-height: 2;
+  font-weight: 600;
+  color: $color-accent;
+  border-radius: 12px;
+  line-height: 1;
+  padding: 18px 42px;
+  display: block;
+  background-color: $color-white;
+  border: none;
+  cursor: pointer;
+}
+/* END POLICY-PLASHKA*/
