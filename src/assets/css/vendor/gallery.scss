@@ -8,9 +8,6 @@
     margin-block-end: clamp(1.875rem, -0.75rem + 6vw, 3.75rem);
   }
 
-  &__content {
-  }
-
   &__toolbar {
     min-width: 120px;
     height: clamp(3.125rem, 2.6rem + 1.2vw, 3.5rem);
@@ -225,21 +222,19 @@
         }
       }
 
-      @media screen and (width<=700px) {
-        &__link {
-          margin-block-start: 30px;
+      &__link {
+        margin-block-start: 30px;
+
+        @media (width<=700px) {
+          display: none;
+        }
+
+        &_mobile {
+          display: none;
 
           @media (width<=700px) {
-            display: none;
-          }
-
-          &_mobile {
-            display: none;
-
-            @media (width<=700px) {
-              display: flex;
-              max-width: none;
-            }
+            display: flex;
+            max-width: none;
           }
         }
       }
