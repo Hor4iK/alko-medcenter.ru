@@ -3,6 +3,7 @@
 
   &__body {
     padding-block: $base-section-margin-bl;
+    position: relative;
   }
 
   @media (width<=800px) {
@@ -61,7 +62,7 @@
       width: 100%;
       position: absolute;
       top: 0;
-      left: 0;
+      right: -100%;
       opacity: 0;
       visibility: hidden;
       transform: translateY(10px);
@@ -71,7 +72,7 @@
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
-        position: relative;
+        position: static;
       }
     }
   }
@@ -231,6 +232,20 @@
       flex-direction: column;
       align-items: start;
       max-width: none;
+    }
+  }
+
+  &-page {
+    &__body {
+      padding-block: $base-section-margin-bl;
+    }
+
+    .breadcrumbs {
+      padding-inline: $base-section-margin-in;;
+    }
+
+    .price__body {
+      padding-block-start: 0;
     }
   }
 }
