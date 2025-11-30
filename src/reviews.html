@@ -1,1095 +1,339 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-  <!DOCTYPE html>
-  <html lang="ru">
-  <head>
-  	<meta charset="UTF-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  	<title>alko-medcenter.ru</title>
-    <link rel="apple-touch-icon" href="/assets/img/logo/logo.png">
-    <link rel="icon" type="image/svg+sml" href="/assets/img/logo/logo.svg">
-    <link rel="icon" href="/assets/img/logo/logo.ico">
-  	<link rel="stylesheet" href="assets/css/style.min.css">
-        <link rel="stylesheet" href="assets/css/newcss.css">
-  	<link rel="stylesheet" href="assets/css/build/fancybox.min.css">
-  	<link rel="stylesheet" href="assets/css/build/swiper.css">
-  	<script src="assets/js/build/fancybox.min.js" defer></script>
-  	<script src="assets/js/build/swiper-bundle.min.js" defer></script>
-  	<script src="assets/js/main.js" defer></script>
-        <script src="assets/js/newjs.js" defer></script>
-    <meta name="robots" content="noindex, nofollow">
-  </head>
-</head>
-
-<body>
-  <header class="header">
-    <div class="header__content container">
-      <div class="header__row">
-        <a href="/" class="header__logo logo">
-          <picture class="logo__picture">
-            <source srcset="./assets/img/logo/logo.webp" type="image/webp">
-            <source srcset="./assets/img/logo/logo.svg" type="image/svg+xml">
-            <img src="./assets/img/logo/logo.png" alt="Логотип">
-          </picture>
-          <div class="logo__title">
-            <span>Алко-Медцентр</span>
-            <span>Наркологическая клиника</span>
-          </div>
-        </a>
-        <p class="header__caption">Круглосуточная и анонимная<br>помощь в лечении алкоголизма </p>
-        <div class="header__address header__block">
-          <div class="point-mark point-mark_40">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" fill="none" viewBox="0 0 14 18">
-              <path fill="#D8A28B"
-                d="M7 0C5.14 0 3.36.75 2.05 2.07a7.12 7.12 0 0 0-2.05 5C0 13.12 6.36 17.7 6.63 17.9a.66.66 0 0 0 .74 0c.27-.2 6.63-4.77 6.63-10.82 0-1.87-.74-3.67-2.05-5A6.97 6.97 0 0 0 7 0Zm0 4.5a2.53 2.53 0 0 1 2.35 1.59 2.6 2.6 0 0 1-.55 2.8 2.54 2.54 0 0 1-4.35-1.82c0-.68.27-1.33.75-1.82A2.53 2.53 0 0 1 7 4.5Z" />
-            </svg>
-          </div>
-          <div class="header__block__container">
-            <span class="header__description">Адрес:</span>
-            <p><span class="header__address__title">Москва</span>, <span class="header__address__caption">Старогвардейская
-                245</span></p>
-          </div>
-        </div>
-        <div class="header__phone header__block">
-          <div class="point-mark point-mark_40">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
-              <path fill="#D8A28B"
-                d="m15.22 10.74-3.75-1.6a1.25 1.25 0 0 0-1.21.1l-2.02 1.34a6.13 6.13 0 0 1-2.82-2.8l1.33-2.04a1.27 1.27 0 0 0 .12-1.2L5.26.77A1.3 1.3 0 0 0 3.92 0 4.5 4.5 0 0 0 0 4.46C0 10.82 5.18 16 11.54 16a4.5 4.5 0 0 0 4.45-3.92 1.3 1.3 0 0 0-.77-1.34Z" />
-            </svg>
-          </div>
-          <div class="header__block__container">
-            <span class="header__description">Номер телефона, 24/7:</span>
-            <a class="header__phone__link" href="tel:88005553535">8 (800) 555-35-35</a>
-          </div>
-        </div>
-        <div class="header__license header__block">
-          <div class="point-mark point-mark_40">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" fill="none" viewBox="0 0 14 17">
-              <path fill="#D9A28C"
-                d="M13.82 4.76 9.36.2A.64.64 0 0 0 8.91 0H1.27C.94 0 .61.14.37.38.13.63 0 .96 0 1.31v14.38c0 .35.13.68.37.93.24.24.57.38.9.38h11.46c.33 0 .66-.14.9-.38.24-.25.37-.58.37-.93V5.23a.67.67 0 0 0-.18-.47Zm-4.27 7.66h-5.1a.63.63 0 0 1-.45-.19.66.66 0 0 1 0-.92c.12-.13.29-.2.45-.2h5.1a.66.66 0 0 1 .45 1.12.63.63 0 0 1-.45.2Zm0-2.61h-5.1A.63.63 0 0 1 4 9.6a.66.66 0 0 1 0-.92c.12-.12.29-.19.45-.19h5.1A.66.66 0 0 1 10 9.62a.63.63 0 0 1-.45.19ZM8.9 5.23v-3.6l3.5 3.6H8.9Z" />
-            </svg>
-          </div>
-          <div class="header__block__container">
-            <span class="header__description">Номер лицензии:</span>
-            <p>Л041-01050-61/00347983</p>
-          </div>
-        </div>
-        <button class="button button_accent header__button popup-btn" data-path="popup-call">Заказать звонок</button>
-        <button class="menu_mobile menu_btn point-mark point-mark_40">
-          <span></span>
-          <span></span>
-          <span></span>
+<section class="articles reviews">
+  <div class="reviews__body container">
+    <div class="breadcrumbs">
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a href="/">Главная</a></li>
+        <li class="breadcrumbs__item">Отзывы</li>
+      </ul>
+    </div>
+    <h1 class="reviews__title main-title">Отзывы о нашей клинике</h1>
+    <div class="articles__content">
+      <div class="articles__tabs">
+        <button class="articles__tab">
+          <span>Все</span>
+        </button>
+        <button class="articles__tab">
+          <span>О наркомании</span>
+        </button>
+        <button class="articles__tab">
+          <span>Об алкоголизме</span>
+        </button>
+        <button class="articles__tab">
+          <span>О курении</span>
+        </button>
+        <button class="articles__tab">
+          <span>Об игромании</span>
+        </button>
+        <button class="articles__tab">
+          <span>Психиатрия</span>
+        </button>
+        <button class="articles__tab">
+          <span>Другое</span>
         </button>
       </div>
-      <div class="header__row">
-        <div class="header__search search_mobile search">
-          <form action="" class="search__form">
-            <input placeholder="Поиск по сайту" type="text" class="search__input">
-          </form>
-          <div class="search__content">
-            <div class="search__hints">
-              <ul>
-                <li><a href="#">Лечение алкоголизма </a></li>
-                <li><a href="#">Лечение алкоголизма </a></li>
-                <li><a href="#">Лечение алкоголизма </a></li>
-                <li><a href="#">Опиоидная детоксикация</a></li>
-                <li><a href="#">Опиоидная детоксикация</a></li>
-                <li><a href="#">Опиоидная детоксикация</a></li>
-                <li><a href="#">Опиоидная детоксикация</a></li>
-                <li><a href="#">Опиоидная детоксикация</a></li>
-                <li><a href="#">Опиоидная детоксикация</a></li>
-                <li><a href="#">Шишки шишки шишки</a></li>
-                <li><a href="#">Шишки шишки шишки</a></li>
-                <li><a href="#">Шишки шишки шишки</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <nav class="menu header__menu">
-          <ul class="menu__list hide-items">
-            <li class="menu__item hide-item">
-              <button class="menu__item__button hide-item__title">
-                <a href="#" class="menu__link menu__point">Услуги</a>
-              </button>
-              <div class="menu__subnav hide-item__height">
-                <ul class="hide-item__content hide-items--2">
-                  <li class="menu__sublink hide-item--2">
-                    <button class="menu__item__button hide-item__title--2">
-                      <a href="#" class="menu__link">Лечение алкоголизма 1</a>
-                    </button>
-                    <div class="menu__subnav menu__subnav--lvl-2 hide-item__height--2">
-                      <ul class="hide-item__content--2">
-                        <li class="menu__sublink menu__sublink--lvl-2"><a href="#" class="menu__link">Лечение алкоголизма
-                            111</a></li>
-                        <li class="menu__sublink menu__sublink--lvl-2"><a href="#" class="menu__link">Лечение алкоголизма
-                            222</a></li>
-                        <li class="menu__sublink menu__sublink--lvl-2"><a href="#" class="menu__link">Лечение алкоголизма
-                            333</a></li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li class="menu__sublink hide-item--2">
-                    <button class="menu__item__button hide-item__title--2">
-                      <a href="#" class="menu__link">Лечение алкоголизма 222</a>
-                    </button>
-                    <div class="menu__subnav menu__subnav--lvl-2 hide-item__height--2">
-                      <ul class="hide-item__content--2">
-                        <li class="menu__sublink menu__sublink--lvl-2"><a href="#" class="menu__link">fasfasfsaf 111</a>
-                        </li>
-                        <li class="menu__sublink menu__sublink--lvl-2"><a href="#" class="menu__link">sdfsdfsdfds222</a>
-                        </li>
-                        <li class="menu__sublink menu__sublink--lvl-2"><a href="#" class="menu__link">sdfdsf 333</a></li>
-                      </ul>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="menu__item hide-item">
-              <button class="menu__item__button hide-item__title">
-                <a href="#" class="menu__link">О клинике</a>
-              </button>
-              <div class="menu__subnav hide-item__height">
-                <ul class="hide-item__content hide-items--2">
-                  <li class="menu__sublink hide-item--2">
-                    <button class="menu__item__button hide-item__title--2">
-                      <a href="#" class="menu__link">2</a>
-                    </button>
-                    <div class="menu__subnav menu__subnav--lvl-2 hide-item__height--2">
-                      <ul class="hide-item__content--2">
-                        <li class="menu__sublink menu__sublink--lvl-2"><a href="#" class="menu__link">Фотогалерея</a></li>
-                        <li class="menu__sublink menu__sublink--lvl-2"><a href="#" class="menu__link">Пользовательское
-                            соглашение</a></li>
-                        <li class="menu__sublink menu__sublink--lvl-2"><a href="#" class="menu__link">Авито</a></li>
-                      </ul>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Цены</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Акции</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Специалисты</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Отзывы</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Блог</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Лицензии</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="header__address_mobile header__block">
-          <span class="header__description">Адрес:</span>
-          <p><span class="header__address__title">Москва</span>, <span class="header__address__caption">Старогвардейская
-              245</span></p>
-        </div>
-        <div class="header__phone_mobile header__block">
-          <span class="header__description">Номер телефона, 24/7:</span>
-          <a class="header__phone__link" href="tel:88005553535">8 (800) 555-35-35</a>
-        </div>
-        <div class="header__mail_mobile header__block">
-          <span class="header__description">Электронная почта:</span>
-          <a class="header__phone__link" href="mail:info@alko-medcentr.ru">info@alko-medcentr.ru</a>
-        </div>
-        <div class="header__toolbar">
-          <button id="specialButton" class="point-mark point-mark_56 point-mark_trans">
-            <svg role="img" xmlns="http://www.w3.org/2000/svg" width="26" height="18" fill="none" viewBox="0 0 26 18">
-              <title>ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ</title>
-              <path fill="#D9A28C"
-                d="M25.93 8.64c-.04-.09-.96-2.2-3-4.33a13.58 13.58 0 0 0-19.87 0A15.86 15.86 0 0 0 .07 8.64a.92.92 0 0 0 0 .72c.04.09.96 2.2 3 4.33a13.58 13.58 0 0 0 19.87 0 15.86 15.86 0 0 0 2.99-4.33.92.92 0 0 0 0-.72ZM13 4.95c.77 0 1.53.24 2.17.68a4.02 4.02 0 0 1 1.43 1.82 4.2 4.2 0 0 1-.84 4.41 3.77 3.77 0 0 1-4.25.88 3.94 3.94 0 0 1-1.75-1.49 4.16 4.16 0 0 1 .48-5.11A3.83 3.83 0 0 1 13 4.95Z" />
-            </svg>
-          </button>
-          <a href="#" class="point-mark point-mark_56">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="14" fill="none" viewBox="0 0 22 14">
-              <path fill="#D9A28C"
-                d="M11.98 14C4.47 14 .18 8.74 0 0h3.77c.12 6.42 2.9 9.14 5.1 9.7V0h3.54v5.54c2.17-.24 4.45-2.77 5.22-5.54h3.55a10.79 10.79 0 0 1-4.83 6.98A10.9 10.9 0 0 1 22 14h-3.9a6.94 6.94 0 0 0-2.1-3.38A6.73 6.73 0 0 0 12.4 9v5h-.42Z" />
-            </svg>
-          </a>
-          <a href="#" class="point-mark point-mark_56">
-            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" fill="none" viewBox="0 0 19 17">
-              <path fill="#D9A28C"
-                d="m19 .6-3 15.7s-.43 1.08-1.58.56l-6.94-5.5-.03-.02 8.52-7.94c.5-.48.19-.76-.38-.4L4.86 10.05.72 8.61S.07 8.37 0 7.85c-.06-.52.74-.8.74-.8L17.6.18S19-.44 19 .6Z" />
-            </svg>
-          </a>
-          <div class="search__container search_desktop">
-            <div class="header__search search">
-              <form action="" class="search__form">
-                <input placeholder="Поиск по сайту" type="text" class="search__input">
-              </form>
-              <div class="search__content">
-                <div class="search__hints">
-                  <ul>
-                    <li><a href="#">Лечение алкоголизма </a></li>
-                    <li><a href="#">Лечение алкоголизма </a></li>
-                    <li><a href="#">Лечение алкоголизма </a></li>
-                    <li><a href="#">Опиоидная детоксикация</a></li>
-                    <li><a href="#">Опиоидная детоксикация</a></li>
-                    <li><a href="#">Опиоидная детоксикация</a></li>
-                    <li><a href="#">Опиоидная детоксикация</a></li>
-                    <li><a href="#">Опиоидная детоксикация</a></li>
-                    <li><a href="#">Опиоидная детоксикация</a></li>
-                    <li><a href="#">Шишки шишки шишки</a></li>
-                    <li><a href="#">Шишки шишки шишки</a></li>
-                    <li><a href="#">Шишки шишки шишки</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  </header>
-  <main class="main">
-    <section class="articles reviews">
-      <div class="reviews__body container">
-        <div class="breadcrumbs">
-          <ul class="breadcrumbs__list">
-            <li class="breadcrumbs__item"><a href="/">Главная</a></li>
-            <li class="breadcrumbs__item">Отзывы</li>
-          </ul>
-        </div>
-        <h1 class="reviews__title main-title">Отзывы о нашей клинике</h1>
-        <div class="articles__content">
-          <div class="articles__tabs">
-            <button class="articles__tab">
-              <span>Все</span>
-            </button>
-            <button class="articles__tab">
-              <span>О наркомании</span>
-            </button>
-            <button class="articles__tab">
-              <span>Об алкоголизме</span>
-            </button>
-            <button class="articles__tab">
-              <span>О курении</span>
-            </button>
-            <button class="articles__tab">
-              <span>Об игромании</span>
-            </button>
-            <button class="articles__tab">
-              <span>Психиатрия</span>
-            </button>
-            <button class="articles__tab">
-              <span>Другое</span>
-            </button>
-          </div>
-          <div class="articles__tabs-content ">
-            <div class="articles__tab-content pag-list">
-                <div class="reviews__item">
-                    <div class="reviews__item-head">
-                        <div class="reviews__item-map">
-                            <img src="assets/ymap.svg" alt="ymap">
-                        </div>
-                        <div class="reviews__item-rating">
-                            <p class="reviews__item-rating_number">4.9</p>
-                            <div class="reviews__item-rating_stars">
-                                <img src="assets/star.svg" alt="star">
-                                <img src="assets/star.svg" alt="star">
-                                <img src="assets/star.svg" alt="star">
-                                <img src="assets/star.svg" alt="star">
-                                <img src="assets/star.svg" alt="star">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="reviews__item-body">
-                        <div class="reviews__item-text">
-                            <p class="reviews__item-text_name">Константин</p>
-                            <p>Бесплатная первичная консультация специалиста по телефону для людей, которые страдают от зависимостей и для их близких, поможет в трудной ситуаци принять верное решение. Алкоголь, наркотики, лекарственные средства, поведенческие зависимости, тревога, панические атаки, депрессия, психозы — всё это требует профессионального подхода, а не «перетерпеть» или «взять себя в руки». Нет универсальных схем. Лечение строится под ваш диагноз, возраст, сопутствующие состояния и цель. Бесплатная первичная консультация специалиста по телефону для людей, которые страдают от зависимостей и для их близких, поможет в трудной ситуаци принять верное решение. Алкоголь, наркотики, лекарственные средства, поведенческие зависимости, тревога, панические атаки, депрессия, психозы — всё это требует профессионального подхода, а не «перетерпеть» или «взять себя в руки». Нет универсальных схем. Лечение строится под ваш диагноз, возраст, сопутствующие состояния и цель. Бесплатная первичная консультация специалиста по телефону для людей, которые страдают от зависимостей и дл...</p>
-                        </div>
-                        <button class="reviews__item-btn">Читать полностью</button>
-                    </div>
-                </div>
-                <div class="reviews__item">
-                    <div class="reviews__item-head">
-                        <div class="reviews__item-map">
-                            <img src="assets/ymap.svg" alt="ymap">
-                        </div>
-                        <div class="reviews__item-rating">
-                            <p class="reviews__item-rating_number">4.9</p>
-                            <div class="reviews__item-rating_stars">
-                                <img src="assets/star.svg" alt="star">
-                                <img src="assets/star.svg" alt="star">
-                                <img src="assets/star.svg" alt="star">
-                                <img src="assets/star.svg" alt="star">
-                                <img src="assets/star.svg" alt="star">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="reviews__item-body">
-                        <div class="reviews__item-text">
-                            <p class="reviews__item-text_name">Константин</p>
-                            <p>Бесплатная первичная консультация специалиста по телефону для людей, которые страдают от зависимостей и для их близких, поможет в трудной ситуаци принять верное решение. Алкоголь, наркотики, лекарственные средства, поведенческие зависимости, тревога, панические атаки, депрессия, психозы — всё это требует профессионального подхода, а не «перетерпеть» или «взять себя в руки». Нет универсальных схем. Лечение строится под ваш диагноз, возраст, сопутствующие состояния и цель. Бесплатная первичная консультация специалиста по телефону для людей, которые страдают от зависимостей и для их близких, поможет в трудной ситуаци принять верное решение. Алкоголь, наркотики, лекарственные средства, поведенческие зависимости, тревога, панические атаки, депрессия, психозы — всё это требует профессионального подхода, а не «перетерпеть» или «взять себя в руки». Нет универсальных схем. Лечение строится под ваш диагноз, возраст, сопутствующие состояния и цель. Бесплатная первичная консультация специалиста по телефону для людей, которые страдают от зависимостей и дл...</p>
-                        </div>
-                        <button class="reviews__item-btn">Читать полностью</button>
-                    </div>
-                </div>
-                <div class="reviews__item">
-                    <div class="reviews__item-head">
-                        <div class="reviews__item-map">
-                            <img src="assets/ymap.svg" alt="ymap">
-                        </div>
-                        <div class="reviews__item-rating">
-                            <p class="reviews__item-rating_number">4.9</p>
-                            <div class="reviews__item-rating_stars">
-                                <img src="assets/star.svg" alt="star">
-                                <img src="assets/star.svg" alt="star">
-                                <img src="assets/star.svg" alt="star">
-                                <img src="assets/star.svg" alt="star">
-                                <img src="assets/star.svg" alt="star">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="reviews__item-body">
-                        <div class="reviews__item-text">
-                            <p class="reviews__item-text_name">Константин</p>
-                            <p>Бесплатная первичная консультация специалиста по телефону для людей, которые страдают от зависимостей и для их близких, поможет в трудной ситуаци принять верное решение. Алкоголь, наркотики, лекарственные средства, поведенческие зависимости, тревога, панические атаки, депрессия, психозы — всё это требует профессионального подхода, а не «перетерпеть» или «взять себя в руки». Нет универсальных схем. Лечение строится под ваш диагноз, возраст, сопутствующие состояния и цель. Бесплатная первичная консультация специалиста по телефону для людей, которые страдают от зависимостей и для их близких, поможет в трудной ситуаци принять верное решение. Алкоголь, наркотики, лекарственные средства, поведенческие зависимости, тревога, панические атаки, депрессия, психозы — всё это требует профессионального подхода, а не «перетерпеть» или «взять себя в руки». Нет универсальных схем. Лечение строится под ваш диагноз, возраст, сопутствующие состояния и цель. Бесплатная первичная консультация специалиста по телефону для людей, которые страдают от зависимостей и дл...</p>
-                        </div>
-                        <button class="reviews__item-btn">Читать полностью</button>
-                    </div>
-                </div>
-                <div class="reviews__item">
-                    <div class="reviews__item-head">
-                        <div class="reviews__item-map">
-                            <img src="assets/ymap.svg" alt="ymap">
-                        </div>
-                        <div class="reviews__item-rating">
-                            <p class="reviews__item-rating_number">4.9</p>
-                            <div class="reviews__item-rating_stars">
-                                <img src="assets/star.svg" alt="star">
-                                <img src="assets/star.svg" alt="star">
-                                <img src="assets/star.svg" alt="star">
-                                <img src="assets/star.svg" alt="star">
-                                <img src="assets/star.svg" alt="star">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="reviews__item-body">
-                        <div class="reviews__item-text">
-                            <p class="reviews__item-text_name">Константин</p>
-                            <p>озы — всё это требует профессионального подхода, а не «перетерпеть» или «взять себя в руки». Нет универсальных схем. Лечение строится под ваш диагноз, возраст, сопутствующие состояния и цель. Бесплатная первичная консультация специалиста по телефону для людей, которые страдают от зависимостей и дл...</p>
-                        </div>
-                        <button class="reviews__item-btn">Читать полностью</button>
-                    </div>
-                </div>
-                <div class="reviews__item">
-                    <div class="reviews__item-head">
-                        <div class="reviews__item-map">
-                            <img src="assets/ymap.svg" alt="ymap">
-                        </div>
-                        <div class="reviews__item-rating">
-                            <p class="reviews__item-rating_number">4.9</p>
-                            <div class="reviews__item-rating_stars">
-                                <img src="assets/star.svg" alt="star">
-                                <img src="assets/star.svg" alt="star">
-                                <img src="assets/star.svg" alt="star">
-                                <img src="assets/star.svg" alt="star">
-                                <img src="assets/star.svg" alt="star">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="reviews__item-body">
-                        <div class="reviews__item-text">
-                            <p class="reviews__item-text_name">Константин</p>
-                            <p>т в трудной ситуаци принять верное решение. Алкоголь, наркотики, лекарственные средства, поведенческие зависимости, тревога, панические атаки, депрессия, психозы — всё это требует профессионального подхода, а не «перетерпеть» или «взять себя в руки». Нет универсальных схем. Лечение строится под ваш диагноз, возраст, сопутствующие состояния и цель. Бесплатная первичная консультация специалиста по телефону для людей, которые страдают от зависимостей и для их близких, поможет в трудной ситуаци принять верное решение. Алкоголь, наркотики, лекарственные средства, поведенческие зависимости, тревога, панические атаки, депрессия, психозы — всё это требует профессионального подхода, а не «перетерпеть» или «взять себя в руки». Нет универсальных схем. Лечение строится под ваш диагноз, возраст, сопутствующие состояния и цель. Бесплатная первичная консультация специалиста по телефону для людей, которые страдают от зависимостей и дл...</p>
-                        </div>
-                        <button class="reviews__item-btn">Читать полностью</button>
-                    </div>
-                </div>
-                <div class="reviews__item">
-                    <div class="reviews__item-head">
-                        <div class="reviews__item-map">
-                            <img src="assets/ymap.svg" alt="ymap">
-                        </div>
-                        <div class="reviews__item-rating">
-                            <p class="reviews__item-rating_number">4.9</p>
-                            <div class="reviews__item-rating_stars">
-                                <img src="assets/star.svg" alt="star">
-                                <img src="assets/star.svg" alt="star">
-                                <img src="assets/star.svg" alt="star">
-                                <img src="assets/star.svg" alt="star">
-                                <img src="assets/star.svg" alt="star">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="reviews__item-body">
-                        <div class="reviews__item-text">
-                            <p class="reviews__item-text_name">Константин</p>
-                            <p> панические атаки, депрессия, психозы — всё это требует профессионального подхода, а не «перетерпеть» или «взять себя в руки». Нет универсальных схем. Лечение строится под ваш диагноз, возраст, сопутствующие состояния и цель. Бесплатная первичная консультация специалиста по телефону для людей, которые страдают от зависимостей и для их близких, поможет в трудной ситуаци принять верное решение. Алкоголь, наркотики, лекарственные средства, поведенческие зависимости, тревога, панические атаки, депрессия, психозы — всё это требует профессионального подхода, а не «перетерпеть» или «взять себя в руки». Нет универсальных схем. Лечение строится под ваш диагноз, возраст, сопутствующие состояния и цель. Бесплатная первичная консультация специалиста по телефону для людей, которые страдают от зависимостей и дл...</p>
-                        </div>
-                        <button class="reviews__item-btn">Читать полностью</button>
-                    </div>
-                </div>
-            </div>
-            <div class="articles__tab-content pag-list">
-              
-            </div>
-            <div class="articles__tab-content pag-list">
-              
-            </div>
-            <div class="articles__tab-content pag-list">
-              
-            </div>
-            <div class="articles__tab-content pag-list">
-              
-            </div>
-            <div class="articles__tab-content pag-list">
-              
-            </div>
-            <div class="articles__tab-content pag-list">
-              
-            </div>
-            <button class="button button_accent articles__tab-content__button btn_more active">Смотреть еще</button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <div class="form-call">
-      <div class="form-call__body container">
-        <div class="form-call__content">
-          <p class="section-title form-call__title">Вызовите врача-нарколога на дом — без промедления
-            и лишних вопросов</p>
-          <p class="form-call__caption">Оставьте номер телефона — мы свяжемся в течение 5 минут, уточним ситуацию и направим
-            ближайшую бригаду. Всё пройдёт конфиденциально и по существу.
-          </p>
-          <form class="form">
-            <input type="text" class="input" placeholder="Ваше имя" name="params[name][]" required="">
-            <input type="tel" class="input" placeholder="Ваш номер телефона" name="params[phone][]" required="">
-            <button type="submit" class="button button_accent popup__button">Заказать звонок</button>
-            <label class="checkbox">
-              <input type="checkbox" checked="checked" required="">
-              <span class="checkbox-mark"></span>
-              <span>Отправляя заявку, вы соглашаетесь с <a href="#" rel="nofollow">политикой конфиденциальности</a></span>
-            </label>
-          </form>
-        </div>
-      </div>
-    </div>
-    
-  </main>
-  <footer class="footer">
-    <div class="footer__wrapper container">
-      <div class="footer__content">
-        <div class="footer__container">
-          <a href="/" class="footer__logo logo">
-            <picture class="logo__picture">
-              <source srcset="./assets/img/logo/logo-white.webp" type="image/webp">
-              <source srcset="./assets/img/logo/logo-white.svg" type="image/svg+xml">
-              <img src="./assets/img/logo/logo-white.png" alt="Логотип">
-            </picture>
-            <div class="logo__title">
-              <span>Алко-Медцентр</span>
-              <span>Наркологическая клиника</span>
-            </div>
-          </a>
-          <div class="footer__address footer__block">
-            <span class="footer__caption">Адрес:</span>
-            <p><span class="footer__address__title">Москва</span>, <span class="footer__address__caption">Старогвардейская
-                245</span></p>
-          </div>
-          <div class="footer__phone footer__block">
-            <span class="footer__caption">Номер телефона, 24/7:</span>
-            <a class="footer__phone__link" href="tel:88005553535">8 (800) 555-35-35</a>
-          </div>
-          <div class="footer__license footer__block">
-            <span class="footer__caption">Электронная почта:</span>
-            <a class="mail" href="mail:info@alko-medcentr.ru">info@alko-medcentr.ru</a>
-          </div>
-          <div class="footer__buttons">
-            <a href="#" class="point-mark point-mark_56 point-mark_light">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="14" fill="none" viewBox="0 0 22 14">
-                <path fill="#D9A28C"
-                  d="M11.98 14C4.47 14 .18 8.74 0 0h3.77c.12 6.42 2.9 9.14 5.1 9.7V0h3.54v5.54c2.17-.24 4.45-2.77 5.22-5.54h3.55a10.79 10.79 0 0 1-4.83 6.98A10.9 10.9 0 0 1 22 14h-3.9a6.94 6.94 0 0 0-2.1-3.38A6.73 6.73 0 0 0 12.4 9v5h-.42Z" />
-              </svg>
-            </a>
-            <a href="#" class="point-mark point-mark_56 point-mark_light">
-              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" fill="none" viewBox="0 0 19 17">
-                <path fill="#D9A28C"
-                  d="m19 .6-3 15.7s-.43 1.08-1.58.56l-6.94-5.5-.03-.02 8.52-7.94c.5-.48.19-.76-.38-.4L4.86 10.05.72 8.61S.07 8.37 0 7.85c-.06-.52.74-.8.74-.8L17.6.18S19-.44 19 .6Z" />
-              </svg>
-            </a>
-            <button id="specialButton" class="point-mark point-mark_56 point-mark_trans">
-              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="18" fill="none" viewBox="0 0 26 18">
-                <path fill="#FFF"
-                  d="M26 8.6c-.1 0-1-2.2-3-4.3a13.6 13.6 0 0 0-20 0C1 6.4.2 8.6 0 8.6a1 1 0 0 0 0 .8c.1 0 1 2.2 3 4.3a13.6 13.6 0 0 0 20 0c2-2.1 2.9-4.3 3-4.3a1 1 0 0 0 0-.8ZM13 5c.8 0 1.5.2 2.2.6a4 4 0 0 1 1.4 1.9 4.2 4.2 0 0 1-.8 4.4c-.6.5-1.3 1-2 1-.8.2-1.6.1-2.3-.2a4 4 0 0 1-1.7-1.4 4.2 4.2 0 0 1 .4-5.2C11 5.4 12 5 13 5Z" />
-              </svg>
-            </button>
-          </div>
-          <div class="footer__rating footer__block">
-            <span>Рейтинг клиники:</span>
-            <div>
-              <span class="footer__address__title">4.9</span>
-              <div class="rating-stars">
-                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" fill="none" viewBox="0 0 21 20">
-                  <path fill="#FFE396"
-                    d="m20.48 9.11-4.23 3.65 1.27 5.42a1.47 1.47 0 0 1-.58 1.54 1.51 1.51 0 0 1-1.66.07l-4.79-2.87-4.77 2.87a1.51 1.51 0 0 1-2.18-.75c-.1-.28-.12-.57-.06-.86l1.27-5.42L.52 9.11a1.48 1.48 0 0 1-.45-1.58 1.48 1.48 0 0 1 1.3-1.02l5.57-.48L9.12.91A1.48 1.48 0 0 1 10.5 0a1.5 1.5 0 0 1 1.38.9l2.18 5.13 5.57.48a1.5 1.5 0 0 1 1.3 1.02 1.47 1.47 0 0 1-.45 1.58Z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" fill="none" viewBox="0 0 21 20">
-                  <path fill="#FFE396"
-                    d="m20.48 9.11-4.23 3.65 1.27 5.42a1.47 1.47 0 0 1-.58 1.54 1.51 1.51 0 0 1-1.66.07l-4.79-2.87-4.77 2.87a1.51 1.51 0 0 1-2.18-.75c-.1-.28-.12-.57-.06-.86l1.27-5.42L.52 9.11a1.48 1.48 0 0 1-.45-1.58 1.48 1.48 0 0 1 1.3-1.02l5.57-.48L9.12.91A1.48 1.48 0 0 1 10.5 0a1.5 1.5 0 0 1 1.38.9l2.18 5.13 5.57.48a1.5 1.5 0 0 1 1.3 1.02 1.47 1.47 0 0 1-.45 1.58Z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" fill="none" viewBox="0 0 21 20">
-                  <path fill="#FFE396"
-                    d="m20.48 9.11-4.23 3.65 1.27 5.42a1.47 1.47 0 0 1-.58 1.54 1.51 1.51 0 0 1-1.66.07l-4.79-2.87-4.77 2.87a1.51 1.51 0 0 1-2.18-.75c-.1-.28-.12-.57-.06-.86l1.27-5.42L.52 9.11a1.48 1.48 0 0 1-.45-1.58 1.48 1.48 0 0 1 1.3-1.02l5.57-.48L9.12.91A1.48 1.48 0 0 1 10.5 0a1.5 1.5 0 0 1 1.38.9l2.18 5.13 5.57.48a1.5 1.5 0 0 1 1.3 1.02 1.47 1.47 0 0 1-.45 1.58Z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" fill="none" viewBox="0 0 21 20">
-                  <path fill="#FFE396"
-                    d="m20.48 9.11-4.23 3.65 1.27 5.42a1.47 1.47 0 0 1-.58 1.54 1.51 1.51 0 0 1-1.66.07l-4.79-2.87-4.77 2.87a1.51 1.51 0 0 1-2.18-.75c-.1-.28-.12-.57-.06-.86l1.27-5.42L.52 9.11a1.48 1.48 0 0 1-.45-1.58 1.48 1.48 0 0 1 1.3-1.02l5.57-.48L9.12.91A1.48 1.48 0 0 1 10.5 0a1.5 1.5 0 0 1 1.38.9l2.18 5.13 5.57.48a1.5 1.5 0 0 1 1.3 1.02 1.47 1.47 0 0 1-.45 1.58Z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" fill="none" viewBox="0 0 21 20">
-                  <path fill="#FFE396"
-                    d="m20.48 9.11-4.23 3.65 1.27 5.42a1.47 1.47 0 0 1-.58 1.54 1.51 1.51 0 0 1-1.66.07l-4.79-2.87-4.77 2.87a1.51 1.51 0 0 1-2.18-.75c-.1-.28-.12-.57-.06-.86l1.27-5.42L.52 9.11a1.48 1.48 0 0 1-.45-1.58 1.48 1.48 0 0 1 1.3-1.02l5.57-.48L9.12.91A1.48 1.48 0 0 1 10.5 0a1.5 1.5 0 0 1 1.38.9l2.18 5.13 5.57.48a1.5 1.5 0 0 1 1.3 1.02 1.47 1.47 0 0 1-.45 1.58Z" />
+      <div class="articles__tabs-content ">
+        <div class="articles__tab-content pag-list">
+          <div class="reviews__item">
+            <div class="reviews__item-head">
+              <div class="reviews__item-map">
+                <svg width="71" height="23" viewBox="0 0 71 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M67.7425 8.30039H71.0001C70.5881 5.18782 68.2725 3.55176 65.054 3.55176C61.7964 3.55176 59.6182 5.24771 59.6182 8.16072C59.6182 11.4728 62.4244 12.2109 63.9158 12.5103C65.839 12.8894 67.7229 12.9293 67.7229 14.6052C67.7229 15.7425 66.7809 16.3012 65.4465 16.3012C63.7981 16.3012 62.6992 15.4632 62.4244 13.9469H59.2061C59.4022 17.219 61.7376 18.9748 65.1719 18.9748C68.3509 18.9748 70.9608 17.4984 70.9608 14.306C70.9608 10.8742 67.9584 10.2557 65.8586 9.93645C64.426 9.71701 62.8561 9.51746 62.8561 7.98113C62.8561 6.90373 63.6607 6.24533 65.0148 6.24533C66.5847 6.24533 67.5266 7.14323 67.7425 8.30039Z"
+                    fill="#333333" />
+                  <path d="M57.4199 4.05078H54.3389V18.516H57.4199V4.05078Z" fill="#333333" />
+                  <path
+                    d="M45.0372 13.4676H49.0602C48.4322 15.024 47.0192 15.7621 45.3904 15.7621C42.5254 15.7621 41.191 13.5075 41.191 11.2729C41.191 9.01825 42.4468 6.7238 45.3709 6.7238C47.1567 6.7238 48.491 7.56178 49.0013 9.05818L52.3177 9.05819C51.7487 5.68634 48.8443 3.75098 45.4102 3.75098C41.1713 3.75098 37.9922 6.68386 37.9922 11.3128C37.9922 16.0015 41.446 18.7749 45.3904 18.7749C49.2761 18.7749 52.3177 16.2011 52.3177 12.1708V10.9935H45.0372V13.4676Z"
+                    fill="#333333" />
+                  <path
+                    d="M30.9471 3.75098C27.4147 3.75098 24.8047 6.00551 24.8243 9.75652H28.0035C27.9642 8.12046 28.9846 6.62406 30.79 6.62406C32.36 6.62406 33.2823 7.74139 33.2823 9.01826C33.2823 10.2952 32.36 11.0135 30.6527 11.7917C28.3174 12.8491 26.6494 13.5275 24.942 14.1261V18.5155H36.8343V15.5626H28.6702C28.6702 15.5626 28.6973 15.5539 28.7107 15.5498C30.0993 15.122 31.1426 14.6573 32.3796 14.1061C35.0289 12.909 36.5399 11.4125 36.5399 8.85871C36.5399 5.72617 34.2636 3.75098 30.9471 3.75098Z"
+                    fill="#333333" />
+                  <path
+                    d="M16.4646 13.4279C12.4613 13.4479 11.8137 15.9019 11.5979 17.977L11.4998 18.8947H10.6951L10.597 17.977C10.3812 15.9019 9.71396 13.4478 5.84797 13.4279C5.20039 12.0711 4.92565 10.9737 4.92565 9.73668C4.92565 6.64415 7.41793 3.751 11.1072 3.751C14.7965 3.751 17.2496 6.62409 17.2496 9.75672C17.2496 10.9737 17.1318 12.0711 16.4646 13.4279ZM11.068 0C4.98458 0 0 5.06789 0 11.2729C0 17.4981 4.98458 22.5659 11.068 22.5659C17.2103 22.5659 22.1752 17.4981 22.1752 11.2729C22.1752 5.06791 17.2103 0 11.068 0Z"
+                    fill="#29B24A" />
                 </svg>
               </div>
-            </div>
-          </div>
-          <div class="search__container">
-            <div class="footer__search search">
-              <form action="" class="search__form">
-                <input placeholder="Поиск по сайту" type="text" class="search__input">
-              </form>
-              <div class="search__content">
-                <div class="search__hints">
-                  <ul>
-                    <li><a href="#">Лечение алкоголизма </a></li>
-                    <li><a href="#">Лечение алкоголизма </a></li>
-                    <li><a href="#">Лечение алкоголизма </a></li>
-                    <li><a href="#">Опиоидная детоксикация</a></li>
-                    <li><a href="#">Опиоидная детоксикация</a></li>
-                    <li><a href="#">Опиоидная детоксикация</a></li>
-                    <li><a href="#">Опиоидная детоксикация</a></li>
-                    <li><a href="#">Опиоидная детоксикация</a></li>
-                    <li><a href="#">Опиоидная детоксикация</a></li>
-                    <li><a href="#">Шишки шишки шишки</a></li>
-                    <li><a href="#">Шишки шишки шишки</a></li>
-                    <li><a href="#">Шишки шишки шишки</a></li>
-                  </ul>
+              <div class="reviews__item-rating">
+                <p class="reviews__item-rating_number">4.9</p>
+                <div class="reviews__item-rating_stars">
+                  <img src="/assets/img/icons/star.svg" alt="star">
+                  <img src="/assets/img/icons/star.svg" alt="star">
+                  <img src="/assets/img/icons/star.svg" alt="star">
+                  <img src="/assets/img/icons/star.svg" alt="star">
+                  <img src="/assets/img/icons/star.svg" alt="star">
                 </div>
               </div>
             </div>
+            <div class="reviews__item-body">
+              <div class="reviews__item-text">
+                <p class="reviews__item-text_name">Константин</p>
+                <p>Бесплатная первичная консультация специалиста по телефону для людей, которые страдают от зависимостей
+                  и для их близких, поможет в трудной ситуаци принять верное решение. Алкоголь, наркотики, лекарственные
+                  средства, поведенческие зависимости, тревога, панические атаки, депрессия, психозы — всё это требует
+                  профессионального подхода, а не «перетерпеть» или «взять себя в руки». Нет универсальных схем. Лечение
+                  строится под ваш диагноз, возраст, сопутствующие состояния и цель. Бесплатная первичная консультация
+                  специалиста по телефону для людей, которые страдают от зависимостей и для их близких, поможет в
+                  трудной ситуаци принять верное решение. Алкоголь, наркотики, лекарственные средства, поведенческие
+                  зависимости, тревога, панические атаки, депрессия, психозы — всё это требует профессионального
+                  подхода, а не «перетерпеть» или «взять себя в руки». Нет универсальных схем. Лечение строится под ваш
+                  диагноз, возраст, сопутствующие состояния и цель. Бесплатная первичная консультация специалиста по
+                  телефону для людей, которые страдают от зависимостей и дл...</p>
+              </div>
+              <button class="reviews__item-btn">Читать полностью</button>
+            </div>
           </div>
-          <button class="button button_light footer__button popup-btn" data-path="popup-call">Заказать звонок</button>
-        </div>
-        <div class="footer__container">
-          <div class="footer__list">
-            <ul>
-              <li class="footer__item footer__item-title">
-                <a href="#" class="footer__link">О клинике</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">О нас</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Цены</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Акции</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Специалисты</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Отзывы</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">FAQ</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Фотогалерея</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Лицензии</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Блог</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Контакты</a>
-              </li>
-            </ul>
-            <ul>
-              <li class="footer__item footer__item-title">
-                <a href="#" class="footer__link">Наркологическая помощь</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Лечение алкоголизма</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Вывод из запоя</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Кодирование от алкоголизма</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Гипноз по Довженко</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Лечение токсикомании</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Подшивка налтрексона</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Опиоидная детоксикация</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Лечение наркомании</a>
-              </li>
-            </ul>
-            <ul>
-              <li class="footer__item footer__item-title">
-                <a href="#" class="footer__link">Психиатрическая помощь</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Лечение шизофрении</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Лечение неврозов</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Детский психиатр</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Геронтопсихиатр для пожилых пациентов</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Болезнь Альцгеймера</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Коррекция агрессивного поведения</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Психотерапия</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Психиатрическое освидетельствование</a>
-              </li>
-            </ul>
-            <ul>
-              <li class="footer__item footer__item-title">
-                <a href="#" class="footer__link">Мы лечим</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Реабилитационный центр</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Стационар</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Психиатр на дом</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Нарколог на дом</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Калькулятор</a>
-              </li>
-            </ul>
-            <div class="payments footer__payments">
-              <div class="footer__payment payment box_light-20">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                  <path fill="#fff" fill-rule="evenodd"
-                    d="M9.28.7 6.93 2.43c.92-.03 1.94-.03 3.04-.03h2.6c1.22 0 2.32 0 3.31.04L13.52.7a3.56 3.56 0 0 0-4.24 0Zm12.6 19.22c.17 0 .3.16.26.32-.24.83-.6 1.54-1.2 2.14a5.43 5.43 0 0 1-3.31 1.44c-1.32.18-3 .18-5.13.18h-2.44c-2.13 0-3.81 0-5.13-.18a5.43 5.43 0 0 1-3.32-1.44 5.51 5.51 0 0 1-1.43-3.35C0 17.7 0 16.01 0 13.87v-.14C0 11.6 0 9.9.18 8.57A5.51 5.51 0 0 1 1.6 5.22a5.43 5.43 0 0 1 3.32-1.44c1.32-.18 3-.18 5.13-.18h2.44c2.12 0 3.8 0 5.13.18 1.35.18 2.45.57 3.32 1.44.59.6.95 1.3 1.19 2.14a.26.26 0 0 1-.26.32h-2.92a6.15 6.15 0 0 0-6.17 6.12c0 3.5 2.9 6.12 6.17 6.12h2.92ZM4.34 8.26c-.48 0-.87.4-.87.88s.39.87.87.87h4.62a.87.87 0 0 0 0-1.75H4.34Zm17.54 1.17h.21c.97.06 1.83.83 1.9 1.9l.01.22V16.27a2.04 2.04 0 0 1-2.12 1.9h-2.92a4.4 4.4 0 0 1-4.44-4.37 4.4 4.4 0 0 1 4.44-4.37h2.92Zm-2.06 4.37c0 .64-.5 1.17-1.12 1.17-.61 0-1.11-.53-1.11-1.17 0-.64.5-1.17 1.11-1.17.62 0 1.12.53 1.12 1.17Z" />
+          <div class="reviews__item">
+            <div class="reviews__item-head">
+              <div class="reviews__item-map">
+                <svg width="71" height="23" viewBox="0 0 71 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M67.7425 8.30039H71.0001C70.5881 5.18782 68.2725 3.55176 65.054 3.55176C61.7964 3.55176 59.6182 5.24771 59.6182 8.16072C59.6182 11.4728 62.4244 12.2109 63.9158 12.5103C65.839 12.8894 67.7229 12.9293 67.7229 14.6052C67.7229 15.7425 66.7809 16.3012 65.4465 16.3012C63.7981 16.3012 62.6992 15.4632 62.4244 13.9469H59.2061C59.4022 17.219 61.7376 18.9748 65.1719 18.9748C68.3509 18.9748 70.9608 17.4984 70.9608 14.306C70.9608 10.8742 67.9584 10.2557 65.8586 9.93645C64.426 9.71701 62.8561 9.51746 62.8561 7.98113C62.8561 6.90373 63.6607 6.24533 65.0148 6.24533C66.5847 6.24533 67.5266 7.14323 67.7425 8.30039Z"
+                    fill="#333333" />
+                  <path d="M57.4199 4.05078H54.3389V18.516H57.4199V4.05078Z" fill="#333333" />
+                  <path
+                    d="M45.0372 13.4676H49.0602C48.4322 15.024 47.0192 15.7621 45.3904 15.7621C42.5254 15.7621 41.191 13.5075 41.191 11.2729C41.191 9.01825 42.4468 6.7238 45.3709 6.7238C47.1567 6.7238 48.491 7.56178 49.0013 9.05818L52.3177 9.05819C51.7487 5.68634 48.8443 3.75098 45.4102 3.75098C41.1713 3.75098 37.9922 6.68386 37.9922 11.3128C37.9922 16.0015 41.446 18.7749 45.3904 18.7749C49.2761 18.7749 52.3177 16.2011 52.3177 12.1708V10.9935H45.0372V13.4676Z"
+                    fill="#333333" />
+                  <path
+                    d="M30.9471 3.75098C27.4147 3.75098 24.8047 6.00551 24.8243 9.75652H28.0035C27.9642 8.12046 28.9846 6.62406 30.79 6.62406C32.36 6.62406 33.2823 7.74139 33.2823 9.01826C33.2823 10.2952 32.36 11.0135 30.6527 11.7917C28.3174 12.8491 26.6494 13.5275 24.942 14.1261V18.5155H36.8343V15.5626H28.6702C28.6702 15.5626 28.6973 15.5539 28.7107 15.5498C30.0993 15.122 31.1426 14.6573 32.3796 14.1061C35.0289 12.909 36.5399 11.4125 36.5399 8.85871C36.5399 5.72617 34.2636 3.75098 30.9471 3.75098Z"
+                    fill="#333333" />
+                  <path
+                    d="M16.4646 13.4279C12.4613 13.4479 11.8137 15.9019 11.5979 17.977L11.4998 18.8947H10.6951L10.597 17.977C10.3812 15.9019 9.71396 13.4478 5.84797 13.4279C5.20039 12.0711 4.92565 10.9737 4.92565 9.73668C4.92565 6.64415 7.41793 3.751 11.1072 3.751C14.7965 3.751 17.2496 6.62409 17.2496 9.75672C17.2496 10.9737 17.1318 12.0711 16.4646 13.4279ZM11.068 0C4.98458 0 0 5.06789 0 11.2729C0 17.4981 4.98458 22.5659 11.068 22.5659C17.2103 22.5659 22.1752 17.4981 22.1752 11.2729C22.1752 5.06791 17.2103 0 11.068 0Z"
+                    fill="#29B24A" />
                 </svg>
-                <span>Наличные</span>
               </div>
-              <div class="footer__payment payment box_light-20">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="26"
-                  fill="none" viewBox="0 0 25 26">
-                  <defs>
-                    <pattern id="b" width="1" height="1" patternContentUnits="objectBoundingBox">
-                      <use xlink:href="#a" transform="matrix(.0048529 0 0 .00443091 -.9 -.2)" />
-                    </pattern>
-                    <image
-                      xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAAE6CAYAAAAsknI4AAAABHNCSVQICAgIfAhkiAAAIABJREFUeJzs3Xl8XNV9N/7PuffOnRnt+y5ZtmRblsEOGGyyNLazsTTtE6CmacjzPAlkA7KQ5snSQOIxkBaaNn0aSpqn2PzapqGtSSBNW2OTtHY2toABgyzLkpFsyZIsa99m5s695/z+kGRkW5K13NHMlT7v18shL2nm3O9IM6PznXO+3wMQEREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREtDQoQiY6BiIiIaCGMRAdAREvHyw9uyhgwzvb/5qQZuOHhpmii4yEiIiKaKy3RARDR0tGjx+yUYh+2FoxG2u8tV1xRIiIiIq9hgkRErtKyfYilGEg1bIw8UCKP/vGqBxMdExEREdFsMUEiIldphoCvyA9HE4jFFCqyw18duq9UPXtnVXWiYyMiIiK6FCZIROQuBRiZBowcH6CAmAM4SmJj8Whjb6hMHdy2jbWPRERElLSYIBGR+wRgFAQAUwMUoBRgOYAuHGx5X0Ps5J+sYH0SERERJSUmSETkPgXoqRr0Aj/UpC9LBURtICdoYfSBEnn0j1fek7AYiYiIiKbABImI4saXb0JLNQB5/tdtCVi2Qnl25IGB+0rVz++qyU1MhERERETnY4JERPGhAM2vwSjwA9rUu+lsB1BK4h3FA91d3yhXoRDfk4iIiCixOBkhovhRCkaOD1qW76JVpEk3QdQG/D4bXzFKnJN/UsH6JCIiIkoYJkhEFD8KEAZgFJqAIXBeQdIFpASitkJ2MIbh+0vkq1+s/sDiBUpEREQ0hgkSEcWXBIx0A3quOWOCNMGRgOMorM4ZOdC/q0z97FOrMuMfJBEREdEYJkhEFH8C8BX6gaA+qyRJYawtOODgHRXh/q5vlnPbHRERES0KJkhEFH8K0IIajHxzbndTgGUDft3G6AMlsvErlS8wUSIiIqJ4YoJERIvGl2dCpBljByLNgVRjbcGL0qKbR+4vlYe/sPrdcQqRiIiIljkmSES0OBQgTAGjyA+lz++tx5aA7UisyRv+Rf+uUnXwY5UBl6MkIiKiZY4JEhEtHgX4snzQs3xzXkWaNARiDgBIbKmOhk/fw7bgRERE5B4mSES0eBQAfbxhgzm7hg3TDjV+flK6P4bwAyXy+FcqXnAtTiIiIlq2mCAR0eKSgJ6mQ881oRaQIE1wxs9PKk6LbR66r1Q9d+fqdQsflYiIiJYrJkhEtPgE4Cs0IWbZ9ns2bAk4UmJDyfDRnp1lat/nqv3ujExERETLCRMkIlp8CtD8GnxFflerhxTG2oIbmoNthaOR9nt4fhIRERHNDRMkIkoYI8cHke4DpLvjSjW27S7Vb2PkgRL5xpdW3enuFYiIiGipYoJERImhAOHTxho2GMK1rXaTSQnEbIXKrPAjQ/eVquc+U1Pp/lWIiIhoKWGCRESJIxWMLANathmXBGlCzAEcJbGhbKC5Z2eZ2rsDevyuRkRERF7GBImIEmu8YQNMLa5JklJv1Sf97sYSu/lrlaxPIiIiooswQSKixFKAnqpDL/DHMz86RyrAshXyUqIIP1Ai3/gi65OIiIjoLUyQiCgp+PJNiFTD9YYN07HHz0+qzAk/MnhfqfrVHZdnL86ViYiIKJkxQSKixJto+13gB7T4NGyYTswBpJK4srS798w3ylUoxPdFIiKi5YwTASJKDkrByPVBy/QtaoI0fmlYNhA0bHzVKHFavlbB+iQiIqJligkSESUHBQgdMIrMuLX9vhRHARFbISclhuH7S+ThL6x+9+JHQURERInEBImIkocEjHQDWq6ZiPzoHEcCjqOwNm/4F/27StXPPrUqM4HhEBER0SJigkREyUUAZqEfIqAnZBVpggJgOYCAxDsrwv1nvlHGbXdERETLgJHoAIiIzqMALajDyDdht4YTHQ2kAqI2EDAcjD5QIo8PBZ5a89CbNyU6Llp+lFICAHbtgti69ZBWUFBwyQ85zZOmaAsa807sCwpGjVjUGPL57fT169cPz3ccIiIv4aehROSaA9/ekPqBDbFhK7bAgQQgYwrRxhGoITup1rp9OgBoON6dsvXKv278ZaLjoaXr4MGDxtqq9e9IyQj+Ihj0wzR9CYulq6vn5sLCvCcTFgAR0SJigkRErnEtQQIADYh1x2C9OQqR0Iqkqfl0ICY1PNcdDNzwcFM00fHQ0nDw4EFj0xVXP5CWkfJVIZLjT7RtO/D55r8KRUTkNdxiR0TJSQFGtg92tg+yx4JIolUkYOz8JCEkthaORNruWYHSb51c5BOcaCmpq2suWrOmvMMw9ESHcpHjx1uLEx0DEdFiSrIpBxHRuPG232ahH8LUkjL1mDg/KcNvIfxAiTz+5UpuQaI5aWpqrbZtR9XWViZlchSL2Vi/fmVnouMgIlpMTJCIKHlJQE/XoeeZSZkgTXAkELUVitOjNw7eV6qe+0xNZaJjouR28OBBIxq1VFVVWaOuJ++f4vr6o2mJjoGIaLEl77syEdE4X4EJBBPb9ns2bAlIKbGhbKC5e2e52ruj1kx0TJR82tt7PrBt27ZYIpsuzEY4HHlx48aNI4mOg4hosTFBIqLkpgDNr8Eo9EN5oExcYWzbnU+z8Xsb+6Nt95Tz/CQCMNamOxKJNhYX5xxIdCyzEQwGrkl0DEREicAEiYg8wZfjg5buA2SiI5kdqYCIrZDhtzFyf4l844ur7kx0TJQ4oZDSlFLS7zerEx3LbPT09N0lhEjyNVsiovjgp5pE5BpX23xfSBOwe2OIvjkC4XhvTcanA1JpONKVVvquv2loT3Q8tHjq6urMdevWRZOlbfcsaUyQiGi54goSEXmDVNCzDBjZJrx4IkvMAaSSuKJo8HT3zjIVCvH9dznYt6/RX1tb66nkqKOj91omR0S0nPEPNBF5hqYBTm4AJ0cC0ISAT/fWQtJEW3Cf5uDLRonT/LVK1ictYaGQ0q67riqS6DjmQimFkpLcZxIdBxFRIvGgWCLyDA3AiPLhsm8fEwoQDV9eKcszo3CkguOR2iRgrD7JshXyUqIYfaBEHukJ3Lrhr958PNFxkXuUUkJK6YhkO+H4EhoaGvISHQMRUaJ5652biJY9bXy9RQCq5tvN4ts/X+MbjPrgNwQ8tIsJwFhbcMtWWJUT/uHAfaXq4J21PHNmiYhEosc1zVt/YiMRq2ndunU9iY6DiCjRvPXuTbRYlBcaSi9X55dGhA4dssu+dUr8ojntfYAOU4fnEqWYAyglsbmkb6jzGxWsT/K49lNd7w4E/J7oVjfZ8ePH3pboGIiIkoHHphFEi6PyW8+rtpJC2B+r1MBi5VmLaxc7ALoGdPXrKPnIG9O+dz3/2Wq1vnAUgILtxCeOeNIF4NMFOoZ9WPngSU0k/fG4NNnBgweNbdu2xekVcD4pJSzLhmM7UFCY7590ASAcidyan5/DbZ5ERGANEtGU1pxsx9nMVIg9jTIWOujDzm0OEyVvuOZvmoQCRNNXVsjSjBhijoL00G/OUYBjK+SlWBi+v1T+tit45dUPN72S6Lhodt5+zTvq4zV2JBJtOnmya+vateUd7DJHRBQ/3MZBdIGP/uEPVEH/MFZ0dkNJB2ZxUczc0yQRUny9eIQA1Oo/Pyn+tckMRmwDfuOt2iWvcCTgOBK1hSOH+0JlrE/ygJaW01f4A+4eBOs4EidPtl8JQAsGA6trairamRwREcUXJ3xEFxKAUArVbV3IGA5DCgB2DGbxMcfc06SYKHnHx/++JVJ4f6s41JL1dqk0+PRERzQ3CmNtwTXhYEtJ31DnN8qXbVvwUEhp9fX1uWfOdN80MhJW0ailLCv21r9oTIVHI6q3e+DOpqbW6n37Gv1qEWsJlVKioqL4sJtjdrSe3WoYuqisLH2FSRER0eJZln9oiWby0Q//QCmloEmFYxVFeHVNOc6bmmgaoBuwbqtifdIFkqEGaSavfnGVWp0bgZQKtofagk/QNMDQBFoHzMdqvt1ye6LjiadQSGkf+1jH2qKivKN+v29BYw30D6HpxNmsTZtWDcYr0Wg/1fXu4vL8X7gxluM4ePLJJ41bbrnFg1V0YxYzOU0EJqxES9uSfgMjmo+JBEkoBcsw8KuNq9GVnQFdXjCj1g1Yp0+zPmmSZE+QAEAB4uTXKmV+muW585MmjK2EaajvSt1y9cPHX0x0PG5RSomOjq735+XmHPCZ8SmRHR4OP9XcfPb2DRtW9Lk15tiZR0pqLuzjDIcjLwaDgWu8PAEfT448+MqaHaUUNDd+2USUtLhViGgaSggEYjGsPdUJn21DXdg72rFhFhWyPsljBKAqH2wRP27ISwvbBkzDe58UxRwg5kjUFgy90BsqVXt31JqJjmkhlFKit3foHgCyuLggbskRAKSlBW+8/PKKXimlaq5vrnRjzBMn2qrcmC8PD4efSkkJbvFycrQc2F5sj0lEc8JJHdEMpNBQ3DOA0rN9kNMdrmPHYBY3jNUnLfFtJUvJ//rBkZHC+1rFS21pf61pY/VJXvvlWQ6gCYkPbuyLtt6zwnP1SUop0d7e8wEAMjs77YHFvLYQApU1lc22bav6+rbchYxVWVnSuNB4bNtBWlrw5oWOQ4uA6SvRkscEiWgGSgA+x8Ga1jNIjUSnT5KUBGIWzEcbpLnnBBMlD9n6/ca7M755WpzoC8IwBHSPvSsqBURtINNvIfxAiTz2pco9iY5pNl566USmlFIWF+ccSGQcuq6jpqa0e3Q0/EJoHivBjfsa/boLT5qnnnrS4MoREVFy8NhUgGjxOZqG3MERrGjvvvSNpQRiUZi7GyX2Kn0sxSIv2PidN8Vf2O16X9iE3xCebAsetRVKs6K3Dd5fon792bUliY5pOt3dvXdu2rSqX9OS509QMBjYvHMnnJaW9nVzuV/hu4q/t9Brd3T0XjufhgxKKTHxLxRSWiiktMlfW2hcRETLFd9AiS4w0aRhMk0pjARM/GLjGgykp0CbzcmjQow1cmir1hESS7ZgeTIvNGmYjR9/dF3xtqqh9oDPge3AUwfNAmNv7D4DCFsGXv9llW/7oUN2omMCxib00WjsuN/vc/WsIDeFw5EXU1KCW2Z7e8dx1EISPSklNE3TLrV6pJQSR44cScnJKVifkZ7+QmpaALo+c9/6mGVjcGjorjNnBp6sra08s1grVEu9SUPMsmH6fZw/ES1hyfPxHVESk0IgNRzF6tYz0Bw5u3Uhpc4/P4mf6HrGzf9U35G7q0281J52b0xogE8BhvTMP2VIWJDw+S1cc/2xWOvOsoTXJ+3du1dXSslkTo4A4M//PPD22d52375G/0JXwVpbO6+cLnFRSoljx06VRKOWUkrJDRs2DJeVFb2QkZl6yeQIAHymgdzc7Edqays7AMhIxGqsr69fUL0VEdFywAkb0QWmWkECcK7t93OXVaE9L+vitt+Xommw2juWdFvwpbKCNNmT79mkficnDK/2rVIAfBoQEAK/PZMf3H7oUGSxYzh48KCxbdu2OD0r3NPXM3hXTl7mrLfMtbZ2bC4rK3phgZe9aPVIKSW6OnpuLCjO/fECx56SUgoNDQ1569at64nT+FxBIiJPi18vVaIlZqLt95pTnejJTEPM0CGmSKSmJSXMosIYdjfC2qsM3AIJLM1EaalQgGj4VT6imoKC8tQnSgrjW+0gYAl9a25k36+2J6D/ViiktK1bVdInR1JKZOdm/O1c7pOXl7Og5MiyYvD7zXO/E6WU6D7T90cAflhQHL+FHiEEampquiORaNNPf/pvNV4+kJaIKB6YIBHNgdQ0FPUOovxMD06UFc4tQZrg2DD7jtnY7YPVppZNfZLXvBK89iPdjvhhBiSk9N5yuwEBHRpeiiFwA/ZFExHD+AGqjpiu+2MSaW3tvLKysnTWL2g3miD09w2d+/8vvXQiUynVn1eYvdBhZ83vN6t37Nhht7Z2bCkvL14yBw4TES0Ua5CI5kBhrGHD6rYzSAlHpm/7fcmBFGBbPD8pCe3PuDan07xOlTj4YRRybJ+Q8M4/TQB+oWHAJ0sLYk+LG/B0QpIjAIhEosfdOEA13hxHorKy9JW53GfXroXnzL09A3jk//6L6jrTqzZtWtWfqESyrKzohf7e4QcTcnEioiTEBIlojqQmkD08iqrTZxc+Q5o4P2n3cYnQQYOJUuIcxDajzX+9ujKCHgcSMY+dBikA+KHBUvqVedZ+rWb0Z+2JjKf9VNe7AwF/UjdkmNDUdLp0rvfZsaOlYKHXXbmqFJ+44ybkFyzeqtF0MrNTvzo6Gl5oPRUR0ZLABIloXgRWdnQjZ2AY0o1PyB0HZlFhzNzdJDGPwypp/hQgjvuvO3iZGYgJ5cCC8lhqNFZnJKDd/Ih1jV4Ze/oVkYBao8n27t2rF5fn/yKRMcxWNGo11dRUzDmZLCrM7ljotf0BE6bpW+gwrgkGA5uHhkafTHQcRESJxokY0TxIIZAWiWJ12xnocpZtv2fDmdQWnIlS3B0OXPfes+Z1MkOpbVFIzyVGBgT80NBpqbQSa/+TIYSSop7tQx+6MS7nLo0MjT7W0NBairHOb+fB2N8z7eWX38zqPtN36+jI7Jr1nTjRtH4+sWRkps3nbkkvLS14Y38/t9sR0fLGCRjRPEmhobyrD0VnByCFiy8lpca23ZU0OOaeE6xPioOJOqNSqX4eg4TtsdRoYjtdvyFL8639YiOeGUl0TBOamlqrfT53+/90dfTcDEBLy0i9vaamon2qc4OEEEoIoa66qmogvyjn8dS0oACgHTlyJK2vb/jeqcYdGRp9bP369dZ8YjKMS59D5FWZmalfbW3t2JzoOIiIEoUJEtE8KQH4HIm1rZ0IWDEotwuspQRiUZiPsj7JLSGEtBb/dWpTRPTY43VGXkqNBAATAkLo1yZDndFUVqwobnRrrFjMxhNPPGEUluQ9Od1hqjMRQqiNGzeO5OSkfwuA1tF6duvkM87+4jspn3Qr1qWmrKzohVASrGK//PKbWZhixXCuAGidHXE59omIlqCEv/kReZkUAgUDw1jR2e3eNruLLuLALCqKmXtYnzRfChANgRsev8t83vErhagHz7D0QUCHcev3rLfrJdGnn0l0ndFU6uvrc91aWRkeDj9lmj7h1hk9QghVUlHwS03TREdH77U9PQP3hthif0Zf/7qd8PORNm1aNTif5PhCQgg1/GpfwI2YiGjp4zlIRAugBKBJheq2LnTmZGIwLQhNxmPeqgB7rD4Je5pgtVbx/KRZej54/TXdjnouQzqIJl9OcUkaBAwIdFgybSP2jQD7Eh3StFaurOp2Y5yhoZHHMjLSbndjrKmUlOQ+A+CZ+d7fjTOQ5ioWs9HbM4Dh4TCklAgETGRlZyA9PSVu1/T5DDQ1tVZXV5c3xe0ii6gtaAhPtFUkooRjgkS0QFITyBwJo+r0Wby6piK+F5tUn4TdTbBur9LgwqerS9FBbAusMYNhw5EeTYwAHzQMCLW6Oro/6SeooZDS/P6Fj+PYDtLTUz+x8JG8z3EkWls7rqisLH3NNH3TPomfffbZ4IYNVzyRmhr4XbdjqKwsboT3zkkmIloQbtchcoESY22/8/qH4GiL8LKScuyg2d2NrE+6gALESf916jLTHxZwPHqekYCtGVvzrP1adfRA0idHAHDXZ/o+7MY4v/p1a9CNLVVe19HRda1h6GLlyrJXL/XzeMc73hFOSwt+8OWXX06NxdxtIKjrOurr63NdHZSIKMkxQSJygRICgVgMa1o74bNt9xs2TMexx85PYn0SAOB18/p7us3rpE+NrRp5bQ+iAQEd4tY3rKivIrLvl8lYZzSdnPzMHy50jPBo5MXt21fOrj/3EnbkyJG0kpLCOW8BvOqqq0Z9PkMbGYn8p5vxVFaudGXrJBGRV3CLHZFLpBAo6R5A6dl+nCzOg1CLOLedXJ902/LbdverwAcr1kj7pII3t9PpAAxo6AjqORsG/rMv0fHMlVs1Oc0tb/6OG+N4lVIKhw8fTr3qqqtG5zvG+GrTByMR602/37fSjbgCAT+UUoIre0S0XCz7T5yJ3KKEgM9xsLq1E8FIdPFWkc4FMF6f9GjDkt52N3mGtg/X+9vN69VaGTtpe/g8oxEhVudZ+zUvJkcA0PR0k7nQMaSUmO+ZREtFc0P72oUkR5P5/b4q5eKHNCdPtr/NtcGIiJIcEyQiFzmahrzBEVR29MSv7felSDm27W53o8RepSNxkbhOAvAr4Cdr3qsafNerq00VUXBgeew8I2CsAYOAdvNEnZGXttNdyFebUrvQMfp6h9wIZVHEYyUlGo4erlpXdtyt8YQQ6tixlkq3xispKTjs1lhERMmOCRKRywSA6tNnkDkchtQSmJs4Nsy+Y7a558SSqU9SAFIBvCumkCElopCeyyoMCPiUdle3le4vsfY/6eXEaEIw6F/wVq6z3cN5bsTiVc+90PFOt8esrV110nbpKCO3zrciIvKCJTFpIkomUgikhaNY3doJTcrErt9MbLsrPuaYe06opbLtLgblue10Gsa203UFjZzC2P7vrccTS2Y7ma7pP17oGM3N4WE3YvEix3EQr+YUHR1d73ZjHCFEQs5/IiJKBCZIRHGghEBFVx8KeocgRRK8zJQCYlGYjx5fMvVJwiNHswgAJjQ4Smzxcp3RzBb+uwgG29xZ6lgkjuNej8Surp5rXRvsAs8//+tn3Rrr0KFDXEYiomUhCWZuREuPEgIBa6ztt38x235finRgFhXFzD2N49vuvJ8oJTMTAkLo1+Zb+7Xy2IEXl8J2uqkt/GGFw2WemnyPDIddG6uvr/uQa4Nd4JZbbnGkdCeZS0+vSHVlICKiJMcEiShOHE1Dcc8gys70QiZLggQAUIBtj22727106pOSiQ4BExpesrRASfTpZ5ZuYjTGjdWUlSuDaS6Esmj6+gcX3JhiQm1tbcytsaYipTtPv9RUi0eDENGywIkRURxpSmF16xmkhqNJliRhbNudbcEsaVhS9UmJNFFnNGDI0gJrv7gBT0cTHdNisGLWloWOkZ+X5qnDSEdG+k4kOobZcrPdNxHRcsAEiSiOpCaQMzSKqtNdyVsxI+VYfdLupVOftNgmzjOylH5lnrVfqxn9WXuiY1pMg4O9Rxc6Rk5uhhuhLJp4r/q4Sbj04YxlWXFpJEFElGyYIBHFmwBWdnQjZ3A4sW2/L8Vxxs9PauK2uznwQUCHcesj1jV6ZezpV5b6drqp1NbWjix0DCEEGvc1+t2IZzEIIZTjuNNX4uWXX47r1jXNpfed3t7eZbEiSkTESRBRnEkhkBaJYnXrGejSA+f2OLHxtuBN3HY3AwMCfujotFRakbXv8RBC7rU18xghhHJjG1fZtrJfuhDOohnsH7nLjXFyc8s2uTHOVPbu3atrmjt/6rdt2+apToNERPPFBIloEUihobyrD0XdA5AuTVbiauL8pEcbJOuTzjexna7fkKX51tNiI55Z8OrJUhAOR19c6BiBYGDzSy+dyHQjnsVw5mz7v7oxTllZ3nNujDOVq69+99VujKOUghAi6T/fISJygwdmakTepwTgcyTWtHYiYMWSp+33pUyuT9qr9OWcKJ07z0gzti7HOqNLqa9v/4Ab42zcUNHvlQNJa2pqet1YOTMMHXV1daYLIV2kpCTHleTLrVbhRERewASJaJFITaCgfxgVnd3eO33IcWD2HbPNPcuzPmmszkjceshKNyoi+365HOuMLmXTplWDriQLPgPRqHXcC0mSEEJZVqzJjbEqK6tcX0U6evTNFabpc2Wsnq7+m10ZiIjIA5bdRIcoURQATUpUnz6LjFEL0nBn4rJolALs5VWfpEHADw3dVjS9yDrw+C14gjUY0xBCqJ6u/lvdGMvvN6tjli3jkSQppUR3d++d/f3De9wYr62t63o3xklJ8V95srHDtbOVQiGlrVu3ssWt8f7273J/4tZYRETJjgkS0SKSmoas0Sh6796g+TraH4JhArqe6LDmZnJ90u7zEyUzxRaA93OIc227YdTmW/vFehwaTnRMXvDI97P/xa2xfKYBx3akW53tQiGlnWnvvgmAzM3NfiQzM/W2kAuroVVVZa6dh1RRXVT32muvpS50HKWU+PrXbddeiFJKhEKCe+yIaNlggkS0yDTdB0Co8De2fs36RJWmDw0Dhgl4oXnDZFKOHTS7u/Hc+Unb7jw6ciaWClNYEB7chTZWZyTO1RlVWv9Zn+iYvCQUEnJoaPQxt8bTDR3V11dHBvuH98wnmVFKiZaW01eMjkbUzp1wCopzfzz5+1/6UvhHC41RCKG6Onpc2362YcOG4bq65qL53l8pJWIxW/p87nUOb2/vWvBBwEREXuKxGRmR952fNggV/uNNwmr7J12L2YDPBJL3SNmpOTbM4sKYb3eTTHv0qPx095fxH+HNiELAEJ45SxPGeJ1RnRX1sc5o/tLTUz7h+piZqbft3AnHsmKqpaV9XSikNKWUuPDfwYMHjfr65srhoRElpVIA5IoVJYeDwakXodLSgje6sUJVUJz71ELHmKy2trKjq6vntrluMTx8uDEfgKvJkVIKZWVFv3Xzq8I0AAAgAElEQVRtQCIiD2CCRJQMQiEZuesyEWhsWi00AzDiem6k+xQgnBiiUuDfw5vxyZ7/gy/13YFXrJWAsGEIO9ERTkvH2Ha6Pr+dV2QdeHw7DiVvsB4ghFAdHb3XxmNsn8/AihXFR3fuhANAXvhv27ZtsZqayubUtBTMtlFkxXtXRBYalxBCdXW5t4oEAPn5OXuklPJkY0ftTImSUkocPtyYHx6NqCuuqO5yMwYAGOwffojtvYloufHYR9VE8ffRD//AlUMvp6PrJv7x8Q/P+NpL/dPfPB4rKPwjSAeQ3qvpcaADSscKoxMfTz2AP0z9L1QbZ2ArA2ohn8togOzT0X9vPpxTJqDP//c00bZ7BHrtCus/j3HFyF2RiNXo9/uqEx3HbLQca1m5coENDcaTmLjV6USjMViWhWjEAiAQCJrwGQZMvw8ivscGaHNNkFz+Wcz5+tM5eLA5sG1bZXih48QsG6bfx/kT0RLGFSSiJDTy9Xd+xPpElaaNjgI+P2b9cXiS0OFAFxZO2vl4YOCjuK37T/CPI+/DgPLDSIL6JB8EBLSbJ+qMmBy578EHfWsTHcNsVayuaF7oGEIIdfRoS7Eb8UzF7/chPT0VefnZyMvPQlpaCvwBM67J0YkTbau5ekREyxETJKKkJVTk7iuE1XrKJyQAn897iZJwIIXEs1YNvtD7OXyy58v4r8jbYAHwidiiJ0oGBHxKu+tlSwuUWPufZGIUP6GQkA0NraWJjmM2NF1DS8vpKxY6zvr1KzsHBkZca1KRSKPD0aeqq8tdOeOJiMhrmCARJbvQdjt6xzoRaDyxWggd0L1VnySgYIgYRqDjp+G34392fx339H8SL1sroQkH2iK0BZ84z6graOQUxvZ/7wY8HY37RQk1NRXtHa1ntyY6jtlYsaLksBvnLmVmpn4iFvN2GZuUCilpfh4MS0TLFhMkIo8YfPC6puin1gijr29s253mrfOTNCgYwkKPTMUjQ7+Hj/fcg78avAkdMhOGsKDFoXxjos7IUdiSZ+3XNgz8Z5/rF6EZlVQU/LKnp++uRMcxGz09g3csdAwhhPL5DC2edYzxdv/9QufWOiJazpggEXnM6Fe2COv2VZoWjoy1BRfeehlrQkIIG0djJfjmwMfxke578c+j2zEIE6aL2+7M8TqjfGu/Vh478CK30yVOXl7O99w8KyhecnMzHnHj8FghhPrRj35kKOmtp5xSCk888YTBQ2GJaLnz1syKiMYJFfnCRmG9ejwgpAQMX6IDmhMBwBA2bCg8G63FHT134/M9d+PnkQ1woKAvoC24DgETOgZYZ5RUCkvynjx2rGVlouO4lK9+JfKcG+Pccsstzn33C116JElSCrjvPqHfcsst3mubSUTkMiZIRF728A3R6B21wmxv/UPopmfrk8Iw8M+jW3F7z1fxjf7b0BArhiZi0OdQn6Rh7Dyjfk2sLLCeFqtZZ5R01q1b2XLo0CGf4yTvAoXtqNNujRUKCalpQrPt5M45ohGrSQhoXDkiIhrDBIloCRj+5nv2Wp+sHqtPMkwP1idJGMLCaZmFvx66Cbd0h/Dw0I1ol5nwCQtihvokgbHEyFFiS561X1sX2d+yaIHTnG3fvt3WdU1LtrokpYCjR1uK09NTbnJz3PGaJNHTM5hUj3dCW1vnlkDQz3beRESTMEEiWkJGv7JFWJ+o0rRIdLw+yWNtweEAIoZjdhm+3n8bPtnzFfxo9F0Iw4AxRX2SAQEdxq2PWNforDPyDiGEysvL+d7TTzcFkqHjW1/PwL1CQFu/fmVnvK6Rl5f5vUOHWoKOkxyrSeFw5MVdu6CXlxe/mOhYiIiSDRMkoiVHqMjnN4hg47EcAW2sPslDiZIAoMOGA+BnkStwZ+8XcVfvF/B8dC0cSBiwYWCsO12PFU0vsvY9HkKIW4M86IYbVkdN0ycaGlpLLSu26Ncf6Bt5aNcu6Dl5Wd9ajBWU7dtXRgzDECdPtl+ZqG2G4dHIi0eOHElLSQlu4Za6+eGnMERLHxMkoiVq4MEP9kU/vVb42k5d6wgBqXknSQIm6pMs9KsAHh95Dz7c/Q3cP/C/0WCXYFip4gLnabEeh4YTHSctXE1NRbvfb4qmp5sCI0OjcT9ota2tcwsALSsn7WuJSBIqK0tfMQxdvP76qZxo1FqUa/b09N21axf0lNTglo0bN44sykWTTE7OoCt7j3XdW++lRDR3fJUTXeCjH/6BiucZJrpu4h8f//Civvbe+/l/V0eqKtCb4ocmFYQHz2hxlA5dABtwCi995v1871rClFKi5VjLipJVpc0+w4BYYHLvOA4GB0cfeu21l+/dvn174vf0XUApJdraOq8uLMx7wTB0CBdWfB3Hweho5LHm5hOfT0RCVF/fXCmEvqDsTynHXLduZYtLIUEpJY4da1mx8Li06Lp1ZT1uxUVEycdbLa+IaM4UlHj42CO4srMHv15dgTdKCzDiM6BLCS+VZevCgYLAy6gEQgcNhJJvokvuGN/u1oLxD/H27t2rX3nl21empKSsSk0xD/j9JgyfDk3Tz+0eVUrBth3ELBvhSBThcHjLmTOjDZs2rRo0DCOpn+njj/dFAEIpJQ4dOqSXl1dXpqSkrEoJmgdMvw8+nw5dfyt5UkpBOhK27cCyYohELIyGw1cODHQf37Bhw2iiH7ObiY1bJj2viIhmxE9hiS6wVFaQFJTYteMJX/ZQd1QpCV1K2JqG+uI8PFtVjsb8bDiaBk16sAxBCMDwwWqt0sE6CiIiInIRV5CIlqDQtpDxN8HvxzIHnXMNsm1Ng1DAhrYuVHb349XyIjxbVYbOjDQACppHDrQEMNaTOWbBLGlwsLsJ1u1VGtimmIiIiFzABIloCdm7Y69+ZrjXdqQDW17cTlgJIKZrSLVi+J3GU6jp7MYLK0vx0opi9KUEoHutPklKQFowdzdKK3TQh53bHCZKREREtBDsYke0BCgo8d3rv+tvHzpr29KGukQjWikEbF1D3nAYN7zehP/13BFcfbIDpuPA0TXvtbF1bJhFhTFzT5NESPF9jYiIiOaNK0hEnqZEaMcTvoeHvh91pIa5ntDhaAICwKrufpQODOHytjz8ck0FWnKz4AgB3Wv1SXYMZnGDgz0nYN22itvuiIiIaM6YIBF5VGhbyMgJfj8mBx1cvJlu9hQAW9dgOBJvazuDqu4+vFxRjOdXlaIjIw1CKWhe2nanJBCLwnz0OLfdERER0ZwxQSLymFAopOW+UOQ40oYzRZ3RfCkhENMFUqwYtjaexNoz3XhuVTkOVxRiMOD3YH2SA7OoMIbdjbD2KgO3QMJTjc2JiIgoEbhXn8gjFJQI7dhrZj9f4IzVGcWHFAK2pqFocAS//9pxfOzZI3hb6xn4pPRufVLfMdvcfYL1SURERHRJXEEiSnpjdUbfHfrbaOagxGJVBdmaBgGgqrsPZf2DeKOkAM9VlePN3ExIAe+1BbctmMXHWJ9EREREM2KCRJTExtp2/z/bHrQXLTGaTGEsUTIciU0nO1B1tg8vryjGc6tK0Z2WAiG9Vp+kztUn8fwkIiIimgoTJKIkNFFn1D50FioJEhAlBGxdIDMcxXuPNaO2/SyerSrHq+WFGAqY0DxYnwTpwNzTJK2Q0hGCYn0SERERAUyQiJKKghIPX/+wqZ43IrayEx3ORRxNABAoGhzGh149hvXtXXiuqhxHi3IR03WPtgWvd7DHhNWqdISExx4AERERuY0JEtEiE1N+VYnQtl36w8Hvx8bOM0ruebozXp+0rrMHK3oH8EZpEZ5dswIn0zOgoKAh+ZK7aSkAMQtmSYPDbXdE7lBKCcHXERF5FDs6ES2yC2cMoW0h4+Hr/5/M8ufH3GzbHW9j5yfpSJUC//joTaLpy5tE7DOrRba/E47yQXmtYZyUY40cHj0uETpoQKmpc1kiuohSSoRCSmtqaq2ORi2FZP+Uh4hoBh6bwRB5nyNjAN5q253lz4+Nte321oetutBx94G7xF3773grkVAQNxb+Gd6WfgB+LQxHmVDTrJklrfHzk8zdjWwLTjQDpZRoamqtllIqAHLnTjhVVWWNjuO8eOjQIV+i4yMimi+PzVyI4u+jH/6BildjBAkg1XawNhyBXyo4ynsfsmpCwxf23znNTkGIb/73ahm1TJwKb8BLgx/CqcjlsJUPurBx8fpZkhMCMHywWqtYn0Q0SV1dc1FtbWUHAPT1DNzb1j7wvcsvr+jntjoiWgpYg0S0iDQAhZYF03Hgnc10YwQE7j5w1yU/VHGUDxokqlJ+i5LAMTSMvAuvDt6ATmsVBAAhPPTIlRqrTypu4PlJROPq6+tza2oqO/p6Bu7Nzs3805y8LL4miGhJYYJEtEgkgMyYjWwr5ql1FAFA13R87uk7Zr3irCBgKxOmCONt6fuxIvAajgx/AG8MvxeDdj40YUN4qURByXPnJ1l7lYEdkEyUaDlSSgmlVHdf38C9OXlZ30p0PERE8cAEiWgRKACGUiiORuFTClJ4Y3errun4/BwSowspaLCVhixfJ34n6wdYk/IsXh78fTSOXoOITIMmYhBeShelA7PvmI09BsbOT+K2O1peurv7/ig3NwvZ2Zl/muhYiIjixRuzNKJFFI8aJAmgIGqhMhxxddx40YTAF/ZfejvdRRTEPf9VK53Y1N/UhQ1bmXhzdBNeHfpdnIxcDqkMaMJDbcEnCAEYJrfd0bLiOI7q6uxFcWk+5w9EtGSxQxNRnCkAAUei0LKS/hMJIQQMzZhfcnTp0c/VJ61NfRYfzP823puzG7m+VjjKB6l09y8ZT0qNb7trkObuJsW24JdWV1dnDg4O71EXONvZ+5HQFB0DlVJiaHBE7d27d8Ynx8GDB43BwWF1trP3I5e8fv/wgxdd/2zvRy68xvDwqJr8b2hoRA0OjqihwZHzvj4yPKrq6+tzp4q9peX0FY7jnHet7u7eO6d6rG/F2Fw0ODCs1CyfT/X1zZXDQyPTJuj19c2VkYh1XgyxmK2OHTtVMpvxJwuFlKZpGl7+bf25rymlRF1dc1HbqTOqpeX0FXV1dWmXin1oaEQ1NbVWz/a6SikxNDRyyZ9JU1NrdSxmn/dYo1FLtbS0r5t837q6urSRC3+/g+O/36GLf7+Tr3Hw4EFjeHj0XCx1dc1F0ej5P9+zZ3s/MlOs9fX1uUOD0//OptLa2rH5zJnumy78+ksvncgcHhpVdXXNRdPdVykl+nsHH2xt7dg8l2sSLWf8g050AbdXkBSAsnAEJVErqTeTGZqBzz39mYW9J8y4gnQ+TTgQkOiLFeO1oetQN/xeDDk5577uOboBK3M165Om0d87+GBmdvpXLSuG5ubO0iNHnj+Tn58vCgoq81ZUFHakpgUBQJvcBW18kimffropcMMNq6NTjTteEyOFEBgZCSMtLWXK53Bvd/892bmZD0xcv6PjRNfZs2fV5ZdfnlVWVtGdlpZy3vW7z/a99S6ggNS0IIJBP6SU6O8bgpQKEGN/RM90taevX79+eOLmdXV15rp166JKKei6fl48o6MRFQz6cfRoS/H69Ss7L4yzpbldragshuNI6LqmzdQVbt++Rv/111dPLEtfdFullBgdjTx/4kTXdZdfXtEPAE888YT2vvdc++ns3IxHOjq6ri0pKXxmuvEvVF9fn7t27dru7/7l44hELHzqzpuRnZ2BoeFROLaDtLQUGD4dSik0NJxcuW7dypapxlFKqa4zvSgsyp3V+83E82DXLuihKba1KqWE4zhS13X09Qze1Xq65R+eempDePPmJl9tbUrtihUlhyPhyIvBlOAWAGjc1+jPvjovogBAAZomkJWdDk3TEA5HMTISPje2AJCXn30uzsZ9jf7q66sjI8NhGD4d4XDkeMub7T/r7R1qSUkJZldUFr6npCT/GgB4/fVTORs2rOi7MN6mptbqqqqyRiFmv9e6r3dQ+XwG0tIvfn739g7dk52d9sB0P5+RkfALfr+52TB0zvmIZok1SERxJAGkOQ7yrFlkDAkyY9vuOBpbMdKR5evE1ux/QHXKb/HK0A1oHN0CSwbHGzl4KM9wbJi99Tb2+FifdIHu7t47M7PTv9rRenZrSUXBLy/4dicAEQopLRSaOhlYscKa9okQjVjH/QETACCdqX/kZ9q7b8rOzXxgmuv3THX9yZNi4K1Jent715by8uIXp4tHKSWkVFFN06Z8TaWkBMT47dTBgwd927dvP29/qZJjIei6hpGh0d0Abp/hOjPu2R1PmLZc8GUHwPe6u3tRXFxwAHP4oDQYzKhwHAdvf+dGrKmpQHtHb3F2TsaZjIzUcz+3f//3l1KuvXbDH9TUVDbX19fnrVu3rmeqsaR05+WhlBJ2zJa6oePo0aP+9evXW5O+HQXwCgAxeUVn9Viyfd7jbm3t2FxWVvRCMOjXUlICl3zjCab48ctDL3/5n/913/f+7u9CoxNf37EjZH7q49d++j3Xbv7uZZeV9yqlLkpcbVuNXjziJR8npvvgLicn/VvRiPWxr37FeS4UOv/33dTUWp2SEti8axc8tkRPlFjcYkcURxqAoogFv5RJN9XXhIYvHvisSERyNJlUBhQ0lAdex3W538UNeX+F8kAdxrbkefAzHDsGs7jBMfdw2x0wNoHNzc1+pKen764pkpNzpvrk+1LOdvZ+RGhadX1dMywrNlYXNsX1C4pzf9zXM7ig6wshlFLAyEisbabb9fUM3jGbFWjbtnHNlmt+M9X3pCNxtqsP/qD/tpaW9nVT3WZ0OPrj4aERDA3Nea4NAMjNzf5bYGzL2Gzv4zN8h3Vdx5VXr8Nzz/8msH79ys4LJ/+/93tXjf7kJz/5oeNIrFmztnu6sUzTnXNku7p6bjR8Bk7sPxG4IDk6z6XOZxocjJyaze0mPPeb13Zuf+/mv5icHAHAE0+ErPff8PaHn/31q/cKIdDV0XPjhfdVyjHH/uve+8OfPehbGwgGNp89+9Y201BIaatWlTYePdpSPJ/XF9FyxgSJKE6kALKsGLJjMagk6lonMFFnlNjEaLKJtuC6iGFd6q9wY8G38J7sPcj3tY4lUJ6rT5Jj5yc92iAROmgs50Spo6P3/UqpcxNyt9TVNRfl5Gf98D9+8gv8w55/QyxmT7kU0t3d90dKKWTnZrh6/elk52Y8MputTD6fT/gD/s0XTpKFAGIxG0/88zP4+f7nUVFRdLRxX6N/8m1aWzs2O8rpy8xKF62tLenziXMiEcjNXTXr++u6BiEETpxoL73hhhum3PIIALfccotz/PjJSk0TqKurS5vqNtk5GRgdjZyr8+nt7r/npZdOZM71cRQU5P54aGj0sdXTbMGcLV3X5zQfamnu/O1M39/7o9/83chIGPlFOT+e7jaxmC2Hh8NqZDishgZHVGtrx0XPh9kKhYQ8ebKjNi8v+4cTdWD33uM4/f3DD021lZOIZubBj2eJkp8C4JMSBZYFHUiaipqFtu2Ot7G24CaC2iCuyvwJKoOv4LWh63B0ZCtGnGzvnZ8kJcyiwhh2N8LaqwzcAgksr/qk/PzMA+FwFKmpQdcedyiktNpadLz++qmcm//wfX0AsPNbdyhHXnwIcXZ2xg9jlg1/wIz7z32uk9vpSlB0Q8Ndd39YAEBzfXNl1XVVkYmtWqGQ0kpL1QtCiFlP6EMhpd1445FgLJZmDA2dGtm2bdu5H5SuS/9M950q3rVryzsudds33nipbd26lSjILf59AI9PdRvpSDiOhOHTkZGV/sCmTZkPxGI2DEOfsfZqwsTPu+d01/2zfQxu0TUx4xJYbm5vT0/3AFJXBKGUElM9HiUVHMeBEAJ+vw9lZUUvAEBra8eM2zinU1lZUt/fO/xQbW3tkFIKjpTIycn42lzHISKuIBHFhYJAbjSGDNtJium8Pr6dLpmTo8kkdDjKhzzzJLbn7MGHCv4Ua1N+Ax0xOMoHz/WXcWyYfcdsc/cJiRk6mC1FhqEjEpl259O83Huv43R39906VQH8hYQQsJ2LE6d42LVrbk/M0dHpSojeGmblupUt/f3DD0Uilqx7/YS6917pvP7662kTE27HSZt2oh4KKS0asRp37oSzYsWq4dKSjP4Nl18Ri0ZjMhaz5/zW5FjOVmB229B27NghpVQIpgV+ONX3+3oH8fHb/sPIzEoTqalB8cAD9/tff7XpQ7quwZ5lbIcOHdIBoKUTSbdCEgqFpHWJ2tN/e/LQdz7+Rzsr/+cffKPiM7f/6abH//Hph4aHRjvLyopemMvWx8leee1sCBh73k///CKiS1lWf6iJFoMCEJQOCq1YwqfxQoixxCiJttPNxVgyBJQHXscH8/8S1+c9jPLAUQhdA3SPLYArBdjWeH3SiWVTnySlhGm697vq7x/eEw5Hn8rPz5lyVeIiCtC0xflTt3PnWKlh15neWa1WpaYGp1xZuFBOTsbXlJIv1l62Cl3tPVs3btw4MvE9y5o+mdi5E46C/DwALSsrXRSX5IvcvCwRCJjiyJGzqbOJcbKBkZFTAHCptusThAAsy7l3qu9ZVgxPPHHLucw1FApZG65Y/W89PQMhw2fMajXuF7/YJgGgoABZs3sEi2fHjh16YLx5yHS/487TZ08+ue8vT/7bM99p/f/+KXT41v99w9f27/v1vyilULv28t+fz3Wvuqrwcdt2EA5HkZmZhplayhPR9PjCIYqDgqiFoOMkrDGDwFjb7rvjcp7R4lIQcJQJXVhYn/7fuCH12yg5/BS0s72Azw9oXqxPisJ89PiyqE8aGBi6NyUlsKCC9Lq6OgcAWlra12VkpNyWlpZy82zvOzIafsw0fa4WxF/KHLo3z1owGLhmYGDksZkaTUx25MjJbAD46U9/+sxUE/SrriqZc3eHf/3XylMAcNllV5Vd6rbPPHMkRQiBM2favj/V96f7GXV39TYCs1uNm2g8UFycN2Wnv0RaU/b2orz8LMy0iqRpF2+TbDh68rDjOEhJC05buzSd9vaeD6SmBm40DF1LSQkIO+bgT74Wa5jrOETEBInIVRIC6TEbuVbiGjPomo67D3xWLPhMoySjoMGBiTTRi+a//ZqIfP0aYd2+StPCkbFEafYlGclBOjCLimLmnqbxbXdLM1Hq6Dj9bU3T0NbWefV8x7jybdfYrx5uUCtWFB/dv/9EYLadxgDg5Zd/+2lNE+jo6Hr/fK8/W0IINTQ0+lhuXqbrCZkQQmVlpc06EcjIMCqBsa1ubsUQCglpx2xUV1e871KPb8uWqncoBdTU1PRO9f3pOv2lpaXmA2+txl3K8HD4qays1AcWe6XEuUSf8t+/5X2fDwT8ePPN0yunu81UAxQW5Zbruo7RcHjWHwIAwGuvvZZaXJxzYPL2S59paD7TqO7uHrhzLmMRERMkItcoALpSKLQsmEot+uqR5rE6o/mSYvKKkVCRL2wU1gs/N4VUgOFO6+DFo8bbgh9zzD1Lsz5p/fr11vBw+KmysqIX6uqai6a73d69e/XpJt1Vq8ux8Yo1OHmyo3a6A2Ons337dntoYOSx4uKCA/X1zZXzuf5cfOc7KZ8UQiAasY7PNF68V7S6uyNvAsCbb76ZMdX3W1u7S+cz7q9/0xb0+fTd/f3926a7TXNze01mZuozb77Ztnq6ZHaqbY+hUEgrKsn7v7btzLrddlpa8GYhBL7+dduZ6Wc6nw55M7nsslXXfepToZQLv75tW8j4r589f/fVWy77imXFMN1huQAQCPrT3rrfnWnf+Orf3HLd777zw0IIHD36+k9nG4tSSlx22eXDXV09N0/efimEUMePt5Xm5mY8Ul9fnzuHh0e07HlsEz9R8lIAsmMxZMXsRU2ONCHwhSWwlW5B/u7TsSgg0u/773dGS8p/DaUAx770/ZKFUmNtwUsaHOxugnV7lYY5rJIku7S04M2WFZO1tZUd/b3DD519vmNn9fXVFgA88cQT2tat7/kfBQW5P2451rISQMtUY/T1Dd9bWVlSP901xLn/uVh6ZuonIhHr3TU1lc2D/cMPnXn2revv2gXxqU/1vq+4OOfA0aMtxcD0Bf9CvHWGzXRCISF37Ggurq2t7AAgm5paV1dVlZ2Y+P6hQ4f08fqSH08d8dxeyqZpTJlUX3VV1YCUEitXruw/ceJE1qpVqwYnrn/llZuv0HXxIjD39tbbt6+MjD+mxnA4emtdXcszb775Wh8ArFq1Km316pq3Z2SkPt3V1XNzdXV503TjZOdkoL6+5SOWFfulpsGfnZ35k9LS/MuUUrjvPjHrfbNCCPXSSyeyNm1a1Q9AtrScvvLv/77ktYkVqCNHjqSsXr3mv4PBwOapDm2dr41X1tz1wH2f2/yxj35o/8lTHa9Eo/ZIaVne2pqalTeWVRRudxwJ0/TN+LP9Hzdt/9+br2nYJjSBoN9MKykv2JKaGkT3mb5bLzxAeCbhcOR5TdOaCgvznrzwezU1Fe2DgyOP1dTUdLv5+ImWuuU9qSKawkc//AM1m4MeJ5to6716eBTpUi5a5zpDM5BUW+kUxD3/VSudmZs3zZvQgNiQjr/4g9dnfMyBP3/xdZmTcxmkDcy8EyY56Tqs0+0+7NzmLKVEqb6+uXLNmormC1cPwqORF1948fl3XjgpHF8RkNGI1RQI+lfPNHZ4NKJsRz6Vnp5y03S3OXbsVElVVclpwzh//h0JR148eKjt3ZdanVJSqmMNJ1fOtCowOfaenr47cnOzH7nwe319A/d+97uZfzbV4Z0tLaevKC0tPOzzGbN6XR85cjL78ssregFcNPlVSonR0cjzKSmBzRNfGxgYeSgzM/VPxg6+VaqhobW0pqaifTbXmuzgwYPGVVdt3puWlnLeQaiRcOTFtkNt757pXKKp3mAjEQtnzvTUrlhRfGyqxwFA7toFfboDT5VSoqur58aCgtyLane6OnpuLijOfWqm5KC+vrmypqayWVyigKxxX6O/+vrqSH/fEAAgK/viY6Ta2jq3lJUV/fhfXCYAABT4SURBVHa66zU1tVZXVZU1Tv6alAoDfUN39bzYtWeqn11vz4DymT6kp6ecF9/Zs70fycnJ+qGmiRmTn0gk2qhpWrVp+pLn7wVREuMLhegC80mQJICSSBTlkeiirB7pQsfn9yfhVrokSZDGgxGBh9+QMiUFsK2xVRqvMXyw2qp1TDMp9KqLD0dd3CRwsa8/+XqJ+AR/4vrxunaiH9+F4hnPRIKESQlpsj1+Ilo4brEjWiAJINVxkH+JMy/coAkNX/Boy+7FJ1TkcxCF/+dAav/qymFlaGPb7ryUKI3XJ2FPE6zWqiWTKCV6ErnY11/qjzfRj+9Cy+33S0TuW3IFwUSLTcNYW++AjF9bbwEBQzOYHM3Dmb+4diT66bXC3976LugGoHutLfhb9UnL6fwkIiKiROEKEtECSACZMRs5MRvx2LEqIKBrenLVGXnU0Dff8xsAIviXLysnKwtwYt6qT5ISkFGYuxultVcZ2AG5lOqTiIiIkgVXkIgWwFAKRdEofFK6vnqkCx13H7hryZ1nlGjhL20SVusPdM2yAZ851prMSxwbZt8x+63zk4iIiMhN/ONKNE8KQI4VQ6btQLo4ydaEGDvPKBmbMCwVoZCMfPYykXq8OUtAA3SPLaaryecnNXHbHdEiaQvOrrsgEXkbEySieVAA/FKiwLKgubR2JMREndEyP9NoEfU99P6B6KfXCl9X163wmd6tT3r0uDR3M1Eiirft21dGxBhubyVawjz2sSlR8siPWkh1JKQLtUeGpuNzT3PFKFFG7nnX44D65+B3XpFOZiZgxwDlpfokB5AO65OIiIhcwBUkojmSAFJtB3kutPXWhIYvHvisYHKUDIQK//GVwvr/27v32LrP+o7jn+f3O8f28S2Ob4lzdRq3jpMpLS2U2+gcKBUN7FqpdKmE1LChaYXSwZQLLcpJaUujSahD0yZBB9JYOlBWyiYoizZkm4FG2yQ0pY6dOvekTn2349u5/X7P/rANrnN8rZ1zfsn7JR1FOb/LeY6V2Ofj5/l+n4vfc43nS6GA1if1tlCfhEVlrTUtLZfK0h2LRq1z5MjpZdd6TACwlPgBCsyTI2lFPKFc3y54cd1EMKJtdxaKRv34X2824Usnq4xxx+uT3GA9Up5yVrV5Of98hmV3WBSbNq3uPttytnrq84895nlrVy37WAaGBABLhiV2wDz4MipNJFSaTGohHztp2x0cw9FPvi3JRJ763y+myoqfDdSSO0nyxh7hb/3GN8+dUOKzdQ7L7rAQxhjb0nJ2w6ZN1WdbWy+srq1de1mS+vqGviJrVVlV9mKmxwgAi4mABMyRlRS2vlYkEnI1ttRuPlzjis50wTP62Ee+6fzd556VDWa2sJLkGknfyvBIEGR1dRvORaPW/dKjpd/2PG+n71tduXLl9tLSoqcyPTYAWGwEJGCOrKSyeEJFKW9e4cg1jh5hKV0w7b57mYoTn/Tjb2R6JAvjGmnPLx0ZWX0504NB0EWjxo9G9VlJn830WABgKRGQgDmwkiLeWFtvM/732RgZPXqYlt2BFK0PKU8Py6aelW8kE870iObHSHIdaXeD0d5MDwYAgGAhIAFzVJlIKN+z8meJPNQZBZrR09s+JNf+QqkALqmbCEa7GsZmjQAAwLwRkIBZ+JKKUymVJ2ZvzOA6rh6hZXcwPXH3e5TrHZPnS6lMD2YBXCPtbhwLRrszPZh3ar/QeZdCbt5s57myhf/0rbIfRaNm2lWsM93LlXSxvf/l975340C6483NZ1euXV3xaCgntFuSUonUgfa3e7+5adO69qnnXrjQeVdoDmOWpJGRkTM1NWtPTX0+GrXOw3/V90CkIO+g4zpKpTz19vbfvn79qtfSbTTa0d5zTzzlxdatq/x5utfpaO/+s8qqshfTXdvScqmstDTvDyor0x+31prLl3s/XlSUd9h1XXmep/7+K+9fs2blq9NtemqtNd0dfX9evmL5v820Maq11nRe7v1470Dn0bq6up7pzgOAoCAgATOwklxrtSKeUNjaaWuPHOOIlt0B9bf3FKgi9VX5yd2BDEaOkfaMB6M9mR5MeivXlDeZOe4p9alPnSmJRpU24NixluVNM95gbPOKq15seHj05XA4dGd7e+ftw8P9TzqOk7tm9bru2tq1u0dGRl/Jz4+8f/L5a9dWzPw6kyQTxVe9ZldX747ych1MpYrV1dmnkeFRlZQWa926qmOSdOTI6ZKpQe7oa71N995bE+vq6n2woqL0+TTv/YUTJ07kSkpMPnb8+PGCTZtWd58/f3lzuiDTfqHzLklNK1aUqKuzT0ODIypeVqhVq1a8LEktLWc31NVtODf1uv37ZfbtW35w/359X9OsLLbWmmQy5VdWlcoNO1d9HQAgiNgHCZiBlVSSTKkkmUr76cAxhv2MgioadfTMth0qTwwp5e2ed1vCTDOSQo60tzEQy+neutQpM4PGxsawJEUiMW+2e7W2ntsw9XqN/zyz03QbzM/P+0BOTthUV6/+9ZYtW4bq6up6iooLTGtra3kkkndnc3Nz4eTz093f963i8aQkOZOP5eSG3/H/v7e3/7Hy8uUHf3O8bWc4HDKrVleYmlvWmfLyEvPEE0+4PT0DuuOOm/rbXmrLnXzd9u03x0+fvnRzefnygy9NOTYda63ZunXr0PDgyHeqq1e1TD3e3t5zT9Xaiqa2k+ebHnjghdDKqnJTc8s6U7mi1Hzta/+ee7m9S5s2VZ9taWm5aiPYffvG/l1N/JnO8ODIc+FwaHwscxkxAGQ/AhIwDSspx/dVFY/L1dW/Pg05IX3xv2jCEEBGT23boUijJ98/KC+An+pCRtrb5Gh3w1x7hmSUMUb9/YMznlNfXz9rMJrwgx9UX0jzGjN+HaY7XldX15OIJ1VZWfVHs11vrVUykZzxtdpeastdvnzZN4wxZuttt3x36vFoNOqXl5eYWCyh9XdXx6Yer6lZe2pwYPg7n/jExpidwya/g4MjzyUSSRUWF1zVWS4atU5VVenhkyfPN92yqbr+0KH7vXcevz+xanWFM3hlWLfcUts922tNdfHi5TvzCyI7uzr7pg2mABBEBCRgBuWJpAo8/x2TC65x9DeHP29owhBA++5epwPbfBn/oFI2ANFiCtdIX2lytLvRBGHWaDJnjkvs5mKmGY2F6OjoUX5+5OCcTp7lfaz4/VX/KCk5220ikVwTDoeULgQVLSv4C9+3Gh4ceW6me5w6dbGmqCh/59e/HnbTHX/44b4HEvGkmpoOf3z6uxh75GjLHzuO0dQZrZm0vdSWu2bNypd/3nhU3//Xn871MgAIBAISkIYvKeJ5qkj87nOOMx6M2NMogKL1eTrw0WeUlzqvlB+8YORoLBjtCV4wWkyHDh161z+zrLVm4jHxXDyWkOMszn/roqL8nZrHPtKvv/56/tTnjDH2yScdNy8/b2dr64VVk491dnb60tjs0Mab1rSdPHlx9XRNLcrKSg6mUp5cd3mRZE26RzQadfLCbokkhTcX3DSXMVtrzcZPbIydaz23of5j7zOPfPlBM9caMwAIApo0AFNYjX0erYwnFPE9WTkK0bY7mKJRR3mNX5D0rFJzXsGVPSbqjHY1ONp74wajCVu2bIlYKznOzMvp0jly5PSy225b3y9JnufLWivf9zUyHFMoHJK3uP8+cu3sa86MJCWThWl/Dkejxn/kCwOqrV371ne//SM9/y8vacdntsumCpKP7/4H7doVl2/DSteB77cvYIzyC/L00EP39Tz00HSZ7atynIncaefUtS8WS7yZjCcPbEjT2AEArgfMIAFTWBkVJVMqT6bkOCE9evhhltMFj9ETd79HkUZPnn02cHVGRr+rM9oVjDqja2F5ScVgIjHr6rWrNDc3F95xx039fb1Xzhw6dCg3FHJNOBwyxhjn7OlLfxgOp6syXLhYLD6yf78SkuIzPGKSnOlakltrTUFhRJ2Xe+576C//xOz4zPaxFnGh4fCTBz5v2tpOFjqOo+bm5pyZxpJMpvTCCy+EnBlo7LOAU129+tezvbeurt4doZBbU1xSmKU9EwHg3WMGCZjCtb5WJ1L6Mg0Ygmnf3euU752Xn2Q/o+vMipVl6usbeHi+19XW1g6ODMdUUVm6cfLz480Wfny67aJWra5YlDH6vpXvW0Wjxo9GF36f0dHYr0JuSCtWlf9w8vOVlZWOJN16663DXW/3PlhXVxe31jrpGkekUp5kpfvvv39Rpseam8+uLCsrOWiM4ZerAK5rfJMDpvjeDz5jvvrjzxGOguYL9+a+o84oiG27qTOaVjRqHcdx1N099KP5Xuu6rrq7+qY9nkylZm2+MFfdHb335efnpW2+MFcXL16+MxLJu/Ppr4fSNl+YULGy9PlEPHlqaGj0hXTH33qrc3M4J6SGhoZ39cvQV/7vDb/hf161mzdXXz527GzJbB0DASDoCEgAguXqj2ZGT2/brjWjsbH9jAL22e23+xk1BWI/o0z50qPD35ak2tq1lxdyfUlpcdrno9GG0Pr1VfK9xUnUlVVlL0pjM0ALCUkNDQ2hNWtWvtzaem7DdM0XJnvmQE5tYWHkT9vbe+6Zemz9+qpWSfrgBz/c8m4C22231+oj9beru6PvwemWBALA9YSABCBgJmWIJ7Z9WAfqfcn/iVIBzBaT9zMiHE2rq6t3R9Gygp19PQOPL2T2oq9n4PHi4gKdOXXp8clB4Zc/O7Jxz54PJcM5YdlF+vIbY+yJE+eqIpG8O5PJlN/QcPaqxgcNDQ2hkZHRl6eGFmutueuuu5JDQyMv1s2xAUI0avzTpy/dXFVVevj48eMFU8fS2HgukpsbrvE83z9y5PSyq6+3zuBg7IfRqJ3280BObljxeOKVipWlz89lTAAQdAQkAIHhyuptL6Si/fVWz2yzCvm/COR+Rk5w9zNaKGucqrmc53mF4cl/b2k5W11evvzg8ODId0rLS56a7Xrj6L6pzy0vW/Z0IpHUho2rvybJ933fWmvtpltrTv3kP36uty51KDTzaraxe48/ZrNly4a3f/rTU3mSVF9fPWqnqK+vTw4Pj/791LA3MhL7lTFGhYX5V72HCefP51w1hJqatacG+gYPbNnye0NTQ9e2bRtihw4dCqVSqVN33HFT/9Sx7NsnL5lMvJlutmr//rG363me8vPzPjDb+zaOnXd9GABkI+osACweK/PYzzb73vwbjc3KMVLCk/7z7DK9OZCr4KUijf1Kak+TM/6dN4BvYGGstWYuMz/pzrPWmv37Zeay3GwiHEz3WtGodT796dbliUQitnXr1pHJ581ljLPdf7prTpw4t6K4OG+d59nBEyeGz2zffnN8IfefbYxzub61tbW0sLBko+fZweSJ4TM199Yk3s0953seAAQBAQnA4lnCgBRyrF7rytN/ny9W3CpY372MJHd8P6MbZMYIAICgos03gKznGKk/7uq1rnzFfSM5AcoYtO0GACBQCEgAsp6R9Hp3RO3D4eCEI8dIe8aDEVtqAgAQGDRpAJDVXCO9PRLS8a48+UFYnfbbtt03TgMGAACuJ8wgAchaRpJnpaOdEV1JuNk9e2Q0luZ2NVJnBABAgBGQAGQt17E62Zertr5c2WxujkWdEQAA1w0CEoCs5BhpJOnoWEdEwyknO2ePqDMCAOC6Qw0SgKzkGKuW3lydH8zJvnDkaKLOiOV0AABcZ5hBApB1XCP1xlwd7cpXSkZZtadqiDojAACuZwQkAFnFSLJWeq0rou5RV8qW2iPqjAAAuCEQkABkFddYXRgKq7knT36mByNRZwQAwA2GGiQAWcMYKeEbHe3M10DSHZtOythgRJ0RAAA3IGaQAGQN11i9OZCnU/25mVtaZzQ2a7SbYAQAwI2IgAQgKzhGGko6erUjorhnMtO5bnKdEcvpAAC4IRGQAGQFI6s3uiNqHwpf+3BkJO1tIhgBAAACEoDMc41V12hIx7sj17att9HYrBFtuwEAwDgCEoCMMpJ8GR3rjKg7dg3bek/ez4i23QAAYBwBCUBGuY7VuSs5aunLuzZTOJPbdhOMAADAFLT5BpAxjpFiKaNXOyIaTjpL29bbEW27AQDArJhBApAxjqxa+yI6N7CEbb2NJNeRdjUQjAAAwKwISAAywjHSQMLVa10Rxf0laus9uW03y+kAAMAcEJAAZISR1evdeWofDi1+OJpcZ0TbbgAAMA/UIAG45lwjdYyEdbwrIn8xb2xEnREAAHhXmEECcE0ZSZ6VjnZGNJBwFufXNOxnBAAAFgkBCcA15TpWb/bl6s2+XNnF6FpHnREAAFhEBCQA14xjpJGko6OdEQ2nnHdXe+RI2tNEnREAAFhU1CABuGYcY9XSl6vzgzkLD0cTdUYT4QgAAGARMYME4JpwjVVvzNWxjnylrFnYvkehSXVGLKcDAABLgIAEYMkZSVZGx7si6o658w9Hk9t2E4wAAMASIiABWHKusbo4FNYbPXny5nPh5DqjvUs0OAAAgEmoQQKwpIykhG90pDNfAwl37Im5XBRypL3UGQEAgGuLGSQAS8p1rNp6c3WqP3f2xgzsZwQAADKMgARgyThGGko4eqUjX3HPzByQ2M8IAABkAQISgCVjZPVGT0SXh8PThyNjpL2N7GcEAACyAgEJwJJwjdQdC+l4d0TJdG29jSTXkXY1sJwOAABkDQISgCXhSzrWGVHXaOjq2SOW0wEAgCxFQAKw6EKO1fkrOWrpyXvnzNHktt0spwMAAFmINt8AFpVjpFjK6JWOiIZSzthSOke07QYAAIHADBKARWVkdbIvonMD4229Q7TtBgAAwUFAArCoriRc/borovjk7nTUGQEAAAC44ViZjz7/Pisrk+mhAAAAAEBmEYwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQJL+HzgQSztO3lvtAAAAAElFTkSuQmCC"
-                      id="a" width="840" height="314" />
-                  </defs>
-                  <path fill="url(#b)" d="M0 0h25v26H0z" />
-                </svg>
-                <span>СБП</span>
+              <div class="reviews__item-rating">
+                <p class="reviews__item-rating_number">4.9</p>
+                <div class="reviews__item-rating_stars">
+                  <img src="/assets/img/icons/star.svg" alt="star">
+                  <img src="/assets/img/icons/star.svg" alt="star">
+                  <img src="/assets/img/icons/star.svg" alt="star">
+                  <img src="/assets/img/icons/star.svg" alt="star">
+                  <img src="/assets/img/icons/star.svg" alt="star">
+                </div>
               </div>
-              <div class="footer__payment payment box_light-20">
-                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="21" fill="none" viewBox="0 0 26 21">
-                  <path fill="#fff" fill-rule="evenodd"
-                    d="M15.6 0h-5.2C5.5 0 3.05 0 1.52 1.54.42 2.64.12 4.24.03 6.89h25.94c-.09-2.65-.4-4.25-1.5-5.35C22.96 0 20.5 0 15.6 0ZM10.4 21h5.2c4.9 0 7.35 0 8.88-1.54C26 17.92 26 15.45 26 10.5V8.86H0v1.64c0 4.95 0 7.42 1.52 8.96C3.05 21 5.5 21 10.4 21Z" />
-                  <path fill="#fff" fill-rule="evenodd"
-                    d="M10.4 21h5.2c4.9 0 7.35 0 8.88-1.54C26 17.92 26 15.45 26 10.5V8.86H0v1.64c0 4.95 0 7.42 1.52 8.96C3.05 21 5.5 21 10.4 21Z" />
-                  <path fill="#D9A28C" fill-rule="evenodd"
-                    d="M4.22 15.75c0-.54.44-.98.98-.98h5.2c.54 0 .97.44.97.98s-.43.98-.97.98H5.2a.98.98 0 0 1-.98-.98Z" />
-                  <path fill="#D9A28C" fill-rule="evenodd"
-                    d="M4.22 15.75c0-.54.44-.98.98-.98h5.2c.54 0 .97.44.97.98s-.43.98-.97.98H5.2a.98.98 0 0 1-.98-.98Z" />
-                  <path fill="#D9A28C" fill-rule="evenodd"
-                    d="M12.68 15.75c0-.54.43-.98.97-.98h1.95c.54 0 .97.44.97.98s-.43.98-.97.98h-1.95a.98.98 0 0 1-.97-.98Z" />
-                  <path fill="#D9A28C" fill-rule="evenodd"
-                    d="M12.68 15.75c0-.54.43-.98.97-.98h1.95c.54 0 .97.44.97.98s-.43.98-.97.98h-1.95a.98.98 0 0 1-.97-.98Z" />
-                </svg>
-                <span>Карты</span>
+            </div>
+            <div class="reviews__item-body">
+              <div class="reviews__item-text">
+                <p class="reviews__item-text_name">Константин</p>
+                <p>Бесплатная первичная консультация специалиста по телефону для людей, которые страдают от зависимостей
+                  и для их близких, поможет в трудной ситуаци принять верное решение. Алкоголь, наркотики, лекарственные
+                  средства, поведенческие зависимости, тревога, панические атаки, депрессия, психозы — всё это требует
+                  профессионального подхода, а не «перетерпеть» или «взять себя в руки». Нет универсальных схем. Лечение
+                  строится под ваш диагноз, возраст, сопутствующие состояния и цель. Бесплатная первичная консультация
+                  специалиста по телефону для людей, которые страдают от зависимостей и для их близких, поможет в
+                  трудной ситуаци принять верное решение. Алкоголь, наркотики, лекарственные средства, поведенческие
+                  зависимости, тревога, панические атаки, депрессия, психозы — всё это требует профессионального
+                  подхода, а не «перетерпеть» или «взять себя в руки». Нет универсальных схем. Лечение строится под ваш
+                  диагноз, возраст, сопутствующие состояния и цель. Бесплатная первичная консультация специалиста по
+                  телефону для людей, которые страдают от зависимостей и дл...</p>
               </div>
-              <div class="footer__payment payment box_light-20">
-                <svg xmlns="http://www.w3.org/2000/svg" width="19.2" height="21" fill="none" viewBox="0 0 19.2 21">
-                  <g fill="#FFF">
-                    <path
-                      d="M.7 0a1 1 0 0 0-.6.5L0 .7v8l.1.2.3.4.2.1h3.6a49.3 49.3 0 0 0 4.1-.2c.4-.3.4-.1.3-4.6v-4L8.5.6 8.2 0H8L4.4 0H.7ZM5 3.2c.2.1.4.3.5.6l.1 1c0 .7 0 1-.3 1.2-.2.2-.4.3-1 .3-.9 0-1 0-1.3-.4C3 5.6 3 5.4 3 4.6l.1-.9.6-.5h1.5ZM11.2 0a1 1 0 0 0-.5.5l-.1.2v4c0 4.4 0 4.2.3 4.5l.3.2h7.4l.2-.1.3-.4.1-.2v-8l-.1-.2a1 1 0 0 0-.4-.3l-.2-.2h-7.3Zm4.6 3.3.4.4v1c.1.7 0 1-.1 1.2-.3.3-.4.4-1.2.4-.7 0-.9 0-1.1-.3-.3-.3-.3-.5-.3-1.3s0-1 .3-1.3c.3-.2.4-.2 1.1-.2l1 .1ZM.6 11.6c-.2 0-.4.3-.5.5l-.1.2v8l.1.2.4.3.2.2H8l.2-.1.3-.4.1-.2v-8a1 1 0 0 0-.5-.7H.6Zm4.6 3.2.3.2c.2.3.2.5.2 1.3s0 1-.3 1.2c-.3.3-.5.3-1.2.3-.6 0-.6 0-.8-.2a1 1 0 0 1-.4-.3v-1c-.1-.7 0-1 .1-1.2.3-.3.4-.4 1.2-.4l.9.1ZM11.1 11.6l-.5.6V14l.1.2c0 .2.2.3.3.4l.9.1h.6V16c0 1.3 0 1.4.3 1.7.2.2.4.3 1.1.3.7 0 .9 0 1.1-.3.3-.3.4-.4.4-1.9v-1.4l-.2-.2-.3-.4h-1.4V13c0-.6 0-.7-.2-1l-.3-.3-.2-.1h-1.7ZM15.9 11.6a1 1 0 0 0-.4.4l-.1 1c0 1 0 1.2.3 1.5.2.2.4.2 1 .2.8 0 1 0 1.2-.2.3-.3.3-.5.3-1.4l-.1-1.1a1 1 0 0 0-.4-.4H16ZM11.1 17.9l-.5.6v1.8l.1.2.3.4h1c.8 0 1 0 1.2-.2.2-.3.2-.4.2-1.3v-1L13 18l-.2-.2h-.7l-1 .1ZM15.9 18a1 1 0 0 0-.4.3l-.1 1c0 1 0 1.2.3 1.4.2.3.4.3 1 .3.8 0 1 0 1.2-.3.3-.2.3-.4.3-1.4l-.1-1a1 1 0 0 0-.4-.4H16Z" />
-                  </g>
-                </svg>
-                <span>QR-код</span>
-              </div>
-              <div class="footer__payment payment box_light-20">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="23" fill="none" viewBox="0 0 28 23">
-                  <path fill="#fff" fill-rule="evenodd"
-                    d="M16.2 0h-5.4C5.7 0 3.16 0 1.58 1.6.44 2.78.12 4.44.03 7.2h26.92c-.09-2.77-.4-4.43-1.54-5.6C23.83 0 21.28 0 16.19 0Zm10.79 12.1-.55-.55a3 3 0 0 0-4.3 0l-1.08 1.1a3.04 3.04 0 0 0-2.84-2 3.06 3.06 0 0 0-3.04 3.08v2.42a3 3 0 0 0-1.8.89 3.13 3.13 0 0 0 0 4.37l.54.56H10.8c-5.1 0-7.64 0-9.22-1.6C0 18.74 0 16.16 0 10.98V9.27H27a362.88 362.88 0 0 1 0 2.84Zm-7.76 1.63c0-.57-.45-1.03-1.01-1.03s-1.02.46-1.02 1.03v5.75l-.97-.98a1 1 0 0 0-1.43 0c-.4.4-.4 1.05 0 1.45l2.7 2.75a1 1 0 0 0 1.43 0l2.7-2.75c.4-.4.4-1.05 0-1.45a1 1 0 0 0-1.43 0l-.97.98v-5.75ZM25 13a1 1 0 0 0-1.43 0l-2.7 2.75c-.39.4-.39 1.05 0 1.46a1 1 0 0 0 1.44 0l.97-1v5.76c0 .57.45 1.03 1 1.03.57 0 1.02-.46 1.02-1.03v-5.75l.97.99a1 1 0 0 0 1.43 0c.4-.4.4-1.06 0-1.46L25 13ZM5.4 15.45c-.56 0-1.01.46-1.01 1.03 0 .57.45 1.03 1 1.03h5.4c.56 0 1.02-.46 1.02-1.03 0-.57-.46-1.03-1.01-1.03H5.4Z" />
-                </svg>
-                <span>Перевод</span>
-              </div>
-              <div class="footer__payment payment box_light-20">
-                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="21" fill="none" viewBox="0 0 26 21">
-                  <path fill="#fff" fill-rule="evenodd"
-                    d="M10.4 0h5.2c4.92 0 7.38 0 8.9 1.54 1.06 1.06 1.38 2.56 1.49 5 .02.5.03.74-.06.9-.1.16-.45.36-1.17.77a2.63 2.63 0 0 0 0 4.58c.72.4 1.08.6 1.17.77.09.16.08.4.06.9-.1 2.44-.43 3.94-1.48 5C22.98 21 20.52 21 15.6 21h-5.22c-4.91 0-7.37 0-8.9-1.54C.44 18.4.12 16.9.01 14.46c-.02-.5-.03-.74.06-.9.1-.16.45-.36 1.17-.77a2.63 2.63 0 0 0 0-4.58C.52 7.8.16 7.6.07 7.44c-.09-.16-.08-.4-.06-.9.1-2.44.43-3.94 1.48-5C3.02 0 5.48 0 10.4 0Zm7.21 5.87c.38.38.38 1 0 1.39L9.8 15.13a.97.97 0 0 1-1.38 0 .99.99 0 0 1 0-1.39l7.82-7.87a.97.97 0 0 1 1.38 0Zm-1.34 9.22a1.3 1.3 0 0 0 0-2.63c-.72 0-1.3.6-1.3 1.32 0 .73.58 1.31 1.3 1.31ZM9.75 8.53c.72 0 1.3-.59 1.3-1.31a1.3 1.3 0 0 0-1.3-1.31 1.3 1.3 0 0 0 0 2.63Z" />
-                </svg>
-                <span>Рассрочка</span>
-              </div>
+              <button class="reviews__item-btn">Читать полностью</button>
             </div>
           </div>
-          <ul class="footer__links">
-            <li><a class="footer__link" href="#">Карта сайта</a></li>
-            <li><a class="footer__link" href="#">Политика конфиденциальности</a></li>
-            <li><a class="footer__link" href="#">Пользовательское соглашение</a></li>
-          </ul>
-          <div class="footer__description">
-            <p><span>Лицензия ЛО-78-01-010715</span><span>ИНН 496794809</span><span>ОГРН 49644009794809</span></p>
-            <p>Все права защищены © 2025 alko-medcentr.ru</p>
-            <p>Вся информация на сайте не является публичной офертой, несёт сугубо информационный характер, и не служит
-              для
-              постановки диагноза и назначения лечения. Есть противопоказания, необходимо проконсультироваться с врачом.
-              Консультационные услуги, оказываемые по телефону, мессенджерам и в соцсетях носят исключительно
-              информационный
-              характер и не являются медицинскими услугами. Оставаясь на сайте вы соглашаетесь на использование cookies.
-              18+
-              Вся информация на сайте не является публичной офертой, несёт сугубо информационный характер, и не служит для
-              постановки диагноза и назначения лечения. Есть противопоказания, необходимо проконсультироваться с врачом.
-              Консультационные услуги, оказываемые по телефону, мессенджерам и в соцсетях носят исключительно
-              информационный
-              характер и не являются медицинскими услугами. Оставаясь на сайте вы соглашаетесь на использование cookies.
-              18+
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <button id="toTop" class="btn_top active">
-    <div>
-    </div>
-  </button>
-  
-  <div class="popup calculator" data-target="popup-calculator">
-    <div class="popup__body">
-      <div class="popup__content">
-        <button class="close-popup point-mark point-mark_56"></button>
-        <div>
-          <p class="popup__title">
-            Рассчитайте стоимость лечения за минуту
-          </p>
-          <p class="popup__subtitle">
-            Наш калькулятор поможет вам быстро сориентироваться в ценах —
-            без звонков и обязательств. Просто выберите параметры, актуальные для вашего случая, и получите
-            приблизительную
-            стоимость услуги.
-          </p>
-        </div>
-        <div class="calculator__wrapper">
-          <div class="calculator__content">
-            <div class="calculator__page active box_accent-light">
-              <p class="calculator__page-title">Пол пациента</p>
-              <p class="calculator__page-caption">(некоторые программы учитывают физиологические особенности)</p>
-              <fieldset class="calculator__inputs-container">
-                <div class="input__button">
-                  <input type="radio" name="sex" id="sexChoice1" value="Мужчина" required>
-                  <label for="sexChoice1">Мужчина</label>
+          <div class="reviews__item">
+            <div class="reviews__item-head">
+              <div class="reviews__item-map">
+                <svg width="71" height="23" viewBox="0 0 71 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M67.7425 8.30039H71.0001C70.5881 5.18782 68.2725 3.55176 65.054 3.55176C61.7964 3.55176 59.6182 5.24771 59.6182 8.16072C59.6182 11.4728 62.4244 12.2109 63.9158 12.5103C65.839 12.8894 67.7229 12.9293 67.7229 14.6052C67.7229 15.7425 66.7809 16.3012 65.4465 16.3012C63.7981 16.3012 62.6992 15.4632 62.4244 13.9469H59.2061C59.4022 17.219 61.7376 18.9748 65.1719 18.9748C68.3509 18.9748 70.9608 17.4984 70.9608 14.306C70.9608 10.8742 67.9584 10.2557 65.8586 9.93645C64.426 9.71701 62.8561 9.51746 62.8561 7.98113C62.8561 6.90373 63.6607 6.24533 65.0148 6.24533C66.5847 6.24533 67.5266 7.14323 67.7425 8.30039Z"
+                    fill="#333333" />
+                  <path d="M57.4199 4.05078H54.3389V18.516H57.4199V4.05078Z" fill="#333333" />
+                  <path
+                    d="M45.0372 13.4676H49.0602C48.4322 15.024 47.0192 15.7621 45.3904 15.7621C42.5254 15.7621 41.191 13.5075 41.191 11.2729C41.191 9.01825 42.4468 6.7238 45.3709 6.7238C47.1567 6.7238 48.491 7.56178 49.0013 9.05818L52.3177 9.05819C51.7487 5.68634 48.8443 3.75098 45.4102 3.75098C41.1713 3.75098 37.9922 6.68386 37.9922 11.3128C37.9922 16.0015 41.446 18.7749 45.3904 18.7749C49.2761 18.7749 52.3177 16.2011 52.3177 12.1708V10.9935H45.0372V13.4676Z"
+                    fill="#333333" />
+                  <path
+                    d="M30.9471 3.75098C27.4147 3.75098 24.8047 6.00551 24.8243 9.75652H28.0035C27.9642 8.12046 28.9846 6.62406 30.79 6.62406C32.36 6.62406 33.2823 7.74139 33.2823 9.01826C33.2823 10.2952 32.36 11.0135 30.6527 11.7917C28.3174 12.8491 26.6494 13.5275 24.942 14.1261V18.5155H36.8343V15.5626H28.6702C28.6702 15.5626 28.6973 15.5539 28.7107 15.5498C30.0993 15.122 31.1426 14.6573 32.3796 14.1061C35.0289 12.909 36.5399 11.4125 36.5399 8.85871C36.5399 5.72617 34.2636 3.75098 30.9471 3.75098Z"
+                    fill="#333333" />
+                  <path
+                    d="M16.4646 13.4279C12.4613 13.4479 11.8137 15.9019 11.5979 17.977L11.4998 18.8947H10.6951L10.597 17.977C10.3812 15.9019 9.71396 13.4478 5.84797 13.4279C5.20039 12.0711 4.92565 10.9737 4.92565 9.73668C4.92565 6.64415 7.41793 3.751 11.1072 3.751C14.7965 3.751 17.2496 6.62409 17.2496 9.75672C17.2496 10.9737 17.1318 12.0711 16.4646 13.4279ZM11.068 0C4.98458 0 0 5.06789 0 11.2729C0 17.4981 4.98458 22.5659 11.068 22.5659C17.2103 22.5659 22.1752 17.4981 22.1752 11.2729C22.1752 5.06791 17.2103 0 11.068 0Z"
+                    fill="#29B24A" />
+                </svg>
+              </div>
+              <div class="reviews__item-rating">
+                <p class="reviews__item-rating_number">4.9</p>
+                <div class="reviews__item-rating_stars">
+                  <img src="/assets/img/icons/star.svg" alt="star">
+                  <img src="/assets/img/icons/star.svg" alt="star">
+                  <img src="/assets/img/icons/star.svg" alt="star">
+                  <img src="/assets/img/icons/star.svg" alt="star">
+                  <img src="/assets/img/icons/star.svg" alt="star">
                 </div>
-                <div class="input__button">
-                  <input type="radio" name="sex" id="sexChoice2" value="Женщина" required>
-                  <label for="sexChoice2">Женщина</label>
-                </div>
-              </fieldset>
-            </div>
-            <div class="calculator__page box_accent-light">
-              <p class="calculator__page-title">Возраст пациента</p>
-              <p class="calculator__page-caption">(влияет на дозировки препаратов и интенсивность терапии)</p>
-              <fieldset class="calculator__range-container">
-                <div class="input__range age">
-                  <span>14 лет</span>
-                  <input type="range" value="50" min="14" max="69" step="1" name="age" id="age" required>
-                  <output id="valueAge">50</output>
-                  <span>69 лет</span>
-                </div>
-              </fieldset>
-            </div>
-            <div class="calculator__page box_accent-light">
-              <p class="calculator__page-title">Тип вещества</p>
-              <p class="calculator__page-caption">(определяет методы детоксикации и снятия ломки)</p>
-              <fieldset class="calculator__inputs-container">
-                <div class="input__button">
-                  <input type="radio" name="type" id="typeChoice1" value="Алкоголь" required>
-                  <label for="typeChoice1">Алкоголь</label>
-                </div>
-                <div class="input__button">
-                  <input type="radio" name="type" id="typeChoice2" value="Наркотики" required>
-                  <label for="typeChoice2">Наркотики</label>
-                </div>
-                <div class="input__button">
-                  <input type="radio" name="type" id="typeChoice3" value="Сочетание алкоголя и наркотиков" required>
-                  <label for="typeChoice3">Сочетание алкоголя и наркотиков</label>
-                </div>
-              </fieldset>
-            </div>
-            <div class="calculator__page box_accent-light">
-              <p class="calculator__page-title">Стаж употребления</p>
-              <p class="calculator__page-caption">(чем дольше зависимость, тем сложнее и длительнее восстановление)</p>
-              <fieldset class="calculator__range-container">
-                <div class="input__range exp">
-                  <span>1 год</span>
-                  <input type="range" value="8" min="1" max="11" step="1" name="exp" id="exp" required>
-                  <output id="valueExp">8</output>
-                  <span>11+ лет</span>
-                </div>
-              </fieldset>
-            </div>
-            <div class="calculator__page box_accent-light">
-              <p class="calculator__page-title">Согласие на лечение</p>
-              <p class="calculator__page-caption">(если пациент сопротивляется — может потребоваться мотивационная беседа)
-              </p>
-              <fieldset class="calculator__inputs-container">
-                <div class="input__button">
-                  <input type="radio" name="agree" id="agreeChoice1" value="Да" required>
-                  <label for="agreeChoice1">Да</label>
-                </div>
-                <div class="input__button">
-                  <input type="radio" name="agree" id="agreeChoice2" value="Нет" required>
-                  <label for="agreeChoice2">Нет</label>
-                </div>
-                <div class="input__button">
-                  <input type="radio" name="agree" id="agreeChoice3" value="Колеблется или не уверен(а)" required>
-                  <label for="agreeChoice3">Колеблется или не уверен(а)</label>
-                </div>
-              </fieldset>
-            </div>
-            <div class="calculator__page box_accent-light">
-              <p class="calculator__page-title">Ранее проходили лечение?</p>
-              <fieldset class="calculator__inputs-container_cl">
-                <div class="input__radio">
-                  <input type="radio" name="previous" id="previousChoice1" value="Нет, обращаюсь впервые" required>
-                  <label for="previousChoice1">Нет, обращаюсь впервые</label>
-                </div>
-                <div class="input__radio">
-                  <input type="radio" name="previous" id="previousChoice2"
-                    value="Да, проходил(а) детоксикацию или вывод из запоя" required>
-                  <label for="previousChoice2">Да, проходил(а) детоксикацию или вывод из запоя</label>
-                </div>
-                <div class="input__radio">
-                  <input type="radio" name="previous" id="previousChoice3" value="Да, был(а) закодирован(а)" required>
-                  <label for="previousChoice3">Да, был(а) закодирован(а)</label>
-                </div>
-                <div class="input__radio">
-                  <input type="radio" name="previous" id="previousChoice4" value="Да, проходил(а) курс в стационаре"
-                    required>
-                  <label for="previousChoice4">Да, проходил(а) курс в стационаре</label>
-                </div>
-                <div class="input__radio">
-                  <input type="radio" name="previous" id="previousChoice5"
-                    value="Да, участвовал(а) в реабилитационной программе" required>
-                  <label for="previousChoice5">Да, участвовал(а) в реабилитационной программе</label>
-                </div>
-                <div class="input__radio">
-                  <input type="radio" name="previous" id="previousChoice6"
-                    value="Да, проходил(а) амбулаторное лечение или психотерапию" required>
-                  <label for="previousChoice6">Да, проходил(а) амбулаторное лечение или психотерапию</label>
-                </div>
-              </fieldset>
-            </div>
-            <div class="calculator__page box_accent-light">
-              <p class="calculator__page-title">Сопутствующие заболевания</p>
-              <p class="calculator__page-caption">(влияет на выбор препаратов и контроль состояния)</p>
-              <fieldset class="calculator__inputs-container">
-                <div class="input__button">
-                  <input type="radio" name="illness" id="illnessChoice1" value="Нет" required>
-                  <label for="illnessChoice1">Нет</label>
-                </div>
-                <div class="input__button">
-                  <input type="radio" name="illness" id="illnessChoice2" value="Есть" required>
-                  <label for="illnessChoice2">Есть</label>
-                </div>
-                <div class="input__button">
-                  <input type="radio" name="illness" id="illnessChoice3" value="Неизвестно" required>
-                  <label for="illnessChoice3">Неизвестно</label>
-                </div>
-              </fieldset>
-            </div>
-            <div class="calculator__page box_accent-light">
-              <p class="calculator__page-title">Занятость</p>
-              <p class="calculator__page-caption">(учитывается при планировании амбулаторного режима)</p>
-              <fieldset class="calculator__inputs-container">
-                <div class="input__button">
-                  <input type="radio" name="work" id="workChoice1" value="Работает" required>
-                  <label for="workChoice1">Работает</label>
-                </div>
-                <div class="input__button">
-                  <input type="radio" name="work" id="workChoice2" value="Учится" required>
-                  <label for="workChoice2">Учится</label>
-                </div>
-                <div class="input__button">
-                  <input type="radio" name="work" id="workChoice3" value="Не занят" required>
-                  <label for="workChoice3">Не занят</label>
-                </div>
-              </fieldset>
-            </div>
-            <div class="calculator__page box_accent-light calculator__page-result">
-              <div class="calculator__page-result__content">
-                <p class="calculator__page-title">2 990 ₽</p>
-                <p class="calculator__page-caption">Это предварительная оценка. Окончательная стоимость определяется
-                  врачом после бесплатной консультации — с учётом всех нюансов состояния и ваших целей.</p>
-                <button class="button button_accent popup-btn" data-path="popup-call">Рассчитать стоимость</button>
               </div>
             </div>
+            <div class="reviews__item-body">
+              <div class="reviews__item-text">
+                <p class="reviews__item-text_name">Константин</p>
+                <p>Бесплатная первичная консультация специалиста по телефону для людей, которые страдают от зависимостей
+                  и для их близких, поможет в трудной ситуаци принять верное решение. Алкоголь, наркотики, лекарственные
+                  средства, поведенческие зависимости, тревога, панические атаки, депрессия, психозы — всё это требует
+                  профессионального подхода, а не «перетерпеть» или «взять себя в руки». Нет универсальных схем. Лечение
+                  строится под ваш диагноз, возраст, сопутствующие состояния и цель. Бесплатная первичная консультация
+                  специалиста по телефону для людей, которые страдают от зависимостей и для их близких, поможет в
+                  трудной ситуаци принять верное решение. Алкоголь, наркотики, лекарственные средства, поведенческие
+                  зависимости, тревога, панические атаки, депрессия, психозы — всё это требует профессионального
+                  подхода, а не «перетерпеть» или «взять себя в руки». Нет универсальных схем. Лечение строится под ваш
+                  диагноз, возраст, сопутствующие состояния и цель. Бесплатная первичная консультация специалиста по
+                  телефону для людей, которые страдают от зависимостей и дл...</p>
+              </div>
+              <button class="reviews__item-btn">Читать полностью</button>
+            </div>
           </div>
-          <div class="calculator__toolbar">
-            <p class="calculator__count"><span class="page-number">01</span> / <span>08</span></p>
-            <div class="calculator__buttons">
-              <button type="button"
-                class="calculator__button point-mark point-mark_grey point-mark_arrow point-mark_56"></button>
-              <button type="button"
-                class="calculator__button point-mark point-mark_grey point-mark_arrow point-mark_arrow_right point-mark_56"></button>
+          <div class="reviews__item">
+            <div class="reviews__item-head">
+              <div class="reviews__item-map">
+                <svg width="71" height="23" viewBox="0 0 71 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M67.7425 8.30039H71.0001C70.5881 5.18782 68.2725 3.55176 65.054 3.55176C61.7964 3.55176 59.6182 5.24771 59.6182 8.16072C59.6182 11.4728 62.4244 12.2109 63.9158 12.5103C65.839 12.8894 67.7229 12.9293 67.7229 14.6052C67.7229 15.7425 66.7809 16.3012 65.4465 16.3012C63.7981 16.3012 62.6992 15.4632 62.4244 13.9469H59.2061C59.4022 17.219 61.7376 18.9748 65.1719 18.9748C68.3509 18.9748 70.9608 17.4984 70.9608 14.306C70.9608 10.8742 67.9584 10.2557 65.8586 9.93645C64.426 9.71701 62.8561 9.51746 62.8561 7.98113C62.8561 6.90373 63.6607 6.24533 65.0148 6.24533C66.5847 6.24533 67.5266 7.14323 67.7425 8.30039Z"
+                    fill="#333333" />
+                  <path d="M57.4199 4.05078H54.3389V18.516H57.4199V4.05078Z" fill="#333333" />
+                  <path
+                    d="M45.0372 13.4676H49.0602C48.4322 15.024 47.0192 15.7621 45.3904 15.7621C42.5254 15.7621 41.191 13.5075 41.191 11.2729C41.191 9.01825 42.4468 6.7238 45.3709 6.7238C47.1567 6.7238 48.491 7.56178 49.0013 9.05818L52.3177 9.05819C51.7487 5.68634 48.8443 3.75098 45.4102 3.75098C41.1713 3.75098 37.9922 6.68386 37.9922 11.3128C37.9922 16.0015 41.446 18.7749 45.3904 18.7749C49.2761 18.7749 52.3177 16.2011 52.3177 12.1708V10.9935H45.0372V13.4676Z"
+                    fill="#333333" />
+                  <path
+                    d="M30.9471 3.75098C27.4147 3.75098 24.8047 6.00551 24.8243 9.75652H28.0035C27.9642 8.12046 28.9846 6.62406 30.79 6.62406C32.36 6.62406 33.2823 7.74139 33.2823 9.01826C33.2823 10.2952 32.36 11.0135 30.6527 11.7917C28.3174 12.8491 26.6494 13.5275 24.942 14.1261V18.5155H36.8343V15.5626H28.6702C28.6702 15.5626 28.6973 15.5539 28.7107 15.5498C30.0993 15.122 31.1426 14.6573 32.3796 14.1061C35.0289 12.909 36.5399 11.4125 36.5399 8.85871C36.5399 5.72617 34.2636 3.75098 30.9471 3.75098Z"
+                    fill="#333333" />
+                  <path
+                    d="M16.4646 13.4279C12.4613 13.4479 11.8137 15.9019 11.5979 17.977L11.4998 18.8947H10.6951L10.597 17.977C10.3812 15.9019 9.71396 13.4478 5.84797 13.4279C5.20039 12.0711 4.92565 10.9737 4.92565 9.73668C4.92565 6.64415 7.41793 3.751 11.1072 3.751C14.7965 3.751 17.2496 6.62409 17.2496 9.75672C17.2496 10.9737 17.1318 12.0711 16.4646 13.4279ZM11.068 0C4.98458 0 0 5.06789 0 11.2729C0 17.4981 4.98458 22.5659 11.068 22.5659C17.2103 22.5659 22.1752 17.4981 22.1752 11.2729C22.1752 5.06791 17.2103 0 11.068 0Z"
+                    fill="#29B24A" />
+                </svg>
+              </div>
+              <div class="reviews__item-rating">
+                <p class="reviews__item-rating_number">4.9</p>
+                <div class="reviews__item-rating_stars">
+                  <img src="/assets/img/icons/star.svg" alt="star">
+                  <img src="/assets/img/icons/star.svg" alt="star">
+                  <img src="/assets/img/icons/star.svg" alt="star">
+                  <img src="/assets/img/icons/star.svg" alt="star">
+                  <img src="/assets/img/icons/star.svg" alt="star">
+                </div>
+              </div>
+            </div>
+            <div class="reviews__item-body">
+              <div class="reviews__item-text">
+                <p class="reviews__item-text_name">Константин</p>
+                <p>озы — всё это требует профессионального подхода, а не «перетерпеть» или «взять себя в руки». Нет
+                  универсальных схем. Лечение строится под ваш диагноз, возраст, сопутствующие состояния и цель.
+                  Бесплатная первичная консультация специалиста по телефону для людей, которые страдают от зависимостей
+                  и дл...</p>
+              </div>
+              <button class="reviews__item-btn">Читать полностью</button>
+            </div>
+          </div>
+          <div class="reviews__item">
+            <div class="reviews__item-head">
+              <div class="reviews__item-map">
+                <svg width="71" height="23" viewBox="0 0 71 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M67.7425 8.30039H71.0001C70.5881 5.18782 68.2725 3.55176 65.054 3.55176C61.7964 3.55176 59.6182 5.24771 59.6182 8.16072C59.6182 11.4728 62.4244 12.2109 63.9158 12.5103C65.839 12.8894 67.7229 12.9293 67.7229 14.6052C67.7229 15.7425 66.7809 16.3012 65.4465 16.3012C63.7981 16.3012 62.6992 15.4632 62.4244 13.9469H59.2061C59.4022 17.219 61.7376 18.9748 65.1719 18.9748C68.3509 18.9748 70.9608 17.4984 70.9608 14.306C70.9608 10.8742 67.9584 10.2557 65.8586 9.93645C64.426 9.71701 62.8561 9.51746 62.8561 7.98113C62.8561 6.90373 63.6607 6.24533 65.0148 6.24533C66.5847 6.24533 67.5266 7.14323 67.7425 8.30039Z"
+                    fill="#333333" />
+                  <path d="M57.4199 4.05078H54.3389V18.516H57.4199V4.05078Z" fill="#333333" />
+                  <path
+                    d="M45.0372 13.4676H49.0602C48.4322 15.024 47.0192 15.7621 45.3904 15.7621C42.5254 15.7621 41.191 13.5075 41.191 11.2729C41.191 9.01825 42.4468 6.7238 45.3709 6.7238C47.1567 6.7238 48.491 7.56178 49.0013 9.05818L52.3177 9.05819C51.7487 5.68634 48.8443 3.75098 45.4102 3.75098C41.1713 3.75098 37.9922 6.68386 37.9922 11.3128C37.9922 16.0015 41.446 18.7749 45.3904 18.7749C49.2761 18.7749 52.3177 16.2011 52.3177 12.1708V10.9935H45.0372V13.4676Z"
+                    fill="#333333" />
+                  <path
+                    d="M30.9471 3.75098C27.4147 3.75098 24.8047 6.00551 24.8243 9.75652H28.0035C27.9642 8.12046 28.9846 6.62406 30.79 6.62406C32.36 6.62406 33.2823 7.74139 33.2823 9.01826C33.2823 10.2952 32.36 11.0135 30.6527 11.7917C28.3174 12.8491 26.6494 13.5275 24.942 14.1261V18.5155H36.8343V15.5626H28.6702C28.6702 15.5626 28.6973 15.5539 28.7107 15.5498C30.0993 15.122 31.1426 14.6573 32.3796 14.1061C35.0289 12.909 36.5399 11.4125 36.5399 8.85871C36.5399 5.72617 34.2636 3.75098 30.9471 3.75098Z"
+                    fill="#333333" />
+                  <path
+                    d="M16.4646 13.4279C12.4613 13.4479 11.8137 15.9019 11.5979 17.977L11.4998 18.8947H10.6951L10.597 17.977C10.3812 15.9019 9.71396 13.4478 5.84797 13.4279C5.20039 12.0711 4.92565 10.9737 4.92565 9.73668C4.92565 6.64415 7.41793 3.751 11.1072 3.751C14.7965 3.751 17.2496 6.62409 17.2496 9.75672C17.2496 10.9737 17.1318 12.0711 16.4646 13.4279ZM11.068 0C4.98458 0 0 5.06789 0 11.2729C0 17.4981 4.98458 22.5659 11.068 22.5659C17.2103 22.5659 22.1752 17.4981 22.1752 11.2729C22.1752 5.06791 17.2103 0 11.068 0Z"
+                    fill="#29B24A" />
+                </svg>
+              </div>
+              <div class="reviews__item-rating">
+                <p class="reviews__item-rating_number">4.9</p>
+                <div class="reviews__item-rating_stars">
+                  <img src="/assets/img/icons/star.svg" alt="star">
+                  <img src="/assets/img/icons/star.svg" alt="star">
+                  <img src="/assets/img/icons/star.svg" alt="star">
+                  <img src="/assets/img/icons/star.svg" alt="star">
+                  <img src="/assets/img/icons/star.svg" alt="star">
+                </div>
+              </div>
+            </div>
+            <div class="reviews__item-body">
+              <div class="reviews__item-text">
+                <p class="reviews__item-text_name">Константин</p>
+                <p>т в трудной ситуаци принять верное решение. Алкоголь, наркотики, лекарственные средства,
+                  поведенческие зависимости, тревога, панические атаки, депрессия, психозы — всё это требует
+                  профессионального подхода, а не «перетерпеть» или «взять себя в руки». Нет универсальных схем. Лечение
+                  строится под ваш диагноз, возраст, сопутствующие состояния и цель. Бесплатная первичная консультация
+                  специалиста по телефону для людей, которые страдают от зависимостей и для их близких, поможет в
+                  трудной ситуаци принять верное решение. Алкоголь, наркотики, лекарственные средства, поведенческие
+                  зависимости, тревога, панические атаки, депрессия, психозы — всё это требует профессионального
+                  подхода, а не «перетерпеть» или «взять себя в руки». Нет универсальных схем. Лечение строится под ваш
+                  диагноз, возраст, сопутствующие состояния и цель. Бесплатная первичная консультация специалиста по
+                  телефону для людей, которые страдают от зависимостей и дл...</p>
+              </div>
+              <button class="reviews__item-btn">Читать полностью</button>
+            </div>
+          </div>
+          <div class="reviews__item">
+            <div class="reviews__item-head">
+              <div class="reviews__item-map">
+                <svg width="71" height="23" viewBox="0 0 71 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M67.7425 8.30039H71.0001C70.5881 5.18782 68.2725 3.55176 65.054 3.55176C61.7964 3.55176 59.6182 5.24771 59.6182 8.16072C59.6182 11.4728 62.4244 12.2109 63.9158 12.5103C65.839 12.8894 67.7229 12.9293 67.7229 14.6052C67.7229 15.7425 66.7809 16.3012 65.4465 16.3012C63.7981 16.3012 62.6992 15.4632 62.4244 13.9469H59.2061C59.4022 17.219 61.7376 18.9748 65.1719 18.9748C68.3509 18.9748 70.9608 17.4984 70.9608 14.306C70.9608 10.8742 67.9584 10.2557 65.8586 9.93645C64.426 9.71701 62.8561 9.51746 62.8561 7.98113C62.8561 6.90373 63.6607 6.24533 65.0148 6.24533C66.5847 6.24533 67.5266 7.14323 67.7425 8.30039Z"
+                    fill="#333333" />
+                  <path d="M57.4199 4.05078H54.3389V18.516H57.4199V4.05078Z" fill="#333333" />
+                  <path
+                    d="M45.0372 13.4676H49.0602C48.4322 15.024 47.0192 15.7621 45.3904 15.7621C42.5254 15.7621 41.191 13.5075 41.191 11.2729C41.191 9.01825 42.4468 6.7238 45.3709 6.7238C47.1567 6.7238 48.491 7.56178 49.0013 9.05818L52.3177 9.05819C51.7487 5.68634 48.8443 3.75098 45.4102 3.75098C41.1713 3.75098 37.9922 6.68386 37.9922 11.3128C37.9922 16.0015 41.446 18.7749 45.3904 18.7749C49.2761 18.7749 52.3177 16.2011 52.3177 12.1708V10.9935H45.0372V13.4676Z"
+                    fill="#333333" />
+                  <path
+                    d="M30.9471 3.75098C27.4147 3.75098 24.8047 6.00551 24.8243 9.75652H28.0035C27.9642 8.12046 28.9846 6.62406 30.79 6.62406C32.36 6.62406 33.2823 7.74139 33.2823 9.01826C33.2823 10.2952 32.36 11.0135 30.6527 11.7917C28.3174 12.8491 26.6494 13.5275 24.942 14.1261V18.5155H36.8343V15.5626H28.6702C28.6702 15.5626 28.6973 15.5539 28.7107 15.5498C30.0993 15.122 31.1426 14.6573 32.3796 14.1061C35.0289 12.909 36.5399 11.4125 36.5399 8.85871C36.5399 5.72617 34.2636 3.75098 30.9471 3.75098Z"
+                    fill="#333333" />
+                  <path
+                    d="M16.4646 13.4279C12.4613 13.4479 11.8137 15.9019 11.5979 17.977L11.4998 18.8947H10.6951L10.597 17.977C10.3812 15.9019 9.71396 13.4478 5.84797 13.4279C5.20039 12.0711 4.92565 10.9737 4.92565 9.73668C4.92565 6.64415 7.41793 3.751 11.1072 3.751C14.7965 3.751 17.2496 6.62409 17.2496 9.75672C17.2496 10.9737 17.1318 12.0711 16.4646 13.4279ZM11.068 0C4.98458 0 0 5.06789 0 11.2729C0 17.4981 4.98458 22.5659 11.068 22.5659C17.2103 22.5659 22.1752 17.4981 22.1752 11.2729C22.1752 5.06791 17.2103 0 11.068 0Z"
+                    fill="#29B24A" />
+                </svg>
+              </div>
+              <div class="reviews__item-rating">
+                <p class="reviews__item-rating_number">4.9</p>
+                <div class="reviews__item-rating_stars">
+                  <img src="/assets/img/icons/star.svg" alt="star">
+                  <img src="/assets/img/icons/star.svg" alt="star">
+                  <img src="/assets/img/icons/star.svg" alt="star">
+                  <img src="/assets/img/icons/star.svg" alt="star">
+                  <img src="/assets/img/icons/star.svg" alt="star">
+                </div>
+              </div>
+            </div>
+            <div class="reviews__item-body">
+              <div class="reviews__item-text">
+                <p class="reviews__item-text_name">Константин</p>
+                <p> панические атаки, депрессия, психозы — всё это требует профессионального подхода, а не «перетерпеть»
+                  или «взять себя в руки». Нет универсальных схем. Лечение строится под ваш диагноз, возраст,
+                  сопутствующие состояния и цель. Бесплатная первичная консультация специалиста по телефону для людей,
+                  которые страдают от зависимостей и для их близких, поможет в трудной ситуаци принять верное решение.
+                  Алкоголь, наркотики, лекарственные средства, поведенческие зависимости, тревога, панические атаки,
+                  депрессия, психозы — всё это требует профессионального подхода, а не «перетерпеть» или «взять себя в
+                  руки». Нет универсальных схем. Лечение строится под ваш диагноз, возраст, сопутствующие состояния и
+                  цель. Бесплатная первичная консультация специалиста по телефону для людей, которые страдают от
+                  зависимостей и дл...</p>
+              </div>
+              <button class="reviews__item-btn">Читать полностью</button>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="popup" data-target="popup-call">
-    <div class="popup__body">
-      <div class="popup__content">
-        <button class="close-popup point-mark point-mark_56"></button>
-        <div>
-          <p class="popup__title">
-            Вызовите врача-нарколога на дом — без промедления и лишних вопросов
-          </p>
-          <p class="popup__subtitle">
-            Оставьте номер телефона — мы свяжемся в течение 5 минут, уточним ситуацию и направим ближайшую бригаду. Всё
-            пройдёт конфиденциально
-            и по существу.
-          </p>
-        </div>
-        <form class="popup__form form">
-          <input type="text" class="input" placeholder="Ваше имя" name="params[name][]" required>
-          <input type="tel" class="input" placeholder="Ваш номер телефона" name="params[phone][]" required>
-          <button type="submit" class="button button_accent popup__button">Заказать звонок</button>
-          <label class="checkbox">
-            <input type="checkbox" checked="checked" required="">
-            <span class="checkbox-mark"></span>
-            <span>Отправляя заявку, вы соглашаетесь с <a href="#" rel="nofollow">политикой конфиденциальности</a></span>
-          </label>
-        </form>
-      </div>
-    </div>
-  </div>
-  
-  <div class="popup city" data-target="popup-city">
-    <div class="popup__body">
-      <div class="popup__content">
-        <button class="close-popup point-mark point-mark_56"></button>
-        <p class="popup__title">
-          Укажите ваш город
-        </p>
-        <form class="popup__form search__form">
-          <input placeholder="Поиск по сайту" type="text" class="search__input">
-        </form>
-        <div class="city__popular">
-          <p class="city__popular-title">Популярные города:</p>
-          <ul>
-            <li><a href="#">Ростов-на-Дону</a></li>
-            <li><a href="#">Ростов-на-Дону</a></li>
-            <li><a href="#">Ростов-на-Дону</a></li>
-            <li><a href="#">Владивосток</a></li>
-            <li><a href="#">Владивосток</a></li>
-            <li><a href="#">Владивосток</a></li>
-            <li><a href="#">Москва</a></li>
-            <li><a href="#">Москва</a></li>
-            <li><a href="#">Москва</a></li>
-            <li><a href="#">Санкт-Петербург</a></li>
-            <li><a href="#">Санкт-Петербург</a></li>
-            <li><a href="#">Санкт-Петербург</a></li>
-            <li><a href="#">Великий Новгород</a></li>
-            <li><a href="#">Великий Новгород</a></li>
-            <li><a href="#">Великий Новгород</a></li>
-          </ul>
-        </div>
-        <div class="popup__search city__search none">
-          <ul class="popup__search_list city__list">
-          </ul>
-        </div>
-        <div class="city__search-wrap">
-          <div class="popup__search popup__search-result city__search-result">
-            <p class="no-results-message city__no-results-message">По вашему запросу города не найдены</p>
-            <ul class="search-list popup__search_list city__list_result">
-              <li><a href="#" class="search-name">Воронеж 3000</a></li>
-              <li><a href="#" class="search-name">Воронеж 3000</a></li>
-              <li><a href="#" class="search-name">Воронеж 3000</a></li>
-              <li><a href="#" class="search-name">Воронеж 3000</a></li>
-              <li><a href="#" class="search-name">Воронеж 3000</a></li>
-              <li><a href="#" class="search-name">Воронеж 3000</a></li>
-              <li class="none"><a href="#" class="search-name">Воронеж 2000</a></li>
-              <li class="none"><a href="#" class="search-name">Воронеж</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="popup popup-responce" data-modal-ok="result-wrapper" data-modal-open="open active">
-    <div class="popup__body">
-      <div class="popup__content">
-        <button class="close-popup point-mark point-mark_56"></button>
-  
-        <div class="result-wrapper popup-change-response__wrapper">
-          <h3>Заявка успешно отправлена!</h3>
-          <p></p>
-        </div>
-  
-        <button class="button button_accent close-popup">Хорошо</button>
-      </div>
-    </div>
-  </div>
-  
-  <div class="popup popup-responce" data-modal-err="result-wrapper" data-modal-open="open active">
-    <div class="popup__body">
-      <div class="popup__content">
-        <button class="close-popup point-mark point-mark_56"></button>
-  
-        <div class="result-wrapper popup-change-response__wrapper">
-          <h3>Произошла какая-то ошибка</h3>
-          <p></p>
-        </div>
-  
-        <button class="button button_accent close-popup">Повторить попытку</button>
-      </div>
-    </div>
-  </div>
+        <div class="articles__tab-content pag-list">
 
-</body>
+        </div>
+        <div class="articles__tab-content pag-list">
 
-</html>
+        </div>
+        <div class="articles__tab-content pag-list">
+
+        </div>
+        <div class="articles__tab-content pag-list">
+
+        </div>
+        <div class="articles__tab-content pag-list">
+
+        </div>
+        <div class="articles__tab-content pag-list">
+
+        </div>
+        <button class="button button_accent articles__tab-content__button btn_more active">Смотреть еще</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{> form-call }}
