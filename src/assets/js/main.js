@@ -670,37 +670,40 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   //Slider Gallery
-  const thumbsSwiper = new Swiper('.gallery-sl__thumbs-swiper', {
-    direction: 'horizontal',
-    spaceBetween: 10,
-    slidesPerView: 3,
-    watchSlidesProgress: true,
-    breakpoints: {
-      768: {
-        direction: 'vertical',
-        slidesPerView: 4,
+  const gallery = document.querySelector('.gallery-sl');
+  if (gallery) {
+    const thumbsSwiper = new Swiper('.gallery-sl__thumbs-swiper', {
+      direction: 'horizontal',
+      spaceBetween: 10,
+      slidesPerView: 3,
+      watchSlidesProgress: true,
+      breakpoints: {
+        768: {
+          direction: 'vertical',
+          slidesPerView: 4,
+        }
       }
-    }
-  });
+    });
 
-  const gallery = new Swiper('.gallery-sl__swiper', {
-    spaceBetween: 10,
-    slidesPerView: 1,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    thumbs: {
-      swiper: thumbsSwiper,
-    },
-    pagination: {
-      el: '.gallery-sl__count',
-      type: 'fraction',
-      renderFraction: function (currentClass, totalClass) {
-        return '<span class="page-number ' + currentClass + '"></span>' + ' / ' + '<span class="' + totalClass + '"></span>';
-      }
-    },
-  });
+    const gallerySlider = new Swiper('.gallery-sl__swiper', {
+      spaceBetween: 10,
+      slidesPerView: 1,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      thumbs: {
+        swiper: thumbsSwiper,
+      },
+      pagination: {
+        el: '.gallery-sl__count',
+        type: 'fraction',
+        renderFraction: function (currentClass, totalClass) {
+          return '<span class="page-number ' + currentClass + '"></span>' + ' / ' + '<span class="' + totalClass + '"></span>';
+        }
+      },
+    });
+  }
   /* -- END SLIDERS  -- */
 
 
@@ -919,6 +922,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   /* -- END POPUP CALCULATOR -- */
 
+
   /* -- POLICY-PLASHKA -- */
   function getCookie(name) {
     let matches = document.cookie.match(new RegExp(
@@ -949,4 +953,21 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
   /* -- END POLICY-PLASHKA -- */
+
+
+  /* -- WIDGET -- */
+  const converseButtons = document.querySelectorAll('.converse-card__back-button, .converse-card__close');
+  if (converseButtons) {
+    converseButtons.forEach(converseButton => {
+      converseButton.addEventListener("click", function () {
+        const converseCard = document.querySelector(".converse-card");
+        const converseCardBackBtn = document.querySelector(".converse-card__back-button");
+        if (converseCard && converseCardBackBtn) {
+          converseCard.classList.toggle("converse-card_hide");
+          converseCardBackBtn.classList.toggle("converse-card__back-button_hide");
+        }
+      })
+    });
+  }
+  /* -- END WIDGET -- */
 });
