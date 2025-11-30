@@ -1,5 +1,6 @@
 .gallery-sl {
   &__body {
+    padding-block: $base-section-margin-bl;
     position: relative;
   }
 
@@ -186,6 +187,85 @@
 
     @media screen and (width<=768px) {
       border-radius: 8px;
+    }
+  }
+
+  &-main {
+    background-color: #fbf9f8;
+
+    .gallery-sl {
+      &__body {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 50px;
+
+        @media screen and (width<=1150px) {
+          gap: 30px;
+          flex-direction: column;
+        }
+        @media screen and (width<=700px) {
+          gap: 0;
+        }
+      }
+
+      &__left {
+        max-width: 550px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      &__title {
+        @media screen and (width>700px) {
+          max-width: 250px;
+          margin-block-end: clamp(1.875rem, 0.3125rem + 5vw, 3.125rem);
+        }
+      }
+
+      @media screen and (width<=700px) {
+        &__link {
+          margin-block-start: 30px;
+
+          @media (width<=700px) {
+            display: none;
+          }
+
+          &_mobile {
+            display: none;
+
+            @media (width<=700px) {
+              display: flex;
+              max-width: none;
+            }
+          }
+        }
+      }
+
+      &__button {
+        &.swiper-button-next,
+        &.swiper-button-prev {
+          position: static;
+          width: clamp(3.125rem, 2.6rem + 1.2vw, 3.5rem);
+          height: clamp(3.125rem, 2.6rem + 1.2vw, 3.5rem);
+          margin: 0;
+
+          &:after {
+            content: none;
+          }
+        }
+      }
+    }
+
+    @media screen and (width<=1150px) {
+      .gallery-sl__buttons {
+        top: 40%;
+      }
+      .gallery-sl__toolbar {
+        margin: 0;
+        height: 0;
+      }
     }
   }
 }
