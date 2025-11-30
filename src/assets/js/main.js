@@ -497,6 +497,47 @@ document.addEventListener('DOMContentLoaded', function () {
   /* -- END AUTOCONTENT RESIZE  -- */
 
 
+  /* -- REVIEWS -- */
+  const reviewItems = document.querySelectorAll('.reviews__item');
+  function initReviewItem(reviewItem) {
+    const textBlock = reviewItem.querySelector('.reviews__item-text');
+    const button = reviewItem.querySelector('.reviews__item-btn');
+    function updateButtonVisibility() {
+      const wasActive = textBlock.classList.contains('active');
+      textBlock.classList.remove('active');
+      const contentHeight = textBlock.scrollHeight;
+      if (wasActive) {
+        textBlock.classList.add('active');
+      }
+      if (contentHeight > 450) {
+        button.style.display = 'block';
+        if (!button.hasAttribute('data-listener-attached')) {
+          button.setAttribute('data-listener-attached', 'true');
+          button.addEventListener('click', function () {
+            textBlock.classList.toggle('active');
+            button.textContent = textBlock.classList.contains('active')
+              ? 'Свернуть'
+              : 'Читать полностью';
+          });
+        }
+      } else {
+        button.style.display = 'none';
+        textBlock.classList.remove('active');
+        button.textContent = 'Читать полностью';
+      }
+    }
+    updateButtonVisibility();
+    const resizeObserver = new ResizeObserver(() => {
+      updateButtonVisibility();
+    });
+    resizeObserver.observe(textBlock);
+    reviewItem._resizeObserver = resizeObserver;
+  }
+  if (reviewItems.length > 0) {
+    reviewItems.forEach(initReviewItem);
+  }
+  /* -- END REVIEWS -- */
+
   /* -- SLIDERS  -- */
   //Sliders 700 --> mobile 1
   sliders700Array = document.querySelectorAll(".slider-700");
@@ -534,6 +575,52 @@ document.addEventListener('DOMContentLoaded', function () {
           }
         })
       })
+    })
+  }
+
+  //Sliders horizontal (4 desktop -> 1 mobile)
+  slidersHl4Array = document.querySelectorAll(".slider-hl-4");
+  if (slidersHl4Array) {
+    slidersHl4Array.forEach(slider => {
+      sliderCheck = new Swiper(slider.querySelector('.slider-hl-4__swiper'), {
+        direction: 'horizontal',
+        slidesPerView: 1.05,
+        grabCursor: true,
+        spaceBetween: 8,
+        pagination: {
+          el: '.slider-hl-4__count',
+          type: 'fraction',
+          renderFraction: function (currentClass, totalClass) {
+            return '<span class="page-number ' + currentClass + '"></span>' + ' / ' + '<span class="' + totalClass + '"></span>';
+          }
+        },
+        navigation: {
+          nextEl: slider.querySelector('.swiper-button-next'),
+          prevEl: slider.querySelector('.swiper-button-prev'),
+        },
+        breakpoints: {
+          600: {
+            direction: 'horizontal',
+            slidesPerView: 1.2,
+            spaceBetween: 10
+          },
+          900: {
+            direction: 'horizontal',
+            slidesPerView: 2,
+            spaceBetween: 10
+          },
+          1200: {
+            direction: 'horizontal',
+            slidesPerView: 3,
+            spaceBetween: 15
+          },
+          1620: {
+            direction: 'horizontal',
+            slidesPerView: 4,
+            spaceBetween: 20
+          }
+        }
+      });
     })
   }
 

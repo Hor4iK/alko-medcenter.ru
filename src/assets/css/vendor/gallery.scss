@@ -2,6 +2,7 @@
   &__body {
     padding-block: $base-section-margin-bl;
     position: relative;
+    overflow: hidden;
   }
 
   &__title {
