@@ -668,6 +668,39 @@ document.addEventListener('DOMContentLoaded', function () {
       },
     });
   }
+
+  //Slider Gallery
+  const thumbsSwiper = new Swiper('.gallery-sl__thumbs-swiper', {
+    direction: 'horizontal',
+    spaceBetween: 10,
+    slidesPerView: 3,
+    watchSlidesProgress: true,
+    breakpoints: {
+      768: {
+        direction: 'vertical',
+        slidesPerView: 4,
+      }
+    }
+  });
+
+  const gallery = new Swiper('.gallery-sl__swiper', {
+    spaceBetween: 10,
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    thumbs: {
+      swiper: thumbsSwiper,
+    },
+    pagination: {
+      el: '.gallery-sl__count',
+      type: 'fraction',
+      renderFraction: function (currentClass, totalClass) {
+        return '<span class="page-number ' + currentClass + '"></span>' + ' / ' + '<span class="' + totalClass + '"></span>';
+      }
+    },
+  });
   /* -- END SLIDERS  -- */
 
 
