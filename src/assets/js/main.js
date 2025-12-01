@@ -634,7 +634,7 @@ document.addEventListener('DOMContentLoaded', function () {
         grabCursor: true,
         spaceBetween: 8,
         pagination: {
-          el: '.slider-hl-3__count',
+          el: slider.querySelector('.slider-hl-3__count'),
           type: 'fraction',
           renderFraction: function (currentClass, totalClass) {
             return '<span class="page-number ' + currentClass + '"></span>' + ' / ' + '<span class="' + totalClass + '"></span>';
@@ -675,7 +675,7 @@ document.addEventListener('DOMContentLoaded', function () {
         grabCursor: true,
         spaceBetween: 8,
         pagination: {
-          el: '.slider-hl-2__count',
+          el: slider.querySelector('.slider-hl-2__count'),
           type: 'fraction',
           renderFraction: function (currentClass, totalClass) {
             return '<span class="page-number ' + currentClass + '"></span>' + ' / ' + '<span class="' + totalClass + '"></span>';
@@ -706,7 +706,7 @@ document.addEventListener('DOMContentLoaded', function () {
         grabCursor: true,
         spaceBetween: 8,
         pagination: {
-          el: '.slider-hl-1__count',
+          el: slider.querySelector('.slider-hl-1__count'),
           type: 'fraction',
           renderFraction: function (currentClass, totalClass) {
             return '<span class="page-number ' + currentClass + '"></span>' + ' / ' + '<span class="' + totalClass + '"></span>';
@@ -776,14 +776,14 @@ document.addEventListener('DOMContentLoaded', function () {
       spaceBetween: 10,
       slidesPerView: 1,
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: gallery.querySelector('.swiper-button-next'),
+        prevEl: gallery.querySelector('.swiper-button-prev'),
       },
       thumbs: {
         swiper: thumbsSwiper,
       },
       pagination: {
-        el: '.gallery-sl__count',
+        el: gallery.querySelector('.gallery-sl__count'),
         type: 'fraction',
         renderFraction: function (currentClass, totalClass) {
           return '<span class="page-number ' + currentClass + '"></span>' + ' / ' + '<span class="' + totalClass + '"></span>';
