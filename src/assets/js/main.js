@@ -686,9 +686,9 @@ document.addEventListener('DOMContentLoaded', function () {
           prevEl: slider.querySelector('.swiper-button-prev'),
         },
         breakpoints: {
-          700: {
+          1400: {
             direction: 'horizontal',
-            slidesPerView: 2.2,
+            slidesPerView: 2.1,
             spaceBetween: 15
           },
         }
