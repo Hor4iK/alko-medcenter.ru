@@ -16,6 +16,10 @@
 .licenses__content button {
   max-width: 320px;
   width: 100%;
+  display: none;
+}
+.licenses__content button.active {
+  display: block;
 }
 .licenses__wrapper {
   display: grid;
