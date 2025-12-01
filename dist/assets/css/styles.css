@@ -2227,8 +2227,7 @@ form.form .input:hover, form.form .input:focus {
 
 .allocator {
   padding-inline: clamp(1px, -3.75rem + 8.5714vw, 3.75rem);
-  padding-block-start: clamp(1.875rem, 0rem + 4.2857vw, 3.75rem);
-  padding-block-end: clamp(1.875rem, -4.25rem + 14vw, 6.25rem);
+  padding-block: clamp(1.875rem, -4.25rem + 14vw, 6.25rem);
 }
 .allocator__title {
   margin-block-end: clamp(2.5rem, 0.625rem + 4.2857vw, 4.375rem);
@@ -6057,8 +6056,10 @@ form.form .input:hover, form.form .input:focus {
     font-size: 14px;
   }
 }
-.doctor__right {
-  width: 100%;
+@media screen and (width > 1400px) {
+  .doctor__right {
+    width: calc(100% - 395px - 30px - clamp(1px, -3.75rem + 8.5714vw, 3.75rem));
+  }
 }
 
 .doctor__right .breadcrumbs {
@@ -6067,6 +6068,12 @@ form.form .input:hover, form.form .input:focus {
 
 .doctor__block {
   margin-bottom: 120px;
+}
+.doctor__block .reviews-sl__body {
+  overflow: hidden;
+}
+.doctor__block .licenses-sl__right {
+  max-width: none;
 }
 
 .doctor__intro {

@@ -400,7 +400,9 @@
 }
 
 .doctor__right {
-  width: 100%;
+  @media screen and (width>1400px) {
+    width: calc(100% - 395px - 30px - clamp(1px, -3.75rem + 8.5714vw, 3.75rem));
+  }
 }
 
 .doctor__right .breadcrumbs {
@@ -409,6 +411,14 @@
 
 .doctor__block {
   margin-bottom: 120px;
+
+  .reviews-sl__body {
+    overflow: hidden;
+  }
+
+  .licenses-sl__right {
+    max-width: none;
+  }
 }
 
 .doctor__intro {

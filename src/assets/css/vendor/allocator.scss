@@ -1,7 +1,6 @@
 .allocator {
   padding-inline: $base-section-margin-in;
-  padding-block-start: clamp(1.875rem, 0rem + 4.2857vw, 3.75rem);
-  padding-block-end: $base-section-margin-bl;
+  padding-block: $base-section-margin-bl;
 
   &__title {
     margin-block-end: clamp(2.5rem, 0.625rem + 4.2857vw, 4.375rem);
