@@ -486,6 +486,17 @@
   }
 }
 
+.about {
+  padding-inline: clamp(1px, -3.75rem + 8.5714vw, 3.75rem);
+
+  &__body {
+    padding-block-start: clamp(1.875rem, -4.25rem + 14vw, 6.25rem);
+  }
+
+  &__content {
+    padding-inline: 0;
+  }
+}
 
 .sitemap {
   padding-inline: clamp(1px, -3.75rem + 8.5714vw, 3.75rem);
@@ -938,4 +949,3 @@
     grid-template-columns: 1fr;
   }
 }
-

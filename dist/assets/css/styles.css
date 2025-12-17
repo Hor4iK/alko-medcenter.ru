@@ -3864,6 +3864,16 @@ form.form .input:hover, form.form .input:focus {
   padding-inline: 0;
 }
 
+.about {
+  padding-inline: clamp(1px, -3.75rem + 8.5714vw, 3.75rem);
+}
+.about__body {
+  padding-block-start: clamp(1.875rem, -4.25rem + 14vw, 6.25rem);
+}
+.about__content {
+  padding-inline: 0;
+}
+
 .sitemap {
   padding-inline: clamp(1px, -3.75rem + 8.5714vw, 3.75rem);
 }
